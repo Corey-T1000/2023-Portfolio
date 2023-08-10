@@ -5,4 +5,5 @@ ARG VARIANT="16-bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 
 # [Optional] Uncomment if you want to install more global node modules
+RUN npm install -g pnpm
 RUN su node -c "npm install -g astro eslint prettier"

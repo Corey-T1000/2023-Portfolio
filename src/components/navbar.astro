@@ -1,0 +1,32 @@
+<div
+  class="border-gray mx-auto flex w-full max-w-7xl flex-col border border-t-0 p-8 lg:flex-row lg:items-center lg:justify-between"
+  x-data="{ open: false }"
+>
+  <div class="text-black-800 flex flex-row items-center justify-between">
+    <a class="font-display inline-flex items-center uppercase" href="/"
+      ><img src="public/images/ct-logo.png" class="max-h-8" />
+    </a><button
+      class="focus:shadow-outline rounded-lg focus:outline-none lg:hidden"
+      @click="open = !open"></button>
+  </div>
+  <nav
+    :class="{'flex': open, 'hidden': !open}"
+    class="hidden grow flex-col items-center p-4 px-5 opacity-100 md:pb-0 lg:mt-0 lg:flex lg:flex-row lg:justify-start lg:p-0"
+  >
+    <a
+      class="focus: text-black-800/90 px-4 py-2 text-sm text-zinc-500 transition duration-1000 ease-in-out hover:text-zinc-500 focus:shadow-none focus:outline-none md:my-0 lg:ml-auto lg:py-0"
+      href="/work"
+      >Work
+    </a>
+    <a
+      class="focus: text-black-800/90 px-4 py-2 text-sm text-zinc-500 transition duration-1000 ease-in-out hover:text-zinc-500 focus:shadow-none focus:outline-none md:my-0 lg:py-0"
+      href="/info"
+      >Info
+    </a>
+    <a
+      class="focus: text-black-800/90 px-4 py-2 text-sm text-zinc-500 transition duration-1000 ease-in-out hover:text-zinc-500 focus:shadow-none focus:outline-none md:my-0 lg:py-0"
+      href="/contact"
+      >Contact
+    </a>
+  </nav>
+</div>

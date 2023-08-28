@@ -9,6 +9,7 @@
     "clean": "git clean --interactive -dx --exclude .env.local --exclude \".env.*.local\" --exclude node_modules/ --exclude .husky/"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^6.8.1",
     "@astrojs/mdx": "0.19.7",
     "@astrojs/prefetch": "0.3.0",
     "@astrojs/tailwind": "4.0.0",

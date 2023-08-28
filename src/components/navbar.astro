@@ -1,20 +1,44 @@
 <div
-  class="border-gray mx-auto flex w-full max-w-7xl flex-col border border-t-0 p-8 lg:flex-row lg:items-center lg:justify-between"
+  class="border-gray mx-auto flex w-full max-w-screen-2xl flex-col border border-t-0 p-8 sm:flex-row sm:items-center sm:justify-between"
   x-data="{ open: false }"
 >
   <div class="text-black-800 flex flex-row items-center justify-between">
     <a class="font-display inline-flex items-center uppercase" href="/"
       ><img src="public/images/ct-logo.png" class="max-h-8" />
-    </a><button
-      class="focus:shadow-outline rounded-lg focus:outline-none lg:hidden"
-      @click="open = !open"></button>
+    </a>
+    <button
+      class="focus:shadow-outline rounded-lg focus:outline-none sm:hidden"
+      @click="open = !open"
+    >
+      <svg
+        :class="{'hidden': open, 'inline-flex': !open }"
+        class="h-5 w-5"
+        fill="currentColor"
+        viewBox="0 0 448 512"
+      >
+        <path
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+        ></path>
+      </svg>
+
+      <svg
+        :class="{'hidden': !open, 'inline-flex': open }"
+        class="hidden h-5 w-5"
+        fill="currentColor"
+        viewBox="0 0 352 512"
+      >
+        <path
+          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+        ></path>
+      </svg>
+    </button>
   </div>
   <nav
     :class="{'flex': open, 'hidden': !open}"
-    class="hidden grow flex-col items-center p-4 px-5 opacity-100 md:pb-0 lg:mt-0 lg:flex lg:flex-row lg:justify-start lg:p-0"
+    class="-ml-3 hidden grow flex-col items-start py-4 opacity-100 sm:flex sm:flex-row sm:justify-start sm:px-5 sm:py-0"
   >
     <a
-      class="focus: text-black-800/90 px-4 py-2 text-sm text-zinc-500 transition duration-1000 ease-in-out hover:text-zinc-500 focus:shadow-none focus:outline-none md:my-0 lg:ml-auto lg:py-0"
+      class="focus: text-black-800/90 px-4 py-2 text-sm text-zinc-500 transition duration-1000 ease-in-out hover:text-zinc-500 focus:shadow-none focus:outline-none sm:ml-auto md:my-0 lg:py-0"
       href="/work"
       >Work
     </a>
@@ -30,3 +54,7 @@
     </a>
   </nav>
 </div>
+
+<script
+  src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+  defer></script>

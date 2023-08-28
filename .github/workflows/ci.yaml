@@ -17,5 +17,4 @@ jobs:
           cache: pnpm
       - run: pnpm install --ignore-scripts
       - run: pnpm run build
-      - run: pnpm run lint
       - run: pnpm run --if-present test

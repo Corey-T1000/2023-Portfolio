@@ -14,7 +14,7 @@
     "@astrojs/tailwind": "4.0.0",
     "@fontsource-variable/raleway": "^5.0.9",
     "@splidejs/splide": "^4.1.4",
-    "astro": "2.8.3",
+    "astro": "3.0.3",
     "tailwindcss": "3.3.3",
     "wrangler": "^3.5.0"
   },

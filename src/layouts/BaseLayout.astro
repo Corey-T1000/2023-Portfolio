@@ -20,11 +20,10 @@ const { title, description } = Astro.props;
 			<Nav />
 			<slot />
 		</div>
-
+<Footer />
 		<script>
 			// Add “loaded” class once the document has completely loaded.
 			addEventListener('load', () => document.documentElement.classList.add('loaded'));
 		</script>
-<Footer />
 	</body>
 </html>

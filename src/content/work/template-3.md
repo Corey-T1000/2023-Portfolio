@@ -2,14 +2,22 @@
 featured: true
 title: template
 publishDate: 2019-10-02 00:00:00
-img: ../public/images/gremlin.gif
-img_alt:
 description: |
   We developed brand positioning and design assets for the launch
   of a new colored water product.
 tags:
   - Design
   - Branding
+img: [
+  { "url": "../public/images/gremlin.gif", "alt": "Image 1", "cols": 8 },
+  { "url": "../public/images/gremlin.gif", "alt": "Image 2", "cols": 4 },
+  { "url": "../public/images/gremlin.gif", "alt": "Image 3", "cols": 4 },
+  { "url": "../public/images/gremlin.gif", "alt": "Image 4", "cols": 4 },
+  { "url": "../public/images/gremlin.gif", "alt": "Image 5", "cols": 4},
+  { "url": "../public/images/gremlin.gif", "alt": "Image 6", "cols": 4 },
+  { "url": "../public/images/gremlin.gif", "alt": "Image 7", "cols": 4 },
+    { "url": "../public/images/gremlin.gif", "alt": "Image 7", "cols": 4 }
+]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -199,9 +199,37 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"work": {
-"peomg.md": {
-	id: "peomg.md";
-  slug: "peomg";
+"template-1.md": {
+	id: "template-1.md";
+  slug: "template-1";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"template-2.md": {
+	id: "template-2.md";
+  slug: "template-2";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"template-3.md": {
+	id: "template-3.md";
+  slug: "template-3";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"template-4.md": {
+	id: "template-4.md";
+  slug: "template-4";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"template-5.md": {
+	id: "template-5.md";
+  slug: "template-5";
   body: string;
   collection: "work";
   data: any

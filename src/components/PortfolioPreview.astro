@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'work'>;
+}
+
+const { data, slug } = Astro.props.project;
+---
+
+<a href={`/work/${slug}`} class="border-gray-800 mx-auto max-w-screen-2xl border-x hover:shadow-md transition duration-300 ease-in-out">
+
+    <img class="flex flex-col object-cover w-full h-full" src={data.img} alt={data.img_alt} loading="lazy" decoding="async" />
+
+</a>

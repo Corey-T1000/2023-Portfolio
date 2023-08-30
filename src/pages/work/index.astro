@@ -3,37 +3,31 @@ import { getCollection } from 'astro:content';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-import ContactCTA from '../../components/ContactCTA.astro';
 import PortfolioPreview from '../../components/PortfolioPreview.astro';
 import Hero from '../../components/Hero.astro';
 import Grid from '../../components/Grid.astro';
 
-const projects = (await getCollection('work')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
-);
+// Content Fetching:
+const projects = (await getCollection("work"))
 ---
 
 <BaseLayout
-	title="Work | Corey Thomas"
+	title="Work | Corey T"
 	description="Most recent projects"
 >
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
-				align="start"
-			/>
-			<Grid variant="offset">
-				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
-					))
-				}
-			</Grid>
-		</main>
-		<ContactCTA />
+         <section id="Work">
+        <div
+          class="border-gray mx-auto max-w-screen-2xl border-x border-y py-8 md:border-t-0"
+        > <div class="mx-auto w-full justify-center">
+       <Grid>
+          {
+            projects.map((project) => (
+
+                <PortfolioPreview project={project} />
+
+            ))
+          }
+        </Grid>
 	</div>
+        </div>
 </BaseLayout>

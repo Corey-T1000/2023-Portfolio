@@ -7,8 +7,13 @@ export const collections = {
 			description: z.string(),
 			publishDate: z.coerce.date(),
 			tags: z.array(z.string()),
-			img: z.string(),
-			img_alt: z.string().optional(),
+			img: z.array(
+				z.object({
+					url: z.string(),
+					alt: z.string().optional(),
+					cols: z.number().optional()
+				})
+			),
 		}),
 	}),
 };

@@ -1,6 +1,7 @@
 ---
 import MainHead from "../components/MainHead.astro";
 import Nav from "../components/Nav.astro";
+import FooterBase from "../components/FooterBase.astro";
 
 interface Props {
   title?: string | undefined;
@@ -19,12 +20,10 @@ const { title, description } = Astro.props;
       <Nav />
       <slot />
     </div>
-
-    <script>
+    <FooterBase /><script>
       // Add “loaded” class once the document has completely loaded.
       addEventListener("load", () =>
-        document.documentElement.classList.add("loaded"),
-      );
-    </script>
+      document.documentElement.classList.add("loaded"), );
+    </FooterBase>
   </body>
 </html>

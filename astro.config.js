@@ -8,6 +8,4 @@ export default defineConfig({
   image: {
     service: sharpImageService(),
   },
-  integrations: [mdx(), prefetch(), tailwind()],
-  },
-});
+  integrations: [mdx(), prefetch(), tailwind()],});

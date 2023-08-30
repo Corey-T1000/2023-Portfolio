@@ -1,48 +1,76 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
+import { CollectionEntry, getCollection } from "astro:content";
 
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
-import Icon from '../../components/Icon.astro';
-import Pill from '../../components/Pill.astro';
+import Icon from "../../components/Icon.astro";
+import Pill from "../../components/Pill.astro";
 
 interface Props {
-	entry: CollectionEntry<'work'>;
+  entry: CollectionEntry<"work">;
 }
 
 // This is a dynamic route that generates a page for every Markdown file in src/content/
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-	const work = await getCollection('work');
-	return work.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry },
-	}));
+  const work = await getCollection("work");
+  return work.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<BaseLayout title={`${entry.data.title} - Corey T`} description={entry.data.description}>
+<BaseLayout
+  title={`${entry.data.title} - Corey T`}
+  description={entry.data.description}
+>
   <div class="mx-auto w-full justify-center">
-    <div class="flex sm:grid gap-x-2 grid-cols-12 border-gray mx-auto max-w-screen-2xl border-x border-y py-8 md:border-t-0">
+    <div
+      class="border-gray mx-auto flex max-w-screen-2xl grid-cols-12 gap-x-2 border-x border-y py-8 sm:grid md:border-t-0"
+    >
       <div class="sticky top-0 px-8 sm:col-span-4" id="description">
-        <h1 class="text-2xl font-bold mb-4">{entry.data.title}</h1>
+        <a
+          class="mb-8 flex gap-2 text-xs uppercase text-neutral-400"
+          href="/work/"><Icon icon="arrow-left" /> Work</a
+        >
+        <h1 class="mb-2 text-2xl font-bold">{entry.data.title}</h1>
         <div class="mb-4">
-          {entry.data.tags.map(tag => <Pill text={tag} />)}
+          {entry.data.tags.map((tag) => <Pill text={tag} />)}
         </div>
         <p class="mb-4 text-gray-700">{entry.data.description}</p>
       </div>
-      <div class="grid sm:grid-col-8 gap-4 col-span-8">
-        {entry.data.img.map(image => (
-          <img class={`w-full col-span-${image.cols || 1}`} src={image.url} alt={image.alt || ''} />
-        ))}
+      <div class="col-span-8">
+        <div class="grid grid-cols-12 gap-4">
+          {
+            entry.data.img.map((image, index, array) => {
+              let layoutClass = "";
+              switch (image.layout) {
+                case "full":
+                  layoutClass = "col-span-12";
+                  break;
+                case "two":
+                  layoutClass = "col-span-6";
+                  break;
+                case "three":
+                  layoutClass = "col-span-4";
+                  break;
+              }
+              return (
+                <img
+                  class={`${layoutClass} w-full`}
+                  src={image.url}
+                  alt={image.alt || ""}
+                />
+              );
+            })
+          }
+        </div>
       </div>
     </div>
-  </div>
-  <div class="border-gray mx-auto max-w-screen-2xl border-x border-y py-8 md:border-t-0">
-    <a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
   </div>
 </BaseLayout>

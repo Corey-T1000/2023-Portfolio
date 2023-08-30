@@ -7,11 +7,12 @@ export const collections = {
 			description: z.string(),
 			publishDate: z.coerce.date(),
 			tags: z.array(z.string()),
+      thumb: z.string(),
 			img: z.array(
 				z.object({
 					url: z.string(),
 					alt: z.string().optional(),
-					cols: z.number().optional()
+					cols: z.number().optional(),
 				})
 			),
 		}),

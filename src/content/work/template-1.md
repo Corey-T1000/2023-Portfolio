@@ -8,14 +8,14 @@ description: |
 tags:
   - Design
   - Branding
-thumb: "../public/images/gremlin.gif"
+thumb: "../../images/gremlin.gif"
 img: [
-  { "url": "../public/images/gremlin.gif", "alt": "Image 1", "layout": "full" },
-  { "url": "../public/images/statype.gif", "alt": "Image 2", "layout": "two" },
-  { "url": "../public/images/gremlin.gif", "alt": "Image 3", "layout": "two" },
-  { "url": "../public/images/statype.gif", "alt": "Image 4", "layout": "three" },
-  { "url": "../public/images/statype.gif", "alt": "Image 5", "layout": "three" },
-  { "url": "../public/images/statype.gif", "alt": "Image 6", "layout": "three" },
+  { "url": "../../images/gremlin.gif", "alt": "Image 1", "layout": "full" },
+  { "url": "../../images/statype.gif", "alt": "Image 2", "layout": "two" },
+  { "url": "../../images/gremlin.gif", "alt": "Image 3", "layout": "two" },
+  { "url": "../../images/statype.gif", "alt": "Image 4", "layout": "three" },
+  { "url": "../../images/statype.gif", "alt": "Image 5", "layout": "three" },
+  { "url": "../../images/statype.gif", "alt": "Image 6", "layout": "three" },
 ]
 ---
 

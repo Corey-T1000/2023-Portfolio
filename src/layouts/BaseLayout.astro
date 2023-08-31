@@ -16,18 +16,19 @@ const { title, description } = Astro.props;
     <MainHead title={title} description={description} />
   </head>
   <body class="bg-neutral-100">
-    <div class="mx-auto w-full justify-start">
+    <div class="mx-auto flex w-full flex-col justify-start">
       <Nav />
       <div class="content-container">
         <slot />
       </div>
+
+      <Footer />
+      <script>
+        // Add “loaded” class once the document has completely loaded.
+        addEventListener("load", () =>
+          document.documentElement.classList.add("loaded"),
+        );
+      </script>
     </div>
-    <Footer />
-    <script>
-      // Add “loaded” class once the document has completely loaded.
-      addEventListener("load", () =>
-        document.documentElement.classList.add("loaded"),
-      );
-    </script>
   </body>
 </html>

@@ -1,33 +1,25 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
-import PortfolioPreview from '../../components/PortfolioPreview.astro';
-import Hero from '../../components/Hero.astro';
-import Grid from '../../components/Grid.astro';
+import PortfolioPreview from "../../components/PortfolioPreview.astro";
+import Grid from "../../components/Grid.astro";
 
 // Content Fetching:
-const projects = (await getCollection("work"))
+const projects = await getCollection("work");
 ---
 
-<BaseLayout
-	title="Work | Corey T"
-	description="Most recent projects"
->
-         <section id="Work">
-        <div
-          class="border-gray mx-auto max-w-screen-2xl border-x border-y py-8 md:border-t-0"
-        > <div class="mx-auto w-full justify-center">
-       <Grid>
-          {
-            projects.map((project) => (
-
-                <PortfolioPreview project={project} />
-
-            ))
-          }
+<BaseLayout title="Work | Corey T" description="Most recent projects">
+  <section id="Work">
+    <div
+      class="border-gray mx-auto max-w-screen-2xl flex-grow border-x border-t py-8 md:border-t-0"
+    >
+      <div class="mx-auto w-full justify-center">
+        <Grid>
+          {projects.map((project) => <PortfolioPreview project={project} />)}
         </Grid>
-	</div>
-        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

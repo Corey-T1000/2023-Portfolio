@@ -1,14 +1,13 @@
 ---
 featured: true
-title: Gremlin
+title: Statype
 description: |
-  Gremlin is a platform for chaos engineering.
+  Statype simplifys automatically generate insights and analysis without writing a single line of SQL or building custom dashboards
 tags:
   - Identity
+  - Design System
   - Web Design
   - Web Development
-  - Events
-  - Print
   - Product
   - Illustration
 thumb: "../../images/gremlin.gif"
@@ -22,4 +21,4 @@ img: [
 ]
 ---
 
-Gremlin is a platform for chaos engineering. It allows you to run experiments on your infrastructure to find weaknesses before they cause problems. While at Gremlin, I worked on a variety of projects including the website, product, and events. Working with the team at Studio Science we launched a brand new identity in 2022. The new identity work can be seen here.
+Statype simplifys automatically generate insights and analysis without writing a single line of SQL or building custom dashboards. Building on an existing logo we expanded the brand to include a new color palette, typography, and illustration style. This new identity was built from the ground up to be flexible and built to scale as the company grows.

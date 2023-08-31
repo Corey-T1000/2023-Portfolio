@@ -46,7 +46,7 @@ const { Content } = await entry.render();
           <div class="-ml-2 mb-4 justify-start">
             {entry.data.tags.map((tags) => <Tag text={tags} />)}
           </div>
-          <p class="mb-12 text-gray-700">{entry.data.description}</p>
+          <p class="mb-12 text-gray-700"><Content /></p>
         </div>
       </div>
       <div class="col-span-12 md:col-span-8" id="images">

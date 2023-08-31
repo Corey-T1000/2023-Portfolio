@@ -11,14 +11,14 @@ tags:
   - Print
   - Product
   - Illustration
-thumb: "../../images/gremlin.gif"
+thumb: "../../images/gremlin/gremlin.gif"
 img: [
-  { "url": "../../images/gremlin.gif", "alt": "Image 1", "layout": "full" },
-  { "url": "../../images/statype.gif", "alt": "Image 2", "layout": "two" },
-  { "url": "../../images/gremlin.gif", "alt": "Image 3", "layout": "two" },
-  { "url": "../../images/statype.gif", "alt": "Image 4", "layout": "three" },
-  { "url": "../../images/statype.gif", "alt": "Image 5", "layout": "three" },
-  { "url": "../../images/statype.gif", "alt": "Image 6", "layout": "three" },
+  { "url": "../../images/gremlin/gremlin-1.png", "alt": "Image 1", "layout": "full" },
+  { "url": "../../images/gremlin/gremlin-1.png", "alt": "Image 2", "layout": "two" },
+  { "url": "../../images/gremlin/gremlin-1.png", "alt": "Image 3", "layout": "two" },
+  { "url": "../../images/gremlin/gremlin-1.png", "alt": "Image 4", "layout": "three" },
+  { "url": "../../images/gremlin/gremlin-1.png", "alt": "Image 5", "layout": "three" },
+  { "url": "../../images/gremlin/gremlin-1.png", "alt": "Image 6", "layout": "three" },
 ]
 ---
 

@@ -10,14 +10,14 @@ tags:
   - Web Development
   - Product
   - Illustration
-thumb: "../../images/statype.gif"
+thumb: "../../images/statype/statype.gif"
 img: [
-  { "url": "../../images/statype-1.png", "alt": "Image 1", "layout": "full" },
-  { "url": "../../images/statype-2.png", "alt": "Image 2", "layout": "two" },
-  { "url": "../../images/statype-3.png", "alt": "Image 3", "layout": "two" },
-  { "url": "../../images/statype-4.png", "alt": "Image 4", "layout": "three" },
-  { "url": "../../images/statype-5.png", "alt": "Image 5", "layout": "three" },
-  { "url": "../../images/statype-6.png", "alt": "Image 6", "layout": "three" },
+  { "url": "../../images/statype/statype-1.png", "alt": "Image 1", "layout": "full" },
+  { "url": "../../images/statype/statype-2.png", "alt": "Image 2", "layout": "two" },
+  { "url": "../../images/statype/statype-3.png", "alt": "Image 3", "layout": "two" },
+  { "url": "../../images/statype/statype-4.png", "alt": "Image 4", "layout": "three" },
+  { "url": "../../images/statype/statype-5.png", "alt": "Image 5", "layout": "three" },
+  { "url": "../../images/statype/statype-6.png", "alt": "Image 6", "layout": "three" },
 ]
 ---
 

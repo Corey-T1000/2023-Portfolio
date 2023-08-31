@@ -9,14 +9,27 @@ tags:
   - Web Design
   - Illustration
   - Mascot Design
-thumb: "../../images/gravitee.gif"
+thumb: "../../images/gravitee/gravitee-1@2x.png"
 img: [
-  { "url": "../../images/gravitee-1.png", "alt": "Image 1", "layout": "full" },
-  { "url": "../../images/gravitee-2.png", "alt": "Image 2", "layout": "two" },
-  { "url": "../../images/gravitee-3.png", "alt": "Image 3", "layout": "two" },
-  { "url": "../../images/gravitee-4.png", "alt": "Image 4", "layout": "three" },
-  { "url": "../../images/gravitee-5.png", "alt": "Image 5", "layout": "three" },
-  { "url": "../../images/gravitee-6.png", "alt": "Image 6", "layout": "three" },
+  { "url": "../../images/gravitee/gravitee-1@2x.png", "alt": "Image 1", "layout": "full" },
+  { "url": "../../images/gravitee/gravitee-products@2x.png", "alt": "Image 2", "layout": "full" },
+  { "url": "../../images/gravitee/gravitee-homepage-1@2x.png", "alt": "Image 3", "layout": "two" },
+  { "url": "../../images/gravitee/gravitee-homepage-2@2x.png", "alt": "Image 4", "layout": "two" },
+  { "url": "../../images/gravitee/gravitee-ad-4@2x.png", "alt": "Image 5", "layout": "three" },
+  { "url": "../../images/gravitee/gravitee-ad-6@2x.png", "alt": "Image 5", "layout": "three" },
+  { "url": "../../images/gravitee/gravitee-ad-8@2x.png", "alt": "Image 5", "layout": "three" },
+
+  { "url": "../../images/gravitee/gravitee-newt-2@2x.png", "alt": "Image 6", "layout": "full" },
+  { "url": "../../images/gravitee/gravitee-newt-3@2x.png", "alt": "Image 6", "layout": "full" },
+  { "url": "../../images/gravitee/gravitee-ad-3@2x.png", "alt": "Image 5", "layout": "three" },
+  { "url": "../../images/gravitee/gravitee-ad-5@2x.png", "alt": "Image 5", "layout": "three" },
+  { "url": "../../images/gravitee/gravitee-ad-7@2x.png", "alt": "Image 5", "layout": "three" },
+  { "url": "../../images/gravitee/gravitee-newt-1@2x.png", "alt": "Image 6", "layout": "two" },
+  { "url": "../../images/gravitee/gravitee-newt-4@2x.png", "alt": "Image 6", "layout": "two" },
+  { "url": "../../images/gravitee/gravitee-ad-1@2x.png", "alt": "Image 5", "layout": "full" },
+      { "url": "../../images/gravitee/gravitee-onepager-1@2x.png", "alt": "Image 5", "layout": "full" },
+          { "url": "../../images/gravitee/gravitee-onepager-2@2x.png", "alt": "Image 5", "layout": "full" },
+    { "url": "../../images/gravitee/gravitee-whitepaper-1@2x.png", "alt": "Image 5", "layout": "full" },
 ]
 ---
 

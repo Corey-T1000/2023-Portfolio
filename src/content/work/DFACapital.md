@@ -6,14 +6,14 @@ description: |
 tags:
   - Identity Design
   - Web Design
-thumb: "../../images/DFACapital-1.png"
+thumb: "../../images/dfacapital/dfacapital-1@2x.png"
 img: [
-  { "url": "../../images/DFACapital-1.png", "alt": "Image 1", "layout": "full" },
-  { "url": "../../images/DFACapital-2.png", "alt": "Image 2", "layout": "two" },
-  { "url": "../../images/DFACapital-3.png", "alt": "Image 3", "layout": "two" },
-  { "url": "../../images/DFACapital-4.png", "alt": "Image 4", "layout": "three" },
-  { "url": "../../images/DFACapital-5.png", "alt": "Image 5", "layout": "three" },
-  { "url": "../../images/DFACapital-6.png", "alt": "Image 6", "layout": "three" },
+  { "url": "../../images/dfacapital/dfacapital-1@2x.png", "alt": "Image 1", "layout": "full" },
+  { "url": "../../images/dfacapital/dfacapital-tape-1@2x.png", "alt": "Image 2", "layout": "full" },
+  { "url": "../../images/dfacapital/dfacapital-deck-1.png", "alt": "Image 4", "layout": "three" },
+  { "url": "../../images/dfacapital/dfacapital-deck-2.png", "alt": "Image 5", "layout": "three" },
+  { "url": "../../images/dfacapital/dfacapital-deck-4.png", "alt": "Image 6", "layout": "three" },
+    { "url": "../../images/dfacapital/dfacapital-pins-1@2x.png", "alt": "Image 6", "layout": "full" },
 ]
 ---
 

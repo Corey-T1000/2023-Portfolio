@@ -1,13 +1,16 @@
 ---
 featured: true
-title: template
+title: Gremlin
 publishDate: 2019-10-02 00:00:00
 description: |
   We developed brand positioning and design assets for the launch
   of a new colored water product.
 tags:
-  - Design
-  - Branding
+  - Identity Design
+  - Events
+  - Print
+  - Product
+  - Web
 thumb: "../../images/gremlin.gif"
 img: [
   { "url": "../../images/gremlin.gif", "alt": "Image 1", "layout": "full" },

@@ -16,9 +16,11 @@ const { title, description } = Astro.props;
     <MainHead title={title} description={description} />
   </head>
   <body class="bg-neutral-100">
-    <div class="mx-auto w-full justify-center">
+    <div class="mx-auto w-full justify-start">
       <Nav />
-      <slot />
+      <div class="content-container">
+        <slot />
+      </div>
     </div>
     <Footer />
     <script>

@@ -4,7 +4,7 @@ import { CollectionEntry, getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import Icon from "../../components/Icon.astro";
-import Pill from "../../components/Pill.astro";
+import Tag from "../../components/Tag.astro";
 
 interface Props {
   entry: CollectionEntry<"work">;
@@ -31,20 +31,25 @@ const { Content } = await entry.render();
 >
   <div class="mx-auto w-full justify-center">
     <div
-      class="border-gray mx-auto flex max-w-screen-2xl grid-cols-12 gap-x-2 border-x border-y py-8 sm:grid md:border-t-0"
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border-x border-y py-8 md:grid md:border-t-0"
     >
-      <div class="sticky top-0 px-8 sm:col-span-4" id="description">
-        <a
-          class="mb-8 flex gap-2 text-xs uppercase text-neutral-400"
-          href="/work/"><Icon icon="arrow-left" /> Work</a
+      <div class="relative md:col-span-4">
+        <div
+          class="top-0 z-10 col-span-12 bg-neutral-100 px-8 md:sticky md:col-span-4"
+          id="description"
         >
-        <h1 class="mb-2 text-2xl font-bold">{entry.data.title}</h1>
-        <div class="mb-4">
-          {entry.data.tags.map((tag) => <Pill text={tag} />)}
+          <a
+            class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
+            href="/work/"><Icon icon="arrow-left" /> Work</a
+          >
+          <h1 class="mb-2 text-2xl font-bold">{entry.data.title}</h1>
+          <div class="-ml-2 mb-4 justify-start">
+            {entry.data.tags.map((tags) => <Tag text={tags} />)}
+          </div>
+          <p class="mb-12 text-gray-700">{entry.data.description}</p>
         </div>
-        <p class="mb-4 text-gray-700">{entry.data.description}</p>
       </div>
-      <div class="col-span-8">
+      <div class="col-span-12 md:col-span-8" id="images">
         <div class="grid grid-cols-12 gap-4">
           {
             entry.data.img.map((image, index, array) => {

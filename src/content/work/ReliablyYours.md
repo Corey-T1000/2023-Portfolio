@@ -1,5 +1,5 @@
 ---
-featured: true
+featured: false
 title: Reliably Yours
 description: |
   Reliably Yours is an engineering consultancy focused on SaaS system resilience.

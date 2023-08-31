@@ -10,14 +10,14 @@ tags:
   - Web Development
   - Product
   - Illustration
-thumb: "../../images/gremlin.gif"
+thumb: "../../images/statype.gif"
 img: [
-  { "url": "../../images/gremlin.gif", "alt": "Image 1", "layout": "full" },
-  { "url": "../../images/statype.gif", "alt": "Image 2", "layout": "two" },
-  { "url": "../../images/gremlin.gif", "alt": "Image 3", "layout": "two" },
-  { "url": "../../images/statype.gif", "alt": "Image 4", "layout": "three" },
-  { "url": "../../images/statype.gif", "alt": "Image 5", "layout": "three" },
-  { "url": "../../images/statype.gif", "alt": "Image 6", "layout": "three" },
+  { "url": "../../images/statype-1.png", "alt": "Image 1", "layout": "full" },
+  { "url": "../../images/statype-2.png", "alt": "Image 2", "layout": "two" },
+  { "url": "../../images/statype-3.png", "alt": "Image 3", "layout": "two" },
+  { "url": "../../images/statype-4.png", "alt": "Image 4", "layout": "three" },
+  { "url": "../../images/statype-5.png", "alt": "Image 5", "layout": "three" },
+  { "url": "../../images/statype-6.png", "alt": "Image 6", "layout": "three" },
 ]
 ---
 

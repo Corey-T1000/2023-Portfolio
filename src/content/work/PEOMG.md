@@ -1,5 +1,5 @@
 ---
-featured: true
+featured: false
 title: PEOMG
 description: |
   PEOMG simplifies the search for the right PEO for small businesses.

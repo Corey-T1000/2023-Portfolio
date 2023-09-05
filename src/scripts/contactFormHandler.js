@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       message: form.message.value
     };
 
-    const response = await fetch("https://coreyt-contact-form.cor3y-thomas.workers.dev/, {
+    const response = await fetch("https://coreyt-contact-form.cor3y-thomas.workers.dev/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

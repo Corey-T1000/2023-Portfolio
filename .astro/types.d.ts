@@ -179,9 +179,51 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"work": {
+"DFACapital.md": {
+	id: "DFACapital.md";
+  slug: "dfacapital";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"Gravitee.md": {
+	id: "Gravitee.md";
+  slug: "gravitee";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
 "Gremlin.md": {
 	id: "Gremlin.md";
   slug: "gremlin";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"IRConf.md": {
+	id: "IRConf.md";
+  slug: "irconf";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"PEOMG.md": {
+	id: "PEOMG.md";
+  slug: "peomg";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"ReliablyYours.md": {
+	id: "ReliablyYours.md";
+  slug: "reliablyyours";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"Statype.md": {
+	id: "Statype.md";
+  slug: "statype";
   body: string;
   collection: "work";
   data: any

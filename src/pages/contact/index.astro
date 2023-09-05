@@ -1,6 +1,6 @@
 ---
 import "@splidejs/splide/css";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
@@ -97,7 +97,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         );
 
         if (response.ok) {
-          alert("Email sent successfully!");
+          // Redirect to confirmation page
+          window.location.href = "/contact/success.html";
         } else {
           alert("Failed to send email.");
         }

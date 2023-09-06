@@ -52,9 +52,9 @@ const { Content } = await entry.render();
       <div class="col-span-12 md:col-span-8" id="images">
         <div class="grid grid-cols-12 gap-4">
           {
-            entry.data.img.map((image, index, array) => {
+            entry.data.img.map((media, index, array) => {
               let layoutClass = "";
-              switch (image.layout) {
+              switch (media.layout) {
                 case "full":
                   layoutClass = "col-span-12";
                   break;
@@ -64,14 +64,28 @@ const { Content } = await entry.render();
                 case "three":
                   layoutClass = "col-span-4";
                   break;
+                case "four":
+                  layoutClass = "col-span-3";
+                  break;
               }
-              return (
-                <img
-                  class={`${layoutClass} w-full`}
-                  src={image.url}
-                  alt={image.alt || ""}
-                />
-              );
+              if (media.type === "video") {
+                return (
+                  <video
+                    class={`${layoutClass} w-full`}
+                    src={media.url}
+                    alt={media.alt || ""}
+                    controls
+                  />
+                );
+              } else {
+                return (
+                  <img
+                    class={`${layoutClass} w-full`}
+                    src={media.url}
+                    alt={media.alt || ""}
+                  />
+                );
+              }
             })
           }
         </div>

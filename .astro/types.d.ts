@@ -179,6 +179,34 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"work": {
+"Brinks.md": {
+	id: "Brinks.md";
+  slug: "brinks";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"Bulleit-Impressions.md": {
+	id: "Bulleit-Impressions.md";
+  slug: "bulleit-impressions";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"Bulleit-Tattoo.md": {
+	id: "Bulleit-Tattoo.md";
+  slug: "bulleit-tattoo";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"CoverageCoalition.md": {
+	id: "CoverageCoalition.md";
+  slug: "coveragecoalition";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
 "DFACapital.md": {
 	id: "DFACapital.md";
   slug: "dfacapital";
@@ -207,9 +235,37 @@ declare module 'astro:content' {
   collection: "work";
   data: any
 } & { render(): Render[".md"] };
+"Little-Caesars.md": {
+	id: "Little-Caesars.md";
+  slug: "little-caesars";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"Misc.md": {
+	id: "Misc.md";
+  slug: "misc";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"NYC-Organics.md": {
+	id: "NYC-Organics.md";
+  slug: "nyc-organics";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
 "PEOMG.md": {
 	id: "PEOMG.md";
   slug: "peomg";
+  body: string;
+  collection: "work";
+  data: any
+} & { render(): Render[".md"] };
+"Papa-Johns.md": {
+	id: "Papa-Johns.md";
+  slug: "papa-johns";
   body: string;
   collection: "work";
   data: any

@@ -5,27 +5,97 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout>
   <div class="mx-auto w-full justify-center">
-    <section id="Hero">
-      <div
-        class="border-gray mx-auto max-w-screen-2xl border-x p-8 pb-12 pt-32"
-      >
-        <div class="max-w-2xl">
+    <section
+      id="Hero"
+      class="relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border-x md:grid"
+    >
+      <div class="col-span-6">
+        <div
+          class="top-0 z-10 mx-auto max-w-screen-2xl p-8 pb-12 pt-32 md:sticky"
+        >
+          <div class="max-w-2xl">
+            <div class="mb-4 text-sm font-light uppercase tracking-widest">
+              Visual Designer & maker of things.
+            </div>
+            <span class="mt-4 text-3xl font-light text-neutral-800">
+              If you didnt know me already,<span class="text-neutral-200">
+                (awkward..)</span
+              >
+              <br /> its great to meet you & thanks for stopping by.
+            </span>
+            <div class="mt-12 sm:mt-8 lg:ml-auto">
+              <p>
+                I'm a multi disiplanary visual designer and frontend dabbler
+                from the East Coast. I've built visual identities, websites, for
+                B2B & B2C clients from pre-seed and beyond.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="history" class="col-span-6 border-l">
+        <div class="mx-auto max-w-screen-2xl border-b p-8 pt-32">
           <div class="mb-4 text-sm font-light uppercase tracking-widest">
-            Visual Designer & maker of things.
+            Where I am:
           </div>
-          <span class="mt-4 text-3xl font-light text-neutral-800">
-            If you didnt know me already,<span class="text-neutral-200">
-              (awkward..)</span
-            >
-            <br /> its great to meet you & thanks for stopping by.
-          </span>
-          <div class="mt-12 sm:mt-8 lg:ml-auto">
-            <p>
-              I'm a multi disiplanary visual designer and frontend dabbler from
-              the East Coast. I've built visual identities, websites, for
-              clients from pre-seed and beyond.
-            </p>
+          <a
+            class="mt-4 text-xl font-light text-neutral-800 hover:text-neutral-300"
+            href="/contact"
+          >
+            Open for work (FT/FL)
+          </a>
+        </div>
+        <div class="mx-auto max-w-screen-2xl border-b p-8">
+          <div class="mb-4 text-sm font-light uppercase tracking-widest">
+            Where I've Been:
           </div>
+          <div class="mt-4 text-xl font-light text-neutral-800 line-through">
+            <ul><a href="https://statype.com">Statype</a></ul>
+            <ul>
+              <ul><a href="https://gremlin.com">Gremlin</a></ul>
+              <ul><a href="https://statype.com">Taxi</a></ul>
+              <ul>
+                <a
+                  href="https://adage.com/article/agency-news/what-you-missed-barton-f-grafs-funeral/2206406"
+                  >Barton F. Graf <span class="text-neutral-300">R.I.P.</span
+                  ></a
+                >
+              </ul>
+              <ul><a href="https://grey.com">Grey NY</a></ul>
+              <ul><a href="https://mothernewyork.com">Mother NY</a></ul>
+            </ul>
+          </div>
+        </div><div class="mx-auto max-w-screen-2xl p-8">
+          <div class="mb-4 text-sm font-light uppercase tracking-widest">
+            Some Brands I've worked with:
+          </div>
+          <ul class="mt-4 text-xl font-light text-neutral-800">
+            <ul>Gravitee</ul>
+            <ul>PEOMG</ul>
+            <ul>D.F.A. Capital</ul>
+            <ul>Bullet Bourbon</ul>
+            <ul>Kettle One</ul>
+            <ul>Supercell</ul>
+            <ul>Brinks Home Security</ul>
+            <ul>Kintaba</ul>
+            <ul>Little Caesars</ul>
+            <ul>
+              Papa Johns <span class="text-neutral-200">
+                (before the racism)
+              </span>
+            </ul>
+            <ul>Covergirl</ul>
+            <ul>NYC Sanitation Dept.</ul>
+            <ul>Ally Bank</ul>
+            <ul>GSK</ul>
+            <ul>3M</ul>
+            <ul>Marriot</ul>
+            <ul>
+              <span class="text-neutral-200">
+                and more I've surely forgotten...</span
+              >
+            </ul>
+          </ul>
         </div>
       </div>
     </section>

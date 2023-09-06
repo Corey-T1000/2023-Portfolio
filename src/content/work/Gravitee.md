@@ -1,8 +1,10 @@
 ---
 featured: true
+featuredRank: 2
 title: Gravitee
 description: |
   Gravitee is the first-ever event-native API Management solution that natively supports synchronous REST APIs, asynchronous APIs, and event brokers like Kafka and MQTT.
+date: "2022-01-01"
 tags:
   - Identity
   - Design System

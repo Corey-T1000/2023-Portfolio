@@ -9,6 +9,18 @@ import PortfolioPreview from "../components/PortfolioPreview.astro";
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection("work"))
   .filter((project) => project.data.featured === true)
+  .sort((a, b) => {
+    if (
+      typeof a.data.featuredRank === "number" &&
+      typeof b.data.featuredRank === "number"
+    ) {
+      return a.data.featuredRank - b.data.featuredRank;
+    }
+    if (a.data.date && b.data.date) {
+      return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+    }
+    return 0;
+  })
   .slice(0, 4);
 ---
 

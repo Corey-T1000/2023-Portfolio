@@ -6,8 +6,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PortfolioPreview from "../../components/PortfolioPreview.astro";
 import Grid from "../../components/Grid.astro";
 
-// Content Fetching:
-const projects = await getCollection("work");
+// Content Fetching: List all work projects, sorted randomly
+const projects = (await getCollection("work")).sort(() => Math.random() - 0.5);
 ---
 
 <BaseLayout title="Work | Corey T" description="Most recent projects">

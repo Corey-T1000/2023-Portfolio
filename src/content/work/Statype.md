@@ -1,8 +1,10 @@
 ---
 featured: true
+featuredRank: 2
 title: Statype
 description: |
   Statype simplifys automatically generate insights and analysis without writing a single line of SQL or building custom dashboards
+date: "2023-08-01"
 tags:
   - Identity
   - Design System

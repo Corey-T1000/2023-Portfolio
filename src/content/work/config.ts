@@ -3,9 +3,11 @@ import { defineCollection, z } from 'astro:content';
 export const collections = {
 	work: defineCollection({
 		schema: z.object({
+      featured: z.boolean(),
+			featuredRank: z.number().optional(),
 			title: z.string(),
 			description: z.string(),
-			publishDate: z.coerce.date(),
+			date: z.coerce.date(),
 			tags: z.array (z.string()),
       thumb: z.string(),
 			img: z.array(

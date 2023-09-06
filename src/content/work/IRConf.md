@@ -3,6 +3,7 @@ featured: false
 title: IR Conf
 description: |
   The incident response conference
+date: "2021-04-01"
 tags:
   - Identity Design
 thumb: "../../images/irconf/irconf-logo@2x.png"

@@ -1,8 +1,10 @@
 ---
 featured: true
+featuredRank: 3
 title: D.F.A. Capital
 description: |
   D.F.A. Capital is a VC firm committed to DEI and industry disruption.
+date: "2021-04-01"
 tags:
   - Identity Design
   - Web Design

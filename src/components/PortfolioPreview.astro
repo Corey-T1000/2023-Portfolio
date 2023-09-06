@@ -8,15 +8,33 @@ interface Props {
 const { data, slug } = Astro.props.project;
 ---
 
-<a
-  href={`/work/${slug}`}
-  class="mx-auto max-w-screen-2xl border-x transition duration-300 ease-in-out hover:shadow-md"
->
-  <img
-    class="flex h-full w-full flex-col object-cover"
-    src={data.thumb}
-    alt={data.img_alt}
-    loading="lazy"
-    decoding="async"
-  />
-</a>
+<div class="portfolio-container group relative">
+  <a
+    href={`/work/${slug}`}
+    class="mx-auto block max-w-screen-2xl border-x transition duration-300 ease-in-out focus-within:opacity-100"
+  >
+    <img
+      class="flex h-full w-full flex-col object-cover"
+      src={data.thumb}
+      alt={data.img_alt}
+      loading="lazy"
+      decoding="async"
+    />
+    <div
+      class="portfolio-title absolute inset-x-0 bottom-0 py-4 text-center text-xs uppercase tracking-widest opacity-0 transition-opacity duration-300 ease-in-out group-focus-within:opacity-100 group-hover:opacity-100"
+    >
+      {data.title}
+    </div>
+  </a>
+</div>
+
+<style>
+  .portfolio-container {
+    position: relative;
+  }
+
+  .portfolio-title {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+</style>

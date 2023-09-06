@@ -3,6 +3,7 @@ featured: false
 title: PEOMG
 description: |
   PEOMG simplifies the search for the right PEO for small businesses.
+date: "2023-06-01"
 tags:
   - Identity Design
 thumb: "../../images/peomg/peomg-logo@2x.png"

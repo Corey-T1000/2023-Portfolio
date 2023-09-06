@@ -1,8 +1,10 @@
 ---
 featured: true
+featuredRank: 4
 title: Gremlin
 description: |
   Gremlin is a platform for chaos engineering.
+date: "2022-08-01"
 tags:
   - Identity
   - Web Design

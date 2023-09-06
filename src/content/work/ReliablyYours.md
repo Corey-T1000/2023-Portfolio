@@ -3,6 +3,7 @@ featured: false
 title: Reliably Yours
 description: |
   Reliably Yours is an engineering consultancy focused on SaaS system resilience.
+date: "2023-06-01"
 tags:
   - Identity Design
 thumb: "../../images/ry/reliablyyours-1@2x.png"

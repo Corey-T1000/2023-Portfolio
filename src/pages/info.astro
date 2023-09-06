@@ -9,9 +9,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       id="Hero"
       class="relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border-x md:grid"
     >
-      <div class="col-span-6">
+      <div class="relative col-span-6">
         <div
-          class="top-0 z-10 mx-auto max-w-screen-2xl p-8 pb-12 pt-32 md:sticky"
+          class="top-24 z-10 mx-auto max-w-screen-2xl flex-grow p-8 pb-0 pt-32 md:sticky md:h-screen"
         >
           <div class="max-w-2xl">
             <div class="mb-4 text-sm font-light uppercase tracking-widest">
@@ -24,12 +24,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <br /> its great to meet you & thanks for stopping by.
             </span>
             <div class="mt-12 sm:mt-8 lg:ml-auto">
-              <p>
-                I'm a multi disiplanary visual designer and frontend dabbler
-                from the East Coast. I've built visual identities, websites, for
-                B2B & B2C clients from pre-seed and beyond.
-              </p>
+              I'm a multi-disiplanary visual designer and frontend dabbler from
+              the East Coast. I've worked with and built brands for B2B & B2C
+              clients from pre-seed and beyond.
             </div>
+          </div>
+          <div class="absolute bottom-0">
+            <img
+              src="public/images/coreyt-hi.png"
+              class="hidden w-3/4 md:inline"
+            />
           </div>
         </div>
       </div>
@@ -98,6 +102,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </ul>
         </div>
       </div>
+      <img
+        src="public/images/coreyt-hi.png"
+        class="inline w-1/2 items-end pl-8 md:hidden"
+      />
     </section>
   </div>
 </BaseLayout>

@@ -22,7 +22,12 @@ declare module 'astro:content' {
 	export { z } from 'astro/zod';
 
 	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
-	export type CollectionEntry<C extends keyof AnyEntryMap> = Flatten<AnyEntryMap[C]>;
+
+	export type CollectionKey = keyof AnyEntryMap;
+	export type CollectionEntry<C extends CollectionKey> = Flatten<AnyEntryMap[C]>;
+
+	export type ContentCollectionKey = keyof ContentEntryMap;
+	export type DataCollectionKey = keyof DataEntryMap;
 
 	// This needs to be in sync with ImageMetadata
 	export type ImageFunction = () => import('astro/zod').ZodObject<{
@@ -38,6 +43,7 @@ declare module 'astro:content' {
 				import('astro/zod').ZodLiteral<'webp'>,
 				import('astro/zod').ZodLiteral<'gif'>,
 				import('astro/zod').ZodLiteral<'svg'>,
+				import('astro/zod').ZodLiteral<'avif'>,
 			]
 		>;
 	}>;
@@ -178,118 +184,13 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"work": {
-"Brinks.md": {
-	id: "Brinks.md";
-  slug: "brinks";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"Bulleit-Impressions.md": {
-	id: "Bulleit-Impressions.md";
-  slug: "bulleit-impressions";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"Bulleit-Tattoo.md": {
-	id: "Bulleit-Tattoo.md";
-  slug: "bulleit-tattoo";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"CoverageCoalition.md": {
-	id: "CoverageCoalition.md";
-  slug: "coveragecoalition";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"DFACapital.md": {
-	id: "DFACapital.md";
-  slug: "dfacapital";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"Gravitee.md": {
-	id: "Gravitee.md";
-  slug: "gravitee";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"Gremlin.md": {
-	id: "Gremlin.md";
-  slug: "gremlin";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"IRConf.md": {
-	id: "IRConf.md";
-  slug: "irconf";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"Little-Caesars.md": {
-	id: "Little-Caesars.md";
-  slug: "little-caesars";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"Misc.md": {
-	id: "Misc.md";
-  slug: "misc";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"NYC-Organics.md": {
-	id: "NYC-Organics.md";
-  slug: "nyc-organics";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"PEOMG.md": {
-	id: "PEOMG.md";
-  slug: "peomg";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"Papa-Johns.md": {
-	id: "Papa-Johns.md";
-  slug: "papa-johns";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"ReliablyYours.md": {
-	id: "ReliablyYours.md";
-  slug: "reliablyyours";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-"Statype.md": {
-	id: "Statype.md";
-  slug: "statype";
-  body: string;
-  collection: "work";
-  data: any
-} & { render(): Render[".md"] };
-};
-
+		
 	};
 
 	type DataEntryMap = {
-		
+		"work": {
+};
+
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;

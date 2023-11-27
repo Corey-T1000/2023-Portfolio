@@ -1,27 +1,11 @@
 ---
-import { getCollection } from "astro:content";
-
 import "@splidejs/splide/css";
-import BaseLayout from "../layouts/BaseLayout.astro";
+
 import Grid from "../components/Grid.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Content Fetching: List four most recent work projects
-const projects = (await getCollection("work"))
-  .filter((project) => project.data.featured === true)
-  .sort((a, b) => {
-    if (
-      typeof a.data.featuredRank === "number" &&
-      typeof b.data.featuredRank === "number"
-    ) {
-      return a.data.featuredRank - b.data.featuredRank;
-    }
-    if (a.data.date && b.data.date) {
-      return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-    }
-    return 0;
-  })
-  .slice(0, 4);
 ---
 
 <BaseLayout>
@@ -52,7 +36,7 @@ const projects = (await getCollection("work"))
     </section>
     <section id="Featured Work">
       <div
-        class="border-gray mx-auto max-w-screen-2xl border-x border-y py-8 md:border-t-0"
+        class="border-gray mx-auto max-w-screen-2xl border-x py-8 md:border-t-0"
       >
         <div
           class="align-center w-full justify-between pl-8 text-left md:inline-flex"
@@ -64,9 +48,7 @@ const projects = (await getCollection("work"))
           >
           </div>
         </div>
-        <Grid>
-          {projects.map((project) => <PortfolioPreview project={project} />)}
-        </Grid>
+        <Grid />
       </div>
     </section>
   </div>

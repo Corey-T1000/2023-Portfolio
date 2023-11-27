@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+
+import Icon from "../../components/Icon.astro";
+import Tag from "../../components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import gremlinLogos from "../../assets/gremlin/gremlinLogos@2x.png";
+import gremlinBlog from "../../assets/gremlin/gremlinBlog@2x.png";
+import gremlinMktUI from "../../assets/gremlin/gremlinMktUI@2x.png";
+import gremlinScoreUI from "../../assets/gremlin/gremlinScoreUI@2x.png";
+import gremlinBFWP from "../../assets/gremlin/gremlinBFWP@2x.png";
+import gremlinGapWP from "../../assets/gremlin/gremlinGapWP@2x.png";
+import gremlinSLOWP from "../../assets/gremlin/gremlinSLOWP@2x.png";
+---
+
+<BaseLayout title=`Gremlin - Corey T` description="Gremlin Visual Identity">
+  <div class="mx-auto w-full justify-center">
+    <div
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border border-b-0 py-8 md:grid md:border-t-0"
+    >
+      <div class="relative col-span-12 grid-cols-12 justify-between md:grid">
+        <div
+          class="top-0 z-10 col-span-full grid bg-neutral-100 px-8 md:col-span-6"
+          id="description"
+        >
+          <a
+            class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
+            href="/work/"><Icon icon="arrow-left" /> Work</a
+          >
+          <h1 class="mb-2 text-5xl font-light">Gremlin Visual Identity</h1>
+          <div class="-ml-2 mb-4 justify-start">
+            <Tag text="Identity" />
+            <Tag text="Web development" />
+            <Tag text="events" />
+            <Tag text="print" />
+            <Tag text="product" />
+            <Tag text="illustration" />
+          </div>
+        </div>
+        <div
+          class="relative col-span-full gap-4 place-self-center px-8 md:col-span-6 md:mt-4"
+        >
+          <p class="text-md font-light">
+            Gremlin is a leader in digital reliability, offering innovative
+            Chaos Engineering tools for large-scale systems. Their platform is
+            essential in ensuring uninterrupted online services, with
+            user-friendly testing methods that identify risks and foster
+            continuous improvement.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
+    >
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="col-span-full md:col-span-6"
+      >
+        <source
+          src="/src/assets/gremlin/gremlinLogoAnimated_full_whiteOnViolet.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <Image
+        src={gremlinLogos}
+        alt="Gremlin Icon"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+      <Image
+        src={gremlinScoreUI}
+        alt="Gremlin UI stylized for marketing materials"
+        class="col-span-full px-8 pb-8 md:col-span-6"
+      />
+      <Image
+        src={gremlinMktUI}
+        alt="Gremlin UI stylized for marketing materials"
+        class="col-span-full px-8 pb-8 md:col-span-6"
+      />
+      <Image
+        src={gremlinBlog}
+        alt="Gremlin blog illustrations"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+      <Image
+        src={gremlinSLOWP}
+        alt="Gremlin SLO whitepaper social post"
+        class="col-span-full pb-8 pl-8 pr-8 md:col-span-3 md:pr-4"
+      />
+      <Image
+        src={gremlinGapWP}
+        alt="Gremlin Reliability Gap whitepaper social post"
+        class="col-span-full pb-8 pl-8 pr-8 md:col-span-3 md:pl-4"
+      />
+    </div>
+  </div>
+</BaseLayout>

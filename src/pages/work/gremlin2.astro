@@ -1,0 +1,37 @@
+---
+import Icon from "../../components/Icon.astro";
+import Tag from "../../components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title=`Gremlin - Corey T`
+  description='Gremlin Visual Identity'
+>
+  <div class="mx-auto w-full justify-center">
+    <div
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border py-8 md:grid md:border-t-0"
+    >
+      <div class="relative col-span-12">
+        <div
+          class="top-0 z-10 grid-cols-12 col-span-4 bg-neutral-100 px-8 md:sticky md:col-span-4"
+          id="description"
+        >
+          <a
+            class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
+            href="/work/"><Icon icon="arrow-left" /> Work</a
+          >
+          <h1 class="mb-2 text-2xl font-bold">Test Title</h1>
+          <div class=" -ml-2 mb-4 justify-start">
+            <Tag text="Test Tag"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-8" id="images">
+        <div class="grid grid-cols-12 gap-4">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

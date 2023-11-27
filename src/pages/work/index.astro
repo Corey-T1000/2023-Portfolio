@@ -1,10 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 
-import BaseLayout from "../../layouts/BaseLayout.astro";
-
-import PortfolioPreview from "../../components/PortfolioPreview.astro";
 import Grid from "../../components/Grid.astro";
+import PortfolioPreview from "../../components/PortfolioPreview.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 // Content Fetching: List all work projects, sorted randomly
 const projects = (await getCollection("work")).sort(() => Math.random() - 0.5);
@@ -13,7 +12,7 @@ const projects = (await getCollection("work")).sort(() => Math.random() - 0.5);
 <BaseLayout title="Work | Corey T" description="Most recent projects">
   <section id="Work">
     <div
-      class="mx-auto max-w-screen-2xl flex-grow border-x border-t py-8 md:border-t-0"
+      class="mx-auto max-w-screen-2xl grow border-x border-t py-8 md:border-t-0"
     >
       <div class="mx-auto w-full justify-center">
         <Grid>

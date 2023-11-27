@@ -1,10 +1,9 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
 
-import BaseLayout from "../../layouts/BaseLayout.astro";
-
 import Icon from "../../components/Icon.astro";
 import Tag from "../../components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 interface Props {
   entry: CollectionEntry<"work">;
@@ -31,7 +30,7 @@ const { Content } = await entry.render();
 >
   <div class="mx-auto w-full justify-center">
     <div
-      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border-x border-y py-8 md:grid md:border-t-0"
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border py-8 md:grid md:border-t-0"
     >
       <div class="relative md:col-span-4">
         <div
@@ -77,7 +76,7 @@ const { Content } = await entry.render();
                     controls
                   />
                 );
-              } else {
+              }
                 return (
                   <img
                     class={`${layoutClass} w-full`}
@@ -85,7 +84,7 @@ const { Content } = await entry.render();
                     alt={media.alt || ""}
                   />
                 );
-              }
+
             })
           }
         </div>

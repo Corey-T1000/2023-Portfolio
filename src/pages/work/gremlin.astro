@@ -164,7 +164,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <Image
           src={gremlinSLOWP}
           alt="Gremlin SLO whitepaper social post"
-          class=""
+          class="rounded-lg border"
         />
         <div class="justify-self-center">
           <a
@@ -178,7 +178,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <Image
           src={gremlinGapWP}
           alt="Gremlin SLO whitepaper social post"
-          class=""
+          class="rounded-lg border"
         />
         <div class="justify-self-center">
           <a
@@ -194,14 +194,24 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         class="col-span-full pb-8 md:col-span-6"
       />
 
-      <div class="col-span-full px-8 pb-8 sm:col-span-2 sm:pl-8 sm:pr-4">
-        <Image src={gremlinHomepage} alt="Gremlin Landing page" class="" />
+      <div class="col-span-full gap-8 px-8 pb-8 sm:col-span-3 sm:pl-8 sm:pr-4">
+        <Image
+          src={gremlinHomepage}
+          alt="Gremlin Landing page"
+          class="mb-8 rounded-lg border"
+        />
+        <Image
+          src={gremlin404}
+          alt="Gremlin 404 page"
+          class="rounded-lg border"
+        />
       </div>
-      <div class="col-span-full px-8 pb-8 sm:col-span-2 sm:px-4">
-        <Image src={gremlinProduct} alt="Gremlin Product page" class="" />
-      </div>
-      <div class="col-span-full px-8 pb-8 sm:col-span-2 sm:pl-4 sm:pr-8">
-        <Image src={gremlin404} alt="Gremlin 404 page" class="" />
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={gremlinProduct}
+          alt="Gremlin Product page"
+          class="rounded-lg border"
+        />
       </div>
     </div>
   </div>

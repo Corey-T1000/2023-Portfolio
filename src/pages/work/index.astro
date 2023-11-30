@@ -1,5 +1,6 @@
 ---
 import Grid from "../../components/Grid.astro";
+import OldWorkPreview from "../../components/OldWorkPreview.astro";
 import PortfolioPreview from "../../components/PortfolioPreview.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
@@ -12,8 +13,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           Visual Designer & maker of things.
         </div>
         <span class="mt-4 text-3xl font-light text-neutral-800">
-          Ive had the fortune of working with amazing people to create
-          everything here. <br />
+          Ive had the fortune of working with amazing teams & people while
+          creating everything here. <br />
           <span class="text-neutral-200"
             ><br class="inline sm:hidden" />
             (I hope you'll be next)</span
@@ -43,7 +44,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </div>
     </div>
   </section>
-  <section id="Recent Work">
+  <section id="Not Recent Work">
     <div
       class="mx-auto max-w-screen-2xl grow border-x border-t py-8 md:border-t-0"
     >
@@ -59,7 +60,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </div>
         </div>
         <Grid>
-          <PortfolioPreview />
+          <OldWorkPreview />
         </Grid>
       </div>
     </div>

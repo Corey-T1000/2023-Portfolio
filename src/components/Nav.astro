@@ -1,10 +1,16 @@
+---
+import { Image } from "astro:assets";
+
+import ctLogo from "../assets/ct-logo.png";
+---
+
 <div
   class="border-gray mx-auto flex w-full max-w-screen-2xl flex-col border border-t-0 p-8 sm:flex-row sm:items-center sm:justify-between"
   x-data="{ open: false }"
 >
   <div class="flex flex-row items-center justify-between text-neutral-800">
     <a class="inline-flex py-2 font-light uppercase sm:items-center" href="/"
-      ><img src="../../images/ct-logo.png" class="max-h-8" />
+      ><Image src={ctLogo} alt="CT Logomark" class="max-h-8 w-auto" />
     </a>
     <button
       class="focus:shadow-outline rounded-lg focus:outline-none sm:hidden"

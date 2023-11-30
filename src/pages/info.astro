@@ -1,6 +1,9 @@
 ---
 import "@splidejs/splide/css";
 
+import { Image } from "astro:assets";
+
+import coreyTHi from "../assets/coreyt-hi.png";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -14,7 +17,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div
           class="top-24 z-10 mx-auto max-w-screen-2xl grow p-8 pb-0 pt-32 md:sticky md:h-screen"
         >
-          <div class="max-w-2xl">
+          <div
+            id="text"
+            class="b relative z-10 max-w-2xl bg-slate-50/20 pb-8 backdrop-blur"
+          >
             <div class="mb-4 text-sm font-light uppercase tracking-widest">
               Visual Designer & maker of things.
             </div>
@@ -25,14 +31,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <br /> its great to meet you & thanks for stopping by.
             </span>
             <div class="mt-12 sm:mt-8 lg:ml-auto">
-              I'm a multi-disiplanary visual designer and frontend dabbler from
+              I'm a multidisciplinary visual designer and frontend dabbler from
               the East Coast. I've worked with and built brands for B2B & B2C
               clients from pre-seed and beyond.
             </div>
           </div>
-          <div class="absolute bottom-0">
-            <img
-              src="../../images/coreyt-hi.png"
+          <div class="relative -bottom-8">
+            <Image
+              src={coreyTHi}
+              alt="Portrait of Corey smiling wide"
               class="hidden w-3/4 md:inline"
             />
           </div>
@@ -133,8 +140,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </ul>
         </div>
       </div>
-      <img
-        src="../../images/coreyt-hi.png"
+      <Image
+        src={coreyTHi}
+        alt="Portrait of Corey smiling wide"
         class="inline w-1/2 items-end pl-8 md:hidden"
       />
     </section>

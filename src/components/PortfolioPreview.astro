@@ -1,38 +1,54 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
 
-interface Props {
-  project: CollectionEntry<"work">;
-}
+import gremlinLogo from "../assets/gremlin/gremlinLogo@2x.png";
+import statypeLogo from "../assets/statype/statype.gif";
+import gremlin from "../pages/work/gremlin.astro";
+import statype from "../pages/work/statype.astro";
 
-const { data, slug } = Astro.props.project;
+const projects = [
+  {
+    component: gremlin,
+    slug: "gremlin",
+    thumb: gremlinLogo,
+    img_alt: "Gremlin Thumbnail",
+    title: "Gremlin Project",
+  },
+  {
+    component: statype,
+    slug: "statype",
+    thumb: statypeLogo,
+    img_alt: "Statype Thumbnail",
+    title: "Statype Project",
+  },
+];
 ---
 
-<div class="portfolio-container group relative">
-  <a
-    href={`/work/${slug}`}
-    class="mx-auto block max-w-screen-2xl transition duration-300 ease-in-out focus-within:opacity-100"
-  >
-    <img
-      class="flex h-full w-full flex-col object-cover"
-      src={data.thumb}
-      alt={data.img_alt}
-      loading="lazy"
-      decoding="async"
-    />
-    <div
-      class="portfolio-title absolute inset-x-0 bottom-0 py-4 text-center text-xs uppercase tracking-widest opacity-0 transition-opacity duration-300 ease-in-out group-focus-within:opacity-100 group-hover:opacity-100"
-    >
-      {data.title}
+{
+  projects.map((project) => (
+    <div class="portfolio-item col-span-1">
+      <a
+        href={`/work/${project.slug}`}
+        class="mx-auto block max-w-screen-2xl transition duration-300 ease-in-out focus-within:opacity-100"
+      >
+        <Image
+          src={project.thumb}
+          alt={project.img_alt}
+          class="flex h-full w-full flex-col object-cover"
+        />
+
+        <div class="portfolio-title absolute inset-x-0 bottom-0 py-4 text-center text-xs uppercase tracking-widest opacity-0 transition-opacity duration-300 ease-in-out group-focus-within:opacity-100 group-hover:opacity-100">
+          {project.title}
+        </div>
+      </a>
     </div>
-  </a>
-</div>
+  ))
+}
 
 <style>
-  .portfolio-container {
+  .portfolio-item {
     position: relative;
   }
-
   .portfolio-title {
     background-color: rgba(0, 0, 0, 0.2);
     color: white;

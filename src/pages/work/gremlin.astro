@@ -1,0 +1,226 @@
+---
+import { Image } from "astro:assets";
+
+import gremlin404 from "../../assets/gremlin/gremlin404@2x.png";
+import gremlinAWSBooth from "../../assets/gremlin/gremlinAWSBooth@2x.png";
+import gremlinBlog from "../../assets/gremlin/gremlinBlog@2x.png";
+import gremlinGapWP from "../../assets/gremlin/gremlinGapWP@2x.png";
+import gremlinHomepage from "../../assets/gremlin/gremlinHomepage@2x.png";
+import gremlinIcons from "../../assets/gremlin/gremlinIcons@2x.png";
+import gremlinVideo from "../../assets/gremlin/gremlinLogoAnimated_full_whiteOnViolet.mp4";
+import gremlinLogos from "../../assets/gremlin/gremlinLogos@2x.png";
+import gremlinMktUI from "../../assets/gremlin/gremlinMktUI@2x.png";
+import gremlinOld2 from "../../assets/gremlin/gremlinOld2.png";
+import gremlinProduct from "../../assets/gremlin/gremlinProduct@2x.png";
+import gremlinScoreUI from "../../assets/gremlin/gremlinScoreUI@2x.png";
+import gremlinSLOWP from "../../assets/gremlin/gremlinSLOWP@2x.png";
+import Icon from "../../components/Icon.astro";
+import Tag from "../../components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Gremlin - Corey T" description="Gremlin Visual Identity">
+  <div class="mx-auto w-full justify-center">
+    <div
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border border-b-0 py-8 md:grid md:border-t-0"
+    >
+      <div class="relative col-span-12 grid-cols-12 justify-between md:grid">
+        <div
+          class="top-0 z-10 col-span-full grid bg-neutral-100 px-8 md:col-span-6"
+          id="description"
+        >
+          <a
+            class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
+            href="/work/"><Icon icon="arrow-left" /> Work</a
+          >
+          <h1 class="mb-2 text-5xl font-light">Gremlin Visual Identity</h1>
+          <div class="-ml-2 mb-4 justify-start">
+            <Tag text="Identity" />
+            <Tag text="Web development" />
+            <Tag text="events" />
+            <Tag text="print" />
+            <Tag text="product" />
+            <Tag text="illustration" />
+          </div>
+        </div>
+        <div
+          class="relative col-span-full gap-4 place-self-center px-8 md:col-span-6 md:mt-4"
+        >
+          <p class="text-md font-light">
+            Gremlin is a leader in digital reliability, offering innovative
+            Chaos Engineering tools for large-scale systems. Their platform is
+            essential in ensuring uninterrupted online services, with
+            user-friendly testing methods that identify risks and foster
+            continuous improvement.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
+    >
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="col-span-full pb-8 md:col-span-6"
+      >
+        <source src={gremlinVideo} type="video/mp4" />
+      </video>
+      <div
+        class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Challenge
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          Originally designed with SREs as the target audience, Gremlin's
+          branding, featuring darker tones and mischievous gremlin mascots,
+          resonated well and worked great to build brand recognition. However,
+          as the target shifted to C-Suite executives, the branding,
+          particularly the 'chaos' theme and mascot, became less appealing.
+        </p>
+      </div>
+      <Image
+        src={gremlinOld2}
+        alt="Gremlin previous branding refrence"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+      <div
+        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Solution
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          We worked with the team at Studio Science to develop a sound brand
+          strategy and build an updated visual identity. We worked to keep
+          several existing elements including the base word mark to keep the
+          brand recognition Gremlin had worked so hard to build. <br />
+          <br /> Focusing on the identified Sage persona, we adjusted the visual
+          language to provide a sense of wisdom and reassurance. This was especially
+          important in a product based on causing errors in order to provide a better
+          end user experience.
+        </p>
+      </div>
+
+      <Image
+        src={gremlinLogos}
+        alt="Gremlin Icon"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+      <Image
+        src={gremlinScoreUI}
+        alt="Gremlin UI stylized for marketing materials"
+        class="col-span-full px-8 pb-8 md:col-span-6"
+      />
+      <div
+        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Execution
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          This significant visual overhaul aimed to preserve brand recognition
+          while updating the core persona and identity. We revamped all brand
+          touch points, including pitch decks, sales materials, event booths,
+          the website, and product interfaces. The design system update
+          facilitated a smooth transition across all areas, allowing for
+          detail-focused launches.
+        </p>
+      </div>
+      <Image
+        src={gremlinIcons}
+        alt="Gremlin Icon illustrations"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+      <Image
+        src={gremlinMktUI}
+        alt="Gremlin UI stylized for marketing materials"
+        class="col-span-full px-8 pb-8 md:col-span-6"
+      />
+
+      <Image
+        src={gremlinBlog}
+        alt="Gremlin blog illustrations"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+
+      <div class="col-span-full grid gap-4 px-8 pb-8 md:col-span-3 md:pr-4">
+        <Image
+          src={gremlinSLOWP}
+          alt="Gremlin SLO whitepaper social post"
+          class="rounded-lg border"
+        />
+        <div class="justify-self-center">
+          <a
+            href="/../../assets/gremlin/Achieving-SLO-Success-with-Golden-Signals-and-Reliability-Testing.pdf"
+            class="inline-flex items-center gap-2 rounded-full bg-neutral-800/5 px-6 py-2 text-xs font-medium uppercase tracking-widest text-neutral-800 duration-200 hover:bg-white"
+            >See the whitepaper<Icon icon="arrow-right" /></a
+          >
+        </div>
+      </div>
+      <div class="col-span-full grid gap-4 px-8 pb-8 md:col-span-3 md:pr-4">
+        <Image
+          src={gremlinGapWP}
+          alt="Gremlin SLO whitepaper social post"
+          class="rounded-lg border"
+        />
+        <div class="justify-self-center">
+          <a
+            href="/../../assets/gremlin/Closing-the-reliability-gap.pdf"
+            class="inline-flex items-center gap-2 rounded-full bg-neutral-800/5 px-6 py-2 text-xs font-medium uppercase tracking-widest text-neutral-800 duration-200 hover:bg-white"
+            >See the whitepaper<Icon icon="arrow-right" /></a
+          >
+        </div>
+      </div>
+      <Image
+        src={gremlinAWSBooth}
+        alt="Gremlin AWS Booth mockup"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+
+      <div class="col-span-full gap-8 px-8 pb-8 sm:col-span-3 sm:pl-8 sm:pr-4">
+        <Image
+          src={gremlinHomepage}
+          alt="Gremlin Landing page"
+          class="mb-8 rounded-lg border"
+        />
+        <Image
+          src={gremlin404}
+          alt="Gremlin 404 page"
+          class="rounded-lg border"
+        />
+      </div>
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={gremlinProduct}
+          alt="Gremlin Product page"
+          class="rounded-lg border"
+        />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

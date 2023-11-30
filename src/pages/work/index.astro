@@ -1,23 +1,66 @@
 ---
-import { getCollection } from "astro:content";
-
-import BaseLayout from "../../layouts/BaseLayout.astro";
-
-import PortfolioPreview from "../../components/PortfolioPreview.astro";
 import Grid from "../../components/Grid.astro";
-
-// Content Fetching: List all work projects, sorted randomly
-const projects = (await getCollection("work")).sort(() => Math.random() - 0.5);
+import OldWorkPreview from "../../components/OldWorkPreview.astro";
+import PortfolioPreview from "../../components/PortfolioPreview.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Work | Corey T" description="Most recent projects">
-  <section id="Work">
+  <section id="Hero">
+    <div class="border-gray mx-auto max-w-screen-2xl border-x p-8 pb-16 pt-32">
+      <div class="max-w-2xl">
+        <div class="mb-4 text-sm font-light uppercase tracking-widest">
+          Visual Designer & maker of things.
+        </div>
+        <span class="mt-4 text-3xl font-light text-neutral-800">
+          Ive had the fortune of working with amazing teams & people while
+          creating everything here. <br />
+          <span class="text-neutral-200"
+            ><br class="inline sm:hidden" />
+            (I hope you'll be next)</span
+          >
+        </span>
+      </div>
+    </div>
+  </section>
+  <section id="Recent Work">
     <div
-      class="mx-auto max-w-screen-2xl flex-grow border-x border-t py-8 md:border-t-0"
+      class="mx-auto max-w-screen-2xl grow border-x border-t py-8 md:border-t-0"
     >
       <div class="mx-auto w-full justify-center">
+        <div
+          class="align-center w-full justify-between pl-8 text-left md:inline-flex"
+        >
+          <div class="mb-8 pr-8 text-sm font-light uppercase tracking-widest">
+            Recent Work
+          </div><div
+            class="mb-8 hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
         <Grid>
-          {projects.map((project) => <PortfolioPreview project={project} />)}
+          <PortfolioPreview />
+        </Grid>
+      </div>
+    </div>
+  </section>
+  <section id="Not Recent Work">
+    <div
+      class="mx-auto max-w-screen-2xl grow border-x border-t py-8 md:border-t-0"
+    >
+      <div class="mx-auto w-full justify-center">
+        <div
+          class="align-center w-full justify-between pl-8 text-left md:inline-flex"
+        >
+          <div class="mb-8 pr-8 text-sm font-light uppercase tracking-widest">
+            Not So Recent Work
+          </div><div
+            class="mb-8 hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <Grid>
+          <OldWorkPreview />
         </Grid>
       </div>
     </div>

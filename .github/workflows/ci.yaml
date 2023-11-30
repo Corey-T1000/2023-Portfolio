@@ -15,7 +15,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: pnpm
-      - run: pnpm install --ignore-scripts
+      - run: pnpm install 
       - name: List files for debugging
         run: ls -R src/components src/layouts
       - run: pnpm run build

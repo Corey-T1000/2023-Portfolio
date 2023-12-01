@@ -1,0 +1,208 @@
+---
+import { Image } from "astro:assets";
+
+import graviteeOG from "../../assets/gravitee/graviteeOG@2x.png";
+import graviteeOld1 from "../../assets/gravitee/graviteeOld1@2x.png";
+import graviteeOld2 from "../../assets/gravitee/graviteeOld2@2x.png";
+
+import Icon from "../../components/Icon.astro";
+import Tag from "../../components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Gravitee - Corey T" description="Gravitee Visual Identity">
+  <div class="mx-auto w-full justify-center">
+    <div
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border border-b-0 py-8 md:grid md:border-t-0"
+    >
+      <div class="relative col-span-12 grid-cols-12 justify-between md:grid">
+        <div
+          class="top-0 z-10 col-span-full grid bg-neutral-100 px-8 md:col-span-6"
+          id="description"
+        >
+          <a
+            class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
+            href="/work/"><Icon icon="arrow-left" /> Work</a
+          >
+          <h1 class="mb-2 text-5xl font-light">Gravitee.io Projects</h1>
+          <div class="-ml-2 mb-4 justify-start">
+            <Tag text="Identity" />
+            <Tag text="Web Design" />
+            <Tag text="Print" />
+            <Tag text="Illustration" />
+          </div>
+        </div>
+        <div
+          class="relative col-span-full gap-4 place-self-center px-8 md:col-span-6 md:mt-4"
+        >
+          <p class="text-md font-light">
+            Gravitee offers a state-of-the-art API management platform,
+            integrating both synchronous and asynchronous APIs with ease. It's
+            known for its user-friendly interface, robust security, and
+            innovative features like real-time analytics.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
+    >
+      <Image
+        src={graviteeOG}
+        alt="Gravitee OG image"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+
+      <div
+        class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Challenge
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          The Gravitee marketing team was looking to elevate their brand and
+          create more impactful and ownable assets, a task that was challenging
+          with a small in-house design team mostly focused on product
+          development. I was brought on to help fill out their in-house design
+          team creating more marketing focused assets and refining the existing
+          visual identity.
+        </p>
+      </div>
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={graviteeOld1}
+          alt="Gravitee Old pitch deck"
+          class="rounded-lg border"
+        />
+      </div>
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={graviteeOld2}
+          alt="Gravitee Old pitch deck"
+          class="rounded-lg border"
+        />
+      </div>
+
+      <div
+        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Solution
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          I worked closely with both the marketing and design teams to audit and
+          update the visual language, updating it to more closely match the
+          product while adding extra design <span class="italic">flair</span> for
+          marketing forcused assets. brand guidelines were key in crafting each piece
+          of collateral. Coordination with internal teams ensured that the designs
+          were not just visually appealing but functionally effective, reflecting
+          Gravitee's commitment to quality in the API sector.
+        </p>
+      </div>
+      <Image
+        src={graviteeOG}
+        alt="Gravitee Product page"
+        class="col-span-full pb-24 md:col-span-6"
+      />
+      <div class="col-span-3 grid grid-cols-4">
+        <div class="col-span-full sm:col-span-2">
+          <Image src={graviteeOG} alt="Gravitee Product page" class="border" />
+        </div>
+        <div class="col-span-full sm:col-span-2">
+          <Image src={graviteeOG} alt="Gravitee Product page" class="" />
+        </div>
+        <div class="col-span-full sm:col-span-2">
+          <Image src={graviteeOG} alt="Gravitee Product page" class="" />
+        </div>
+        <div class="col-span-full sm:col-span-2">
+          <Image src={graviteeOG} alt="Gravitee Product page" class="border" />
+        </div>
+      </div>
+      <div class="col-span-3 grid grid-cols-4">
+        <div class="col-span-full flex h-auto items-center px-24 py-2">
+          <Image src={graviteeOG} alt="Gravitee Product page" class="" />
+        </div>
+
+        <div
+          class="col-span-full flex h-auto items-center bg-neutral-900/95 px-24"
+        >
+          <Image src={graviteeOG} alt="Gravitee Product page" class="" />
+        </div>
+      </div>
+      <Image
+        src={graviteeOG}
+        alt="Gravitee OG image"
+        class="col-span-full border-b md:col-span-6"
+      />
+
+      <div
+        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 py-16"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Execution
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          Since starting with the team, we've developed an ongoing series of
+          assets, including but not limited to whitepapers, sales materials, and
+          even a mascot (named Newt). All anchored by a versatile visual
+          language for consistent designs across all touchpoints.
+        </p>
+      </div>
+
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={graviteeOG}
+          alt="Gravitee pitch deck"
+          class="rounded-lg border"
+        />
+      </div>
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={graviteeOG}
+          alt="Gravitee pitch deck"
+          class="rounded-lg border"
+        />
+      </div>
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={graviteeOG}
+          alt="Gravitee pitch deck"
+          class="rounded-lg border"
+        />
+      </div>
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={graviteeOG}
+          alt="Gravitee pitch deck"
+          class="rounded-lg border"
+        />
+      </div>
+      <Image
+        src={graviteeOG}
+        alt="Gravitee OG image"
+        class="col-span-full border-b md:col-span-6"
+      />
+    </div>
+  </div>
+</BaseLayout>

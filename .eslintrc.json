@@ -13,7 +13,7 @@
   ],
   "plugins": ["simple-import-sort"],
   "parserOptions": {
-    "project": true,
+    "project": "./tsconfig.json",
     "extraFileExtensions": [".astro"]
   },
   "settings": {

@@ -2,9 +2,11 @@
 import { Image } from "astro:assets";
 
 import dfacapitalLogo from "../assets/dfacapital/dfacapitalLogo@2x.png";
+import graviteeLogo from "../assets/gravitee/graviteeLogo@2x.png";
 import gremlinLogo from "../assets/gremlin/gremlinLogo@2x.png";
 import statypeLogo from "../assets/statype/statype.gif";
 import dfacapital from "../pages/work/dfacapital.astro";
+import gravitee from "../pages/work/gravitee.astro";
 import gremlin from "../pages/work/gremlin.astro";
 import statype from "../pages/work/statype.astro";
 
@@ -14,21 +16,28 @@ const projects = [
     slug: "gremlin",
     thumb: gremlinLogo,
     img_alt: "Gremlin Thumbnail",
-    title: "Gremlin Project",
+    title: "Gremlin Visual Identity",
   },
   {
     component: statype,
     slug: "statype",
     thumb: statypeLogo,
     img_alt: "Statype Thumbnail",
-    title: "Statype Project",
+    title: "Statype Visual Identity",
   },
   {
     component: dfacapital,
     slug: "dfacapital",
     thumb: dfacapitalLogo,
     img_alt: "Gremlin Thumbnail",
-    title: "Gremlin Project",
+    title: "D.F.A. Capital Identity",
+  },
+  {
+    component: gravitee,
+    slug: "gravitee",
+    thumb: graviteeLogo,
+    img_alt: "Gravitee Thumbnail",
+    title: "Gravitee Projects",
   },
 ];
 ---
@@ -44,6 +53,7 @@ const projects = [
           src={project.thumb}
           alt={project.img_alt}
           class="flex h-full w-full flex-col object-cover transition-all duration-500 ease-in-out hover:rounded-3xl"
+          quality="max"
         />
 
         <div class="portfolio-title absolute inset-x-0 bottom-0 py-4 text-center text-xs uppercase tracking-widest opacity-0 transition-opacity duration-300 ease-in-out group-focus-within:opacity-100 group-hover:opacity-100">

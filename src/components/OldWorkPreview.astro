@@ -1,29 +1,3 @@
----
-import { Image } from "astro:assets";
-
-import gremlinLogo from "../assets/gremlin/gremlinLogo@2x.png";
-import statypeLogo from "../assets/statype/statype.gif";
-import gremlin from "../pages/work/gremlin.astro";
-import statype from "../pages/work/statype.astro";
-
-const projects = [
-  {
-    component: statype,
-    slug: "statype",
-    thumb: statypeLogo,
-    img_alt: "Statype Thumbnail",
-    title: "Statype Project",
-  },
-  {
-    component: gremlin,
-    slug: "gremlin",
-    thumb: gremlinLogo,
-    img_alt: "Gremlin Thumbnail",
-    title: "Gremlin Project",
-  },
-];
----
-
 <div class="portfolio-item col-span-1">
   <div
     class="flex h-96 w-full flex-col bg-neutral-200/50 transition-all duration-500 ease-in-out hover:rounded-3xl hover:border-4 hover:border-neutral-200/50 hover:bg-neutral-100"

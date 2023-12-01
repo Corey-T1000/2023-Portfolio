@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import dfacapitalLogo from "../assets/dfacapital/dfacapitalLogoPink@2x.png";
+import dfacapitalLogo from "../assets/dfacapital/dfacapitalLogo@2x.png";
 import gremlinLogo from "../assets/gremlin/gremlinLogo@2x.png";
 import statypeLogo from "../assets/statype/statype.gif";
 import dfacapital from "../pages/work/dfacapital.astro";
@@ -22,6 +22,13 @@ const projects = [
     thumb: statypeLogo,
     img_alt: "Statype Thumbnail",
     title: "Statype Project",
+  },
+  {
+    component: dfacapital,
+    slug: "dfacapital",
+    thumb: dfacapitalLogo,
+    img_alt: "Gremlin Thumbnail",
+    title: "Gremlin Project",
   },
 ];
 ---

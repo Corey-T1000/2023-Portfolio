@@ -10,13 +10,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
           cache: pnpm
-      - run: pnpm install
-      - name: List files for debugging
-        run: ls -R src/components src/layouts
-      - run: pnpm run build
-      - run: pnpm run --if-present test
+
+      - name: Print Node.js version
+        run: node --version
+
+      - name: Print pnpm version
+        run: pnpm --version
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: List installed packages
+        run: pnpm list
+
+      - name: List project files
+        run: ls -al
+
+      - name: Set Git to use LF line endings
+        run: git config --global core.autocrlf false
+
+      - name: Build (Verbose)
+        run: pnpm run build --verbose
+
+      - name: Run tests (if present)
+        run: pnpm run --if-present test

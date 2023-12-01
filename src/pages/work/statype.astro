@@ -4,18 +4,15 @@ import { Image } from "astro:assets";
 import statypeDeck1 from "../../assets/statype/statypeDeck1@2x.png";
 import statypeDeck2 from "../../assets/statype/statypeDeck2@2x.png";
 import statypeDeck3 from "../../assets/statype/statypeDeck3@2x.png";
-import statypeDeck4 from "../../assets/statype/statypeDeck4@2x.png";
-import statypeWP from "../../assets/statype/statypeWP@2x.png";
 import statypeHomepage from "../../assets/statype/statypeHomepage@2x.png";
-import statypeProductpage from "../../assets/statype/statypeProductpage@2x.png";
-import statypeSalesUI from "../../assets/statype/statypeSalesUI@2x.png";
-import statypeMktSOC from "../../assets/statype/statypeMktSOC@2x.png";
 import statypeMktSales from "../../assets/statype/statypeMktSales@2x.png";
+import statypeMktSOC from "../../assets/statype/statypeMktSOC@2x.png";
 import statypeMktUI from "../../assets/statype/statypeMktUI@2x.png";
 import statypeOGImage from "../../assets/statype/statypeOGImage@2x.png";
 import statypeOld1 from "../../assets/statype/statypeOld-1@2x.png";
 import statypeOld2 from "../../assets/statype/statypeOld-2@2x.png";
-import statypeOpengraph from "../../assets/statype/statypeOpengraph@2x.png";
+import statypeProductpage from "../../assets/statype/statypeProductpage@2x.png";
+import statypeSalesUI from "../../assets/statype/statypeSalesUI@2x.png";
 import Icon from "../../components/Icon.astro";
 import Tag from "../../components/Tag.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
@@ -59,21 +56,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </div>
     <div
       class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
-    >
-      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
-        <Image
-          src={statypeOld1}
-          alt="statype Landing page"
-          class="rounded-lg border"
-        />
-      </div>
-      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
-        <Image
-          src={statypeOld2}
-          alt="statype Product page"
-          class="rounded-lg border"
-        />
-      </div>
+
+      <Image
+        src={statypeOpengraph}
+        alt="statype previous branding refrence"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+
       <div
         class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
       >
@@ -93,12 +82,21 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           focused on presenting complex data simply, needed a thorough
           accessibility audit.
         </p>
+
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={statypeOld1}
+          alt="statype Landing page"
+          class="rounded-lg border"
+        />
       </div>
-      <Image
-        src={statypeOpengraph}
-        alt="statype previous branding refrence"
-        class="col-span-full pb-8 md:col-span-6"
-      />
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={statypeOld2}
+          alt="statype Product page"
+          class="rounded-lg border"
+        />
+      </div>
       <div
         class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
       >
@@ -119,8 +117,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           standards and consistent lightness and contrast ratios. This palette
           was then seamlessly integrated into product graphs and marketing
           illustrations, unifying the visual language. We also refined the
-          layout and typography, choosing Lexend for its readability and
-          versatile weight range.
+
+          versatile weight range. Lastly we evolved the logo, creating a slimmer
+          and more balanced mark that better represented the brand.
         </p>
       </div>
       <Image

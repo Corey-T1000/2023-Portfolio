@@ -80,8 +80,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       const form = document.getElementById("contact-form") as HTMLFormElement;
 
       if (form) {
+        console.log("Form event listener being added"); // Debugging log
+
         form.addEventListener("submit", async (e) => {
           e.preventDefault();
+          console.log("Form submitted via JavaScript"); // Debugging log
 
           // Use type assertion to assure TypeScript about the specific types
           const nameInput = form.elements.namedItem("name") as HTMLInputElement;

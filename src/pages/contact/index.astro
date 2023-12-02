@@ -75,13 +75,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      console.log("DOM fully loaded and parsed");
-
       const form = document.getElementById("contact-form");
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        console.log("Form submit event triggered");
 
         const formData = {
           name: form.name.value,
@@ -89,32 +86,22 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           message: form.message.value,
         };
 
-        console.log("Form data:", formData);
-
-        try {
-          const response = await fetch(
-            "https://coreyt-contact-form.cor3y-thomas.workers.dev/",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(formData),
+        const response = await fetch(
+          "https://coreyt-contact-form.cor3y-thomas.workers.dev/",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
             },
-          );
+            body: JSON.stringify(formData),
+          },
+        );
 
-          console.log("Fetch request sent");
-          console.log("Response received:", response);
-
-          if (response.ok) {
-            console.log("Form submitted successfully");
-            window.location.href = "/contact/success.astro";
-          } else {
-            console.log("Failed to submit form");
-            alert("Failed to send email.");
-          }
-        } catch (error) {
-          console.error("Error during form submission:", error);
+        if (response.ok) {
+          // Redirect to confirmation page
+          window.location.href = "/contact/success";
+        } else {
+          alert("Failed to send email.");
         }
       });
     });

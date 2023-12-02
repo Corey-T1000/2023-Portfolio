@@ -75,21 +75,21 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("contact-form");
+      const form = document.getElementById("contact-form") as HTMLFormElement;
 
       if (form instanceof HTMLFormElement) {
         form.addEventListener("submit", async (e) => {
           e.preventDefault();
 
-          const nameInput = form.elements.namedItem("name");
-          const emailInput = form.elements.namedItem("email");
-          const messageInput = form.elements.namedItem("message");
+          const nameInput = form.elements.namedItem("name") as HTMLInputElement;
+          const emailInput = form.elements.namedItem(
+            "email",
+          ) as HTMLInputElement;
+          const messageInput = form.elements.namedItem(
+            "message",
+          ) as HTMLTextAreaElement;
 
-          if (
-            nameInput instanceof HTMLInputElement &&
-            emailInput instanceof HTMLInputElement &&
-            messageInput instanceof HTMLTextAreaElement
-          ) {
+          if (nameInput && emailInput && messageInput) {
             const formData = {
               name: nameInput.value,
               email: emailInput.value,
@@ -121,7 +121,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           }
         });
       } else {
-        console.error("Form not found");
+        console.error("Form not found or is not a form element");
       }
     });
   </script>

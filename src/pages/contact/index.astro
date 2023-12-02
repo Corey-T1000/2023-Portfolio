@@ -77,10 +77,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     document.addEventListener("DOMContentLoaded", () => {
       const form = document.getElementById("contact-form") as HTMLFormElement;
 
-      if (form instanceof HTMLFormElement) {
+      if (form) {
         form.addEventListener("submit", async (e) => {
           e.preventDefault();
 
+          // Use type assertion to assure TypeScript about the specific types
           const nameInput = form.elements.namedItem("name") as HTMLInputElement;
           const emailInput = form.elements.namedItem(
             "email",
@@ -121,7 +122,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           }
         });
       } else {
-        console.error("Form not found or is not a form element");
+        console.error("Form not found");
       }
     });
   </script>

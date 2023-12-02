@@ -53,7 +53,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
         if (response.ok) {
           // Redirect to confirmation page
-          window.location.href = "/contact/success.html";
+          window.location.href = "/contact/success.astro";
         } else {
           alert("Failed to send email.");
         }

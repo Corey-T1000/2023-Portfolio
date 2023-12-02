@@ -108,13 +108,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
           if (response.ok) {
             console.log("Form submitted successfully");
-            window.location.href = "/contact/success.html";
+            window.location.href = "/contact/success.astro";
           } else {
             console.log("Failed to submit form");
             alert("Failed to send email.");
           }
         } catch (error) {
-          console.error("Error during form submissio!n:", error);
+          console.error("Error during form submission:", error);
         }
       });
     });

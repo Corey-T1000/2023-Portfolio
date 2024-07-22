@@ -7,17 +7,19 @@ import potpourriBrinks4 from "../../assets/potpourri/potpourriBrinks4.jpg";
 import potpourriBrinks6 from "../../assets/potpourri/potpourriBrinks6.jpg";
 import potpourriBulleit1 from "../../assets/potpourri/potpourriBulleit1.jpg";
 import potpourriBulleit2 from "../../assets/potpourri/potpourriBulleit2.jpg";
-import potpourriBulleit6 from "../../assets/potpourri/potpourriBulleit6.gif";
+
 import potpourriBulleitTattoo1 from "../../assets/potpourri/potpourriBulleitTattoo1.jpg";
 import potpourriBulleitTattoo2 from "../../assets/potpourri/potpourriBulleitTattoo2.jpg";
 import potpourriBulleitTattoo3 from "../../assets/potpourri/potpourriBulleitTattoo3.jpg";
 import potpourriBulleitTattoo5 from "../../assets/potpourri/potpourriBulleitTattoo5.jpg";
-import potpourriBulleitTattoo6 from "../../assets/potpourri/potpourriBulleitTattoo6.jpg";
-import potpourriBulleitTattoo7 from "../../assets/potpourri/potpourriBulleitTattoo7.jpg";
+import bulleitVideo1 from "../../assets/potpourri/potpourriBulleitVideo1.mp4";
+import bulleitVideo2 from "../../assets/potpourri/potpourriBulleitVideo2.mp4";
+
 import potpourriBulleitTattoo8 from "../../assets/potpourri/potpourriBulleitTattoo8.jpg";
-import potpourriBulleitTattoo9 from "../../assets/potpourri/potpourriBulleitTattoo9.jpg";
+
 import potpourriClash2 from "../../assets/potpourri/potpourriClash2.png";
 import potpourriClash3 from "../../assets/potpourri/potpourriClash3.png";
+import clashVideo from "../../assets/potpourri/potpourriCR1.mp4";
 import potpourriDD from "../../assets/potpourri/potpourriDD.png";
 import potpourriCloud1 from "../../assets/potpourri/potpourriCloud1.png";
 import potpourriRY from "../../assets/potpourri/potpourriRY.png";
@@ -25,6 +27,7 @@ import potpourriGrey4 from "../../assets/potpourri/potpourriGrey4.png";
 import potpourriSawtooth5 from "../../assets/potpourri/potpourriSawtooth5.png";
 import potpourriSawtooth4 from "../../assets/potpourri/potpourriSawtooth4.jpg";
 import potpourriLC5 from "../../assets/potpourri/potpourriLC5.jpg";
+import lcVideo from "../../assets/potpourri/potpourriLC4.mp4";
 import potpourriNYC1 from "../../assets/potpourri/potpourriNYC1.jpg";
 import potpourriNYC2 from "../../assets/potpourri/potpourriNYC2.jpg";
 import potpourriNYC3 from "../../assets/potpourri/potpourriNYC3.jpg";
@@ -41,7 +44,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     >
       <div class="relative col-span-12 grid-cols-12 justify-between md:grid">
         <div
-          class="top-0 z-10 col-span-full grid bg-neutral-100 px-8 md:col-span-6"
+          class="top-0 z-10 col-span-full grid bg-neutral-100 px-8 md:col-span-8"
           id="description"
         >
           <a
@@ -57,7 +60,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </div>
         </div>
         <div
-          class="relative col-span-full gap-4 place-self-center px-8 md:col-span-6 md:mt-4"
+          class="relative col-span-full gap-4 place-self-center px-8 md:col-span-8 md:mt-4"
         >
           <p class="text-md font-light">
             A delightful mix of design projects that have no other home. This
@@ -69,198 +72,173 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </div>
     </div>
     <div
-      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 pb-1 md:border-t-0"
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-8 gap-1 pb-1 md:border-t-0"
     >
-      <div title="Brinks" class="col-span-full grid grid-cols-2 gap-1">
+      <div title="Brinks" class="col-span-8 grid grid-cols-6 gap-1">
         <Image
           src={potpourriBrinks1}
           alt="siro open graph image"
-          class="col-span-2"
+          class="col-span-3 w-full"
         />
-        <Image src={potpourriBrinks2} alt="siro open graph image" class="" />
-        <Image src={potpourriBrinks6} alt="siro open graph image" class="" />
         <Image
-          src={potpourriBrinks4}
+          src={potpourriBrinks2}
           alt="siro open graph image"
-          class="col-span-2"
+          class="col-span-3 w-full"
         />
+        <div class="col-span-8 grid grid-cols-5 gap-1">
+          <Image
+            src={potpourriBrinks4}
+            alt="siro open graph image"
+            class="col-span-3 w-full"
+          />
+          <Image
+            src={potpourriBrinks6}
+            alt="siro open graph image"
+            class="col-span-2 w-full"
+          />
+        </div>
       </div>
-    </div>
-    <div
-      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 pb-1 md:border-t-0"
-    >
+
       <div
         title="Bulleit Impressions"
-        class="col-span-full grid grid-cols-2 gap-1"
+        class="col-span-8 grid grid-cols-2 gap-1"
       >
-        <Image
-          src={potpourriBulleit2}
-          alt="siro open graph image"
-          class="col-span-2"
-        />
-        <Image
-          src={potpourriBulleit1}
-          alt="siro open graph image"
-          class="col-span-2"
-        />
+        <Image src={potpourriBulleit2} alt="siro open graph image" class="" />
+        <Image src={potpourriBulleit1} alt="siro open graph image" class="" />
       </div>
-    </div>
-    <div
-      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 pb-1 md:border-t-0"
-    >
-      <div title="Bulleit Tattoo" class="col-span-full grid grid-cols-2 gap-1">
-        <Image
-          src={potpourriBulleitTattoo8}
-          alt="siro open graph image"
-          class="col-span-2"
-        />
-        <div class="grid grid-cols-2 gap-1">
+      <div title="Bulleit Tattoo" class="col-span-8 grid grid-cols-4 gap-1">
+        <div class="col-span-8">
           <Image
-            src={potpourriBulleitTattoo5}
+            src={potpourriBulleitTattoo8}
             alt="siro open graph image"
-            class="col-span-2"
+            class="w-full"
           />
         </div>
-        <div class="grid grid-cols-2 gap-1">
-          <Image
-            src={potpourriBulleitTattoo1}
-            alt="siro open graph image"
-            class="col-span-2"
-          />
-          <Image
-            src={potpourriBulleitTattoo2}
-            alt="siro open graph image"
-            class="col-span-2"
-          />
-          <Image
-            src={potpourriBulleitTattoo3}
-            alt="siro open graph image"
-            class="col-span-2"
-          />
+        <div class="col-span-8 grid grid-cols-4 gap-1">
+          <div class="col-span-2 w-full">
+            <video autoplay loop muted playsinline class="w-full pb-16">
+              <source src={bulleitVideo1} type="video/mp4" class="w-full" />
+            </video>
+            <Image
+              src={potpourriBulleitTattoo5}
+              alt="siro open graph image"
+              class="col-span-2 w-full"
+            />
+          </div>
+          <div class="col-span-2 grid gap-1">
+            <Image
+              src={potpourriBulleitTattoo1}
+              alt="siro open graph image"
+              class="col-span-4 w-full"
+            />
+            <Image
+              src={potpourriBulleitTattoo2}
+              alt="siro open graph image"
+              class="col-span-4 w-full"
+            />
+            <Image
+              src={potpourriBulleitTattoo3}
+              alt="siro open graph image"
+              class="col-span-4 w-full"
+            />
+            <div class="col-span-4 w-full">
+              <video autoplay loop muted playsinline class="w-full">
+                <source src={bulleitVideo2} type="video/mp4" class="w-full" />
+              </video>
+            </div>
+          </div>
+          <div title="Supercell" class="col-span-8 grid grid-cols-6 gap-1">
+            <Image
+              src={potpourriClash3}
+              alt="siro open graph image"
+              class="col-span-6 w-full"
+            />
+            <Image
+              src={potpourriClash2}
+              alt="siro open graph image"
+              class="col-span-2"
+            />
+            <div class="col-span-4 w-full">
+              <video autoplay loop muted playsinline class="col-span-full">
+                <source src={clashVideo} type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div title="Misc" class="col-span-8 grid grid-cols-4 gap-1">
+            <Image
+              src={potpourriCloud1}
+              alt="siro open graph image"
+              class="col-span-1 w-full"
+            />
+            <Image
+              src={potpourriRY}
+              alt="siro open graph image"
+              class="col-span-1 w-full"
+            />
+            <Image
+              src={potpourriDD}
+              alt="siro open graph image"
+              class="col-span-1 w-full"
+            />
+            <Image
+              src={potpourriGrey4}
+              alt="siro open graph image"
+              class="col-span-1 w-full"
+            />
+          </div>
+          <div
+            title="Little Caesars"
+            class="col-span-full grid grid-cols-8 gap-1"
+          >
+            <Image
+              src={potpourriLC5}
+              alt="siro open graph image"
+              class="col-span-5 w-full"
+            />
+            <div class="col-span-3 w-full">
+              <video autoplay loop muted playsinline class="w-full">
+                <source src={lcVideo} type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <div
+            title="Sawtooth Homebrew"
+            class="col-span-8 grid grid-cols-8 gap-1"
+          >
+            <Image
+              src={potpourriSawtooth4}
+              alt="siro open graph image"
+              class="col-span-8 w-full"
+            />
+            <Image
+              src={potpourriSawtooth5}
+              alt="siro open graph image"
+              class="col-span-8"
+            />
+          </div>
+          <div title="NYC" class="col-span-8 grid grid-cols-4 gap-1">
+            <Image
+              src={potpourriNYC1}
+              alt="siro open graph image"
+              class="col-span-1 w-full"
+            />
+            <Image
+              src={potpourriNYC2}
+              alt="siro open graph image"
+              class="col-span-1 w-full"
+            />
+            <Image
+              src={potpourriNYC3}
+              alt="siro open graph image"
+              class="col-span-1 w-full"
+            />
+            <Image
+              src={potpourriNYC4}
+              alt="NYC open graph image"
+              class="col-span-1 w-full"
+            />
+          </div>
         </div>
-        <video controls loop width="640" height="640">
-          <source
-            src="/public/videos/bulleit-tattoo/bulleit-tattoo-1.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <video controls loop width="640" height="640">
-          <source
-            src="/public/videos/bulleit-tattoo/bulleit-tattoo-2.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-    <div
-      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 border md:border-t-0"
-    >
-      <div title="Supercell" class="col-span-full grid grid-cols-6 gap-1">
-        <Image
-          src={potpourriClash3}
-          alt="siro open graph image"
-          class="col-span-6"
-        />
-        <Image
-          src={potpourriClash2}
-          alt="siro open graph image"
-          class="col-span-2"
-        />
-        <video controls loop class="center col-span-4">
-          <source
-            src="/public/videos/clash/potpourriCR1.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-    <div
-      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 pb-1 md:border-t-0"
-    >
-      <div title="Misc" class="col-span-full grid grid-cols-4 gap-1">
-        <Image
-          src={potpourriCloud1}
-          alt="siro open graph image"
-          class="col-span-1"
-        />
-        <Image
-          src={potpourriRY}
-          alt="siro open graph image"
-          class="col-span-1"
-        />
-        <Image
-          src={potpourriDD}
-          alt="siro open graph image"
-          class="col-span-1"
-        />
-        <Image
-          src={potpourriGrey4}
-          alt="siro open graph image"
-          class="col-span-1"
-        />
-      </div>
-    </div>
-    <div
-      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 md:border-t-0"
-    >
-      <div title="Misc" class="col-span-full grid grid-cols-8 gap-1">
-        <Image
-          src={potpourriLC5}
-          alt="siro open graph image"
-          class="col-span-5"
-        />
-        <video controls loop class="col-span-3">
-          <source
-            src="/public/videos/little-caesars/potpourriLC2.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-    <div
-      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 border md:border-t-0"
-    >
-      <div title="Misc" class="col-span-full grid grid-cols-6 gap-1">
-        <Image
-          src={potpourriSawtooth4}
-          alt="siro open graph image"
-          class="col-span-6"
-        />
-        <Image
-          src={potpourriSawtooth5}
-          alt="siro open graph image"
-          class="col-span-6"
-        />
-      </div>
-    </div>
-    <div
-      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 border md:border-t-0"
-    >
-      <div title="Misc" class="col-span-full grid grid-cols-4 gap-1">
-        <Image
-          src={potpourriNYC1}
-          alt="siro open graph image"
-          class="col-span-1"
-        />
-        <Image
-          src={potpourriNYC2}
-          alt="siro open graph image"
-          class="col-span-1"
-        />
-        <Image
-          src={potpourriNYC3}
-          alt="siro open graph image"
-          class="col-span-1"
-        />
-        <Image
-          src={potpourriNYC4}
-          alt="NYC open graph image"
-          class="col-span-1"
-        />
       </div>
     </div>
   </div>

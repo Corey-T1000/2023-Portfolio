@@ -1,23 +1,83 @@
-<div class="portfolio-item col-span-1">
-  <div
-    class="flex h-96 w-full flex-col bg-neutral-200/50 transition-all duration-500 ease-in-out hover:rounded-3xl hover:border-4 hover:border-neutral-200/50 hover:bg-neutral-100"
-  >
-  </div>
-</div>
+---
+import { Image } from "astro:assets";
+
+import dfacapitalLogo from "../assets/dfacapital/dfacapitalLogo@2x.png";
+import stackblitzLogo from "../assets/stackblitz/stackblitzLogo@2x.png";
+import siroLogo from "../assets/siro/siroLogo@2x.png";
+import potpourriLogo from "../assets/potpourri/potpourriLogo@2x.png";
+
+import dfacapital from "../pages/work/dfacapital.astro";
+import stackblitz from "../pages/work/stackblitz.astro";
+import siro from "../pages/work/siro.astro";
+import potpourri from "../pages/work/potpourri.astro";
+
+const projects = [
+  {
+    component: potpourri,
+    slug: "potpourri",
+    thumb: potpourriLogo,
+    img_alt: "Potpourri Thumbnail",
+    title: "A potpourri of projects",
+  },
+  {
+    component: siro,
+    slug: "siro",
+    thumb: siroLogo,
+    img_alt: "Siro Thumbnail",
+    title: "Siro Identity",
+  },
+  {
+    component: stackblitz,
+    slug: "stackblitz",
+    thumb: stackblitzLogo,
+    img_alt: "StackBlitz Thumbnail",
+    title: "StackBlitz Branding",
+  },
+  {
+    component: dfacapital,
+    slug: "dfacapital",
+    thumb: dfacapitalLogo,
+    img_alt: "Gremlin Thumbnail",
+    title: "D.F.A. Capital Identity",
+  },
+];
+---
+
+{
+  projects.map((project) => (
+    <div class="portfolio-item col-span-1">
+      <a
+        href={`/work/${project.slug}`}
+        class="mx-auto block max-w-screen-2xl transition duration-300 ease-in-out focus-within:opacity-100"
+      >
+        <Image
+          src={project.thumb}
+          alt={project.img_alt}
+          class="flex h-full w-full flex-col object-cover transition-all duration-500 ease-in-out hover:rounded-3xl"
+          quality="max"
+        />
+
+        <div class="portfolio-title absolute inset-x-0 bottom-0 py-4 text-center text-xs uppercase tracking-widest opacity-0 transition-opacity duration-300 ease-in-out group-focus-within:opacity-100 group-hover:opacity-100">
+          {project.title}
+        </div>
+      </a>
+    </div>
+  ))
+}
+
 <div class="portfolio-item col-span-1">
   <div
     class="flex h-full w-full flex-col bg-neutral-200/50 transition-all duration-500 ease-in-out hover:rounded-3xl hover:border-4 hover:border-neutral-200/50 hover:bg-neutral-100"
   >
   </div>
 </div>
-<div class="portfolio-item col-span-1">
-  <div
-    class="flex h-full w-full flex-col bg-neutral-200/50 transition-all duration-500 ease-in-out hover:rounded-3xl hover:border-4 hover:border-neutral-200/50 hover:bg-neutral-100"
-  >
-  </div>
-</div><div class="portfolio-item col-span-1">
-  <div
-    class="flex h-full w-full flex-col bg-neutral-200/50 transition-all duration-500 ease-in-out hover:rounded-3xl hover:border-4 hover:border-neutral-200/50 hover:bg-neutral-100"
-  >
-  </div>
-</div>
+
+<style>
+  .portfolio-item {
+    position: relative;
+  }
+  .portfolio-title {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+</style>

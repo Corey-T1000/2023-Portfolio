@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+
+import siroLogo from "../../assets/siro/siroAdSpread@2x.png";
+
+import Icon from "../../components/Icon.astro";
+import Tag from "../../components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Statype - Corey T" description="Statype Visual Identity">
+  <div class="mx-auto w-full justify-center">
+    <div
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border border-b-0 py-8 md:grid md:border-t-0"
+    >
+      <div class="relative col-span-12 grid-cols-12 justify-between md:grid">
+        <div
+          class="top-0 z-10 col-span-full grid bg-neutral-100 px-8 md:col-span-6"
+          id="description"
+        >
+          <a
+            class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
+            href="/work/"><Icon icon="arrow-left" /> Work</a
+          >
+          <h1 class="mb-2 text-5xl font-light">Siro Visual Identity</h1>
+          <div class="-ml-2 mb-4 justify-start">
+            <Tag text="Identity" />
+            <Tag text="print" />
+            <Tag text="Web" />
+            <Tag text="illustration" />
+          </div>
+        </div>
+        <div
+          class="relative col-span-full gap-4 place-self-center px-8 md:col-span-6 md:mt-4"
+        >
+          <p class="text-md font-light">Lorem</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
+    >
+      <Image
+        src={siroLogo}
+        alt="siro open graph image"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+      <div
+        class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Challenge
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          Lorem
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

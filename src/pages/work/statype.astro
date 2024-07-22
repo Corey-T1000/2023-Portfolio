@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
+import statypeWP from "../../assets/statype/statypeWP@2x.png";
 import statypeDeck1 from "../../assets/statype/statypeDeck1@2x.png";
 import statypeDeck2 from "../../assets/statype/statypeDeck2@2x.png";
 import statypeDeck3 from "../../assets/statype/statypeDeck3@2x.png";
@@ -174,6 +175,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </div>
       <Image
         src={statypeSalesUI}
+        alt="Statype OG image"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+      <Image
+        src={statypeWP}
         alt="Statype OG image"
         class="col-span-full pb-8 md:col-span-6"
       />

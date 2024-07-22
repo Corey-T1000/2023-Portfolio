@@ -1,8 +1,23 @@
 ---
 import { Image } from "astro:assets";
 
-import siroLogo from "../../assets/siro/siroAdSpread@2x.png";
-
+import potpourriBrinks1 from "../../assets/potpourri/potpourriBrinks1.jpg";
+import potpourriBrinks2 from "../../assets/potpourri/potpourriBrinks2.jpg";
+import potpourriBrinks4 from "../../assets/potpourri/potpourriBrinks4.jpg";
+import potpourriBrinks6 from "../../assets/potpourri/potpourriBrinks6.jpg";
+import potpourriBulleit1 from "../../assets/potpourri/potpourriBulleit1.jpg";
+import potpourriBulleit2 from "../../assets/potpourri/potpourriBulleit2.jpg";
+import potpourriBulleit6 from "../../assets/potpourri/potpourriBulleit6.gif";
+import potpourriBulleitTattoo1 from "../../assets/potpourri/potpourriBulleitTattoo1.jpg";
+import potpourriBulleitTattoo2 from "../../assets/potpourri/potpourriBulleitTattoo2.jpg";
+import potpourriBulleitTattoo3 from "../../assets/potpourri/potpourriBulleitTattoo3.jpg";
+import potpourriBulleitTattoo5 from "../../assets/potpourri/potpourriBulleitTattoo5.jpg";
+import potpourriBulleitTattoo6 from "../../assets/potpourri/potpourriBulleitTattoo6.jpg";
+import potpourriBulleitTattoo7 from "../../assets/potpourri/potpourriBulleitTattoo7.jpg";
+import potpourriBulleitTattoo8 from "../../assets/potpourri/potpourriBulleitTattoo8.jpg";
+import potpourriBulleitTattoo9 from "../../assets/potpourri/potpourriBulleitTattoo9.jpg";
+import potpourriBulleitTattooVideo1 from "../../assets/potpourri/potpourriBulleitTattooVideo1.png";
+import potpourriBulleitTattooVideo2 from "../../assets/potpourri/potpourriBulleitTattooVideo2.png";
 import Icon from "../../components/Icon.astro";
 import Tag from "../../components/Tag.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
@@ -43,13 +58,90 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </div>
     </div>
     <div
-      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 border md:border-t-0"
     >
-      <Image
-        src={siroLogo}
-        alt="siro open graph image"
-        class="col-span-full pb-8 md:col-span-6"
-      />
+      <div title="Brinks" class="col-span-full grid grid-cols-2 gap-1">
+        <Image
+          src={potpourriBrinks1}
+          alt="siro open graph image"
+          class="col-span-2"
+        />
+        <Image src={potpourriBrinks2} alt="siro open graph image" class="" />
+        <Image src={potpourriBrinks6} alt="siro open graph image" class="" />
+        <Image
+          src={potpourriBrinks4}
+          alt="siro open graph image"
+          class="col-span-2"
+        />
+      </div>
+    </div>
+    <div
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 border md:border-t-0"
+    >
+      <div
+        title="Bulleit Impressions"
+        class="col-span-full grid grid-cols-2 gap-1"
+      >
+        <Image
+          src={potpourriBulleit2}
+          alt="siro open graph image"
+          class="col-span-2"
+        />
+        <Image
+          src={potpourriBulleit1}
+          alt="siro open graph image"
+          class="col-span-2"
+        />
+      </div>
+    </div>
+    <div
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 gap-1 border md:border-t-0"
+    >
+      <div title="Bulleit Tattoo" class="col-span-full grid grid-cols-2 gap-1">
+        <Image
+          src={potpourriBulleitTattoo8}
+          alt="siro open graph image"
+          class="col-span-2"
+        />
+        <div class="grid grid-cols-2 gap-1">
+          <Image
+            src={potpourriBulleitTattoo5}
+            alt="siro open graph image"
+            class="col-span-2"
+          />
+        </div>
+        <div class="grid grid-cols-2 gap-1">
+          <Image
+            src={potpourriBulleitTattoo1}
+            alt="siro open graph image"
+            class="col-span-2"
+          />
+          <Image
+            src={potpourriBulleitTattoo2}
+            alt="siro open graph image"
+            class="col-span-2"
+          />
+          <Image
+            src={potpourriBulleitTattoo3}
+            alt="siro open graph image"
+            class="col-span-2"
+          />
+        </div>
+        <video controls loop width="640" height="640">
+          <source
+            src="../public/videos/bulleit-tattoo/bulleit-tattoo-1.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <video controls loop width="640" height="640">
+          <source
+            src="../public/videos/bulleit-tattoo/bulleit-tattoo-2.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 </BaseLayout>

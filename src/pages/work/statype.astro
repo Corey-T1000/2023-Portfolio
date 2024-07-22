@@ -6,6 +6,10 @@ import statypeDeck1 from "../../assets/statype/statypeDeck1@2x.png";
 import statypeDeck2 from "../../assets/statype/statypeDeck2@2x.png";
 import statypeDeck3 from "../../assets/statype/statypeDeck3@2x.png";
 import statypeDeck4 from "../../assets/statype/statypeDeck4@2x.png";
+import statypeDeck5 from "../../assets/statype/statypeDeck5@2x.png";
+import statypeDeck6 from "../../assets/statype/statypeDeck6@2x.png";
+import statypeDeck7 from "../../assets/statype/statypeDeck7@2x.png";
+
 import statypeHomepage from "../../assets/statype/statypeHomepage@2x.png";
 import statypeMktSales from "../../assets/statype/statypeMktSales@2x.png";
 import statypeMktSOC from "../../assets/statype/statypeMktSOC@2x.png";
@@ -183,39 +187,59 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         alt="Statype OG image"
         class="col-span-full pb-8 md:col-span-6"
       />
-      <div class="col-span-full px-4 pb-8 sm:col-span-3 sm:pl-0 sm:pr-2">
-        <Image src={statypeHomepage} alt="statype Landing page" class="" />
+      <div class="col-span-full grid grid-cols-6 px-8 pb-2 sm:pr-4">
+        <div class="col-span-full px-4 sm:col-span-3 sm:pl-0 sm:pr-2">
+          <Image
+            src={statypeHomepage}
+            alt="statype Landing page"
+            class="mb-2 rounded-lg border"
+          />
+        </div>
+        <div class="col-span-full px-4 pb-8 sm:col-span-3 sm:pr-0">
+          <Image
+            src={statypeProductpage}
+            alt="statype Product page"
+            class="mb-2 rounded-lg border"
+          />
+        </div>
       </div>
-      <div class="col-span-full px-4 pb-8 sm:col-span-3 sm:pl-2 sm:pr-0">
-        <Image src={statypeProductpage} alt="statype Product page" class="" />
-      </div>
-      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
-        <Image
-          src={statypeDeck1}
-          alt="statype pitch deck"
-          class="rounded-lg border"
-        />
-      </div>
-      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
-        <Image
-          src={statypeDeck2}
-          alt="statype pitch deck"
-          class="rounded-lg border"
-        />
-      </div>
-      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
-        <Image
-          src={statypeDeck3}
-          alt="statype pitch deck"
-          class="rounded-lg border"
-        />
-      </div>
-      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
-        <Image
-          src={statypeDeck4}
-          alt="statype pitch deck"
-          class="rounded-lg border"
-        />
+      <div class="col-span-full grid grid-cols-2 gap-1">
+        <div class="col-span-1 grid grid-cols-2 gap-1">
+          <Image
+            src={statypeDeck5}
+            alt="Materialize Marketing Blog image"
+            class="col-span-2"
+          />
+
+          <Image
+            src={statypeDeck1}
+            alt="Materialize Marketing Blog image"
+            class="col-span-1"
+          />
+
+          <Image
+            src={statypeDeck2}
+            alt="Materialize Marketing Blog image"
+            class="col-span-1"
+          />
+        </div>
+        <div class="col-span-1 grid grid-cols-2 gap-1">
+          <Image
+            src={statypeDeck6}
+            alt="Materialize Marketing Blog image"
+            class="col-span-1"
+          />
+
+          <Image
+            src={statypeDeck7}
+            alt="Materialize Marketing Blog image"
+            class="col-span-1"
+          /><Image
+            src={statypeDeck4}
+            alt="Materialize Marketing Blog image"
+            class="col-span-2"
+          />
+        </div>
       </div>
     </div>
   </div>

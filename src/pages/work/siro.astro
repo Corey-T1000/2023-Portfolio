@@ -1,14 +1,22 @@
 ---
 import { Image } from "astro:assets";
 
-import siroLogo from "../../assets/siro/siroAdSpread@2x.png";
+import siroHero from "../../assets/siro/siroHero2@2x.png";
+import siroAdSpread from "../../assets/siro/siroAdSpread@2x.png";
+import siroBanner2 from "../../assets/siro/siroBanner2@2x.png";
+import siroBanner from "../../assets/siro/siroBanner@2x.png";
+import siroHomepage from "../../assets/siro/siroHomepage@2x.png";
+import siroSupers1 from "../../assets/siro/siroSupers1@2x.png";
+import siroSupers2 from "../../assets/siro/siroSupers2@2x.png";
+import siroSupers3 from "../../assets/siro/siroSupers3@2x.png";
+import siroSupers4 from "../../assets/siro/siroSupers4@2x.png";
 
 import Icon from "../../components/Icon.astro";
 import Tag from "../../components/Tag.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Statype - Corey T" description="Statype Visual Identity">
+<BaseLayout title="Siro - Corey T" description="Siro Visual Identity">
   <div class="mx-auto w-full justify-center">
     <div
       class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border border-b-0 py-8 md:grid md:border-t-0"
@@ -28,12 +36,19 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             <Tag text="print" />
             <Tag text="Web" />
             <Tag text="illustration" />
+            <Tag text="Video Production" />
           </div>
         </div>
         <div
           class="relative col-span-full gap-4 place-self-center px-8 md:col-span-6 md:mt-4"
         >
-          <p class="text-md font-light">Lorem</p>
+          <p class="text-md font-light">
+            Siro.ai leverages cutting-edge AI technology to streamline the sales
+            process, providing businesses with intelligent insights and
+            automation to enhance their sales strategies and improve overall
+            efficiency. Their platform is designed to help sales teams close
+            deals faster and with greater precision.
+          </p>
         </div>
       </div>
     </div>
@@ -41,7 +56,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
     >
       <Image
-        src={siroLogo}
+        src={siroHero}
         alt="siro open graph image"
         class="col-span-full pb-8 md:col-span-6"
       />
@@ -59,8 +74,65 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </div>
         </div>
         <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
-          Lorem
+          Without a cohesive brand identity, Siro.ai's visual presence was
+          fragmented and lacked the design polish needed to reflect its
+          innovative technology. The previous ad-hoc design efforts led to
+          inconsistencies that weakened the brand’s overall impact.
         </p>
+      </div>
+    </div>
+    <div class="col-span-full grid grid-cols-6 gap-1">
+      <div class="col-span-6">
+        <Image src={siroAdSpread} alt="Materialize Marketing Blog image" />
+      </div>
+      <div
+        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Solution
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          We conducted a thorough audit of Siro.ai’s visual elements, refining
+          key components with strong brand equity. This included transforming
+          the existing logomark into a versatile element, creating an additional
+          logomark, and developing a stylized UI for marketing materials. We
+          also produced the first customer testimonial video, enhancing the
+          brand’s narrative and visual identity.
+        </p>
+      </div>
+      <div class="col-span-3">
+        <Image src={siroBanner2} alt="Materialize Marketing Blog image" />
+      </div>
+      <div class="col-span-3">
+        <Image src={siroBanner} alt="Materialize SOC2 Blog image" />
+      </div>
+      <div class="col-span-6 grid grid-cols-4 gap-1">
+        <div class="col-span-1">
+          <Image src={siroSupers4} alt="Materialize Marketing Blog image" />
+        </div>
+        <div class="col-span-1">
+          <Image src={siroSupers1} alt="Materialize SOC2 Blog image" />
+        </div>
+        <div class="col-span-1">
+          <Image src={siroSupers2} alt="Materialize SOC2 Blog image" />
+        </div>
+        <div class="col-span-1">
+          <Image src={siroSupers3} alt="Materialize Marketing Blog image" />
+        </div>
+      </div>
+      <div class="col-span-4 col-start-2">
+        <Image
+          src={siroHomepage}
+          alt="Materialize Product UI"
+          class="rounded-lg border"
+        />
       </div>
     </div>
   </div>

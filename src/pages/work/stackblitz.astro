@@ -1,0 +1,133 @@
+---
+import { Image } from "astro:assets";
+
+import stackblitzHandout from "../../assets/stackblitz/stackblitzHandout@2x.png";
+import stackblitzFlyer from "../../assets/stackblitz/stackblitzFlyer@2x.png";
+import stackblitzSocial5 from "../../assets/stackblitz/stackblitzSocial5@2x.png";
+import stackblitzHero from "../../assets/stackblitz/stackblitzHero@2x.png";
+import stackblitzSocial3 from "../../assets/stackblitz/stackblitzSocial3@2x.png";
+import stackblitzSocial4 from "../../assets/stackblitz/stackblitzSocial4@2x.png";
+import stackblitzBox from "../../assets/stackblitz/stackblitzBox@2x.png";
+import stackblitzShirt from "../../assets/stackblitz/stackblitzShirt@2x.png";
+import stackblitzShirtroll from "../../assets/stackblitz/stackblitzShirtRoll@2x.png";
+import stackblitzBottle from "../../assets/stackblitz/stackblitzBottle@2x.png";
+import stackblitzBooth from "../../assets/stackblitz/stackblitzBooth@2x.png";
+import stackblitzDSAFTicket from "../../assets/stackblitz/stackblitzDSAFTicket@2x.png";
+import stackblitzPingpong from "../../assets/stackblitz/stackblitzPingpong@2x.png";
+import Icon from "../../components/Icon.astro";
+import Tag from "../../components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="StackBlitz - Corey T" description="StackBlitz Branding">
+  <div class="mx-auto w-full justify-center">
+    <div
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border border-b-0 py-8 md:grid md:border-t-0"
+    >
+      <div class="relative col-span-12 grid-cols-12 justify-between md:grid">
+        <div
+          class="top-0 z-10 col-span-full grid bg-neutral-100 px-8 md:col-span-6"
+          id="description"
+        >
+          <a
+            class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
+            href="/work/"><Icon icon="arrow-left" /> Work</a
+          >
+          <h1 class="mb-2 text-5xl font-light">StackBlitz Branding</h1>
+          <div class="-ml-2 mb-4 justify-start">
+            <Tag text="Identity" />
+            <Tag text="print" />
+            <Tag text="Events" />
+            <Tag text="illustration" />
+          </div>
+        </div>
+        <div
+          class="relative col-span-full gap-4 place-self-center px-8 md:col-span-6 md:mt-4"
+        >
+          <p class="text-md font-light">
+            StackBlitz is an online IDE that has revolutioned development by
+            providing a seamless coding experience directly in the browser.
+            Empowering developers to create, test, and deploy full-stack
+            applications with unprecedented speed and ease. Developers's have
+            never had streamlined workflow that enhances productivity and
+            innovation as they do with StackBlitz.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
+    >
+      <Image
+        src={stackblitzHero}
+        alt="stackblitz open graph image"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+      <div
+        class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Challenge
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          StackBlitz found that they were reaching their in-house design
+          bandwidth. With immediate needs to scale the existing design system to
+          traditional print mediums we worked closely with their marketing and
+          design teams. Expanding their design system to be applicable to
+          everything from print marketing materials to conference booths and
+          swag. This enabled StackBlitz to effectively communicate their brand's
+          innovation and leadership at every touchpoint.
+        </p>
+      </div>
+
+      <div class="col-span-full grid grid-cols-6 gap-1">
+        <div class="col-span-6">
+          <Image src={stackblitzBooth} alt="Statype Marketing Blog image" />
+        </div>
+        <div class="col-span-2">
+          <Image src={stackblitzSocial4} alt="Statype Marketing Blog image" />
+        </div>
+        <div class="col-span-2">
+          <Image src={stackblitzSocial5} alt="Statype Marketing Blog image" />
+        </div>
+        <div class="col-span-2">
+          <Image src={stackblitzSocial3} alt="Statype Marketing Blog image" />
+        </div>
+        <div class="col-span-6">
+          <Image src={stackblitzFlyer} alt="Statype Marketing Blog image" />
+        </div>
+        <div class="col-span-3">
+          <Image src={stackblitzBox} alt="Statype Marketing Blog image" />
+        </div>
+        <div class="col-span-3">
+          <Image src={stackblitzBottle} alt="Statype Marketing Blog image" />
+        </div>
+        <div class="col-span-3">
+          <Image src={stackblitzShirt} alt="Statype Marketing Blog image" />
+        </div>
+        <div class="col-span-3">
+          <Image src={stackblitzShirtroll} alt="Statype Marketing Blog image" />
+        </div>
+        <div class="col-span-3">
+          <Image
+            src={stackblitzDSAFTicket}
+            alt="Statype Marketing Blog image"
+          />
+        </div>
+        <div class="col-span-3">
+          <Image src={stackblitzHandout} alt="Statype Marketing Blog image" />
+        </div>
+        <div class="col-span-6">
+          <Image src={stackblitzPingpong} alt="Statype Marketing Blog image" />
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

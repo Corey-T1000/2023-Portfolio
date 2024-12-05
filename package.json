@@ -1,0 +1,56 @@
+{
+  "name": "astro-starter-strict",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "clean": "git clean --interactive -dx --exclude .env.local --exclude \".env.*.local\" --exclude node_modules/ --exclude .husky/"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "0.19.7",
+    "@astrojs/prefetch": "0.3.0",
+    "@astrojs/tailwind": "4.0.0",
+    "@fontsource-variable/raleway": "^5.0.16",
+    "@splidejs/splide": "^4.1.4",
+    "astro": "^3.6.2",
+    "sharp": "^0.32.6",
+    "tailwindcss": "3.3.3",
+    "wrangler": "^3.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "18.16.19",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "@typescript-eslint/parser": "5.62.0",
+    "eslint": "8.45.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "17.1.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-plugin-astro": "0.27.2",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-simple-import-sort": "10.0.0",
+    "eslint-plugin-tailwindcss": "3.13.0",
+    "nano-staged": "0.8.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.8.8",
+    "prettier-plugin-astro": "0.10.0",
+    "prettier-plugin-tailwindcss": "0.4.1",
+    "typescript": "^5.3.2"
+  },
+  "packageManager": "pnpm@8.11.0",
+  "nano-staged": {
+    "*": "prettier --write --ignore-unknown",
+    "*.{astro,js,jsx,cjs,ts,tsx,cts}": "eslint --fix"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "rollup"
+      ]
+    }
+  }
+}

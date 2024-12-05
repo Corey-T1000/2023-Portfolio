@@ -1,0 +1,158 @@
+---
+import "@splidejs/splide/css";
+
+import { Image } from "astro:assets";
+
+import coreyTHi from "../assets/coreyt-hi.png";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="mx-auto w-full justify-center">
+    <section
+      id="Hero"
+      class="relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border-x md:grid"
+    >
+      <div class="relative col-span-6">
+        <div
+          class="top-24 -z-10 mx-auto max-w-screen-2xl grow justify-between p-8 pb-0 pt-32 md:sticky md:-mb-0"
+        >
+          <div
+            id="text"
+            class="b relative z-10 max-w-2xl bg-slate-50/20 pb-8 backdrop-blur md:pb-28"
+          >
+            <div class="mb-4 text-sm font-light uppercase tracking-widest">
+              Visual Designer & maker of things.
+            </div><span class="mt-4 text-3xl font-light text-neutral-800">
+              Oh hi, I'm Corey.<span class="text-neutral-200"
+                ><br class="inline sm:hidden" />
+                (you probably knew that)</span
+              ></span
+            >
+            <span class="mt-4 text-3xl font-light text-neutral-800">
+              If you didnt know me already, its great to meet you & thanks for
+              stopping by.
+            </span>
+            <div class="mt-12 sm:mt-8 lg:ml-auto">
+              I'm a multidisciplinary visual designer and frontend dabbler from
+              the East Coast. I've worked with and built brands for B2B & B2C
+              clients from pre-seed and beyond.
+            </div>
+          </div>
+          <div class="-bottom-4">
+            <Image
+              src={coreyTHi}
+              alt="Portrait of Corey smiling wide"
+              class="hidden w-3/4 md:inline"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="history" class="col-span-6 border-l">
+        <div class="mx-auto max-w-screen-2xl border-b p-8 pt-32">
+          <div class="mb-4 text-sm font-light uppercase tracking-widest">
+            Where I am:
+          </div>
+          <a
+            class="mt-4 text-xl font-light text-neutral-800 hover:text-neutral-300"
+            href="https://authzed.com"
+          >
+            AuthZed
+          </a>
+        </div>
+        <div class="mx-auto max-w-screen-2xl border-b p-8">
+          <div class="mb-4 text-sm font-light uppercase tracking-widest">
+            Where I've Been:
+          </div>
+          <div class="mt-4 text-xl font-light text-neutral-800">
+            <ul>
+              <ul class="line-through hover:underline">
+                <a href="https://statype.com">Materialize</a>
+                <span class="tracking-widest text-neutral-300"> 2024</span>
+              </ul>
+              <ul class="line-through hover:underline">
+                <a href="https://statype.com">Statype</a><span
+                  class="text-neutral-300"
+                >
+                  R.I.P.</span
+                ><span class="tracking-widest text-neutral-300"> 2022-23</span>
+              </ul>
+              <ul class="line-through hover:underline">
+                <a href="https://gremlin.com">Gremlin</a><span
+                  class="tracking-widest text-neutral-300"
+                >
+                  2019-22</span
+                >
+              </ul>
+              <ul class="line-through hover:underline">
+                <a href="https://statype.com">Taxi</a><span
+                  class="tracking-widest text-neutral-300"
+                >
+                  2018-19</span
+                >
+              </ul>
+              <ul class="line-through hover:underline">
+                <a
+                  href="https://adage.com/article/agency-news/what-you-missed-barton-f-grafs-funeral/2206406"
+                  >Barton F. Graf <span class="text-neutral-300">R.I.P.</span
+                  ></a
+                ><span class="tracking-widest text-neutral-300"> 2016-18</span>
+              </ul>
+              <ul class="line-through hover:underline">
+                <a href="https://grey.com">Grey NY</a><span
+                  class="tracking-widest text-neutral-300"
+                >
+                  2013-16</span
+                >
+              </ul>
+              <ul class="line-through hover:underline">
+                <a href="https://mothernewyork.com">Mother NY</a><span
+                  class="tracking-widest text-neutral-300"
+                >
+                  2012</span
+                >
+              </ul>
+            </ul>
+          </div>
+        </div><div class="mx-auto max-w-screen-2xl p-8">
+          <div class="mb-4 text-sm font-light uppercase tracking-widest">
+            Some Brands I've worked with:
+          </div>
+          <ul class="mt-4 text-xl font-light text-neutral-800">
+            <ul>StackBlitz</ul>
+            <ul>Gravitee</ul>
+            <ul>PEOMG</ul>
+            <ul>D.F.A. Capital</ul>
+            <ul>Bullet Bourbon</ul>
+            <ul>Kettle One</ul>
+            <ul>Supercell</ul>
+            <ul>Brinks Home Security</ul>
+            <ul>Kintaba</ul>
+            <ul>Little Caesars</ul>
+            <ul>
+              Papa Johns <span class="text-neutral-200">
+                (before the racism)
+              </span>
+            </ul>
+            <ul>Covergirl</ul>
+            <ul>NYC Sanitation Dept.</ul>
+            <ul>Ally Bank</ul>
+            <ul>GSK</ul>
+            <ul>3M</ul>
+            <ul>Marriot</ul>
+            <ul>
+              <span class="text-neutral-200">
+                and more I've surely forgotten...</span
+              >
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <Image
+        src={coreyTHi}
+        alt="Portrait of Corey smiling wide"
+        class="inline w-1/2 items-end pl-8 md:hidden"
+      />
+    </section>
+  </div>
+</BaseLayout>

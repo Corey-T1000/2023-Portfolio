@@ -1,0 +1,212 @@
+---
+import { Image } from "astro:assets";
+
+import materializeAds3 from "../../assets/materialize/materializeAds3@2x.png";
+import materializeAds2 from "../../assets/materialize/materializeAds2@2x.png";
+import materializeBTN from "../../assets/materialize/materializeBTN@2x.png";
+import materializePlayingcards from "../../assets/materialize/materializePlayingcards@2x.png";
+import materializeFlyers from "../../assets/materialize/materializeFlyers@2x.png";
+import materializeAWSBooth from "../../assets/materialize/materializeAWSBooth@2x.png";
+import materializeOnepager from "../../assets/materialize/materializeOnepager@2x.png";
+import materializePartnerFlyer from "../../assets/materialize/materializePartnerFlyer@2x.png";
+import materializeMug from "../../assets/materialize/materializeMug@2x.png";
+import materializeOG from "../../assets/materialize/materializeOG@2x.png";
+import materializeSocial5 from "../../assets/materialize/materializeSocial5@2x.png";
+import materializeSocial2 from "../../assets/materialize/materializeSocial2@2x.png";
+import materializeSocial7 from "../../assets/materialize/materializeSocial7@2x.png";
+import materializeOld3 from "../../assets/materialize/materializeOld3.png";
+import materializeOld2 from "../../assets/materialize/materializeOld2.png";
+import Icon from "../../components/Icon.astro";
+import Tag from "../../components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Materialize - Corey T"
+  description="Materialize Visual Identity"
+>
+  <div class="mx-auto w-full justify-center">
+    <div
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border border-b-0 py-8 md:grid md:border-t-0"
+    >
+      <div class="relative col-span-12 grid-cols-12 justify-between md:grid">
+        <div
+          class="top-0 z-10 col-span-full grid bg-neutral-100 px-8 md:col-span-6"
+          id="description"
+        >
+          <a
+            class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
+            href="/work/"><Icon icon="arrow-left" /> Work</a
+          >
+          <h1 class="mb-2 text-5xl font-light">Materialize Visual Identity</h1>
+          <div class="-ml-2 mb-4 justify-start">
+            <Tag text="Identity" />
+            <Tag text="print" />
+            <Tag text="event" />
+            <Tag text="illustration" />
+          </div>
+        </div>
+        <div
+          class="relative col-span-full gap-4 place-self-center px-8 md:col-span-6 md:mt-4"
+        >
+          <p class="text-md font-light">
+            Materialize is a leading provider of real-time data streaming
+            technology, empowering businesses to access and act on critical data
+            with sub-second latency at a fraction of the cost of analytical data
+            warehouses.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
+    >
+      <Image
+        src={materializeOG}
+        alt="Materialize open graph image"
+        class="col-span-full pb-8 md:col-span-6"
+      />
+      <div
+        class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Challenge
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          In the absence of an internal design team, the marketing team stepped
+          in to fill the void. Unfortunately, this led to inconsistent and
+          off-brand designs that began to dilute the existing brand equity.
+        </p>
+      </div>
+
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={materializeOld3}
+          alt="Materializes Old social image"
+          class="rounded-lg border"
+        />
+      </div>
+      <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
+        <Image
+          src={materializeOld2}
+          alt="Materialize Materializes Old social image landing page"
+          class="rounded-lg border"
+        />
+      </div>
+      <div
+        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Solution
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          After auditing all existing touchpoints, we identified elements that
+          held the most brand equity and began to refine them. This included a
+          critical look at the existing logo mark and its usage, as well as
+          creating an illustration style that would work for both product and
+          conceptual ideas.
+        </p>
+      </div>
+      <div class="col-span-full grid grid-cols-6 gap-1">
+        <div class="col-span-6">
+          <Image
+            src={materializeSocial7}
+            alt="Materialize Marketing Blog image"
+          />
+        </div>
+        <div class="col-span-6">
+          <Image
+            src={materializeAWSBooth}
+            alt="Materialize Marketing Blog image"
+          />
+        </div>
+      </div>
+
+      <div
+        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Execution
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          In true startup fashion, most of the elements and applications of the
+          design system were created as needs arose rather than in one large
+          rebrand. This CI/CD style approact allowed us to continuously pressure
+          test our visual identity and make adjustments as needed.
+          Unfortunately, the team was affected by a RIF before we were able to
+          fully implement the refreshed visual identity.
+        </p>
+      </div>
+      <div class="col-span-full grid grid-cols-6 gap-1">
+        <div class="col-span-6">
+          <Image
+            src={materializeOnepager}
+            alt="Materialize Marketing Blog image"
+          />
+        </div>
+        <div class="col-span-3">
+          <Image src={materializeMug} alt="Materialize Marketing Blog image" />
+        </div>
+        <div class="col-span-3">
+          <Image
+            src={materializePartnerFlyer}
+            alt="Materialize SOC2 Blog image"
+          />
+        </div>
+        <div class="col-span-6">
+          <Image src={materializeFlyers} alt="Materialize Product UI" />
+        </div>
+        <div class="col-span-6">
+          <Image src={materializePlayingcards} alt="Materialize Product UI" />
+        </div>
+        <div class="col-span-3">
+          <Image
+            src={materializeSocial5}
+            alt="Materialize Marketing Blog image"
+          />
+        </div>
+        <div class="col-span-3">
+          <Image src={materializeSocial2} alt="Materialize SOC2 Blog image" />
+        </div>
+        <div class="col-span-6">
+          <Image src={materializeBTN} alt="Materialize Product UI" />
+        </div>
+        <div class="col-span-3">
+          <Image
+            src={materializeAds3}
+            alt="Materialize SOC2 Blog image"
+            class=""
+          />
+        </div>
+        <div class="col-span-3">
+          <Image
+            src={materializeAds2}
+            alt="Materialize SOC2 Blog image"
+            class=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+
+import materializeLogo from "../assets/materialize/materializeLogo@2x.png";
+import graviteeLogo from "../assets/gravitee/graviteeLogo@2x.png";
+import gremlinLogo from "../assets/gremlin/gremlinLogo@2x.png";
+import statypeLogo from "../assets/statype/statype.gif";
+import materialize from "../pages/work/materialize.astro";
+import gravitee from "../pages/work/gravitee.astro";
+import gremlin from "../pages/work/gremlin.astro";
+import statype from "../pages/work/statype.astro";
+
+const projects = [
+  {
+    component: gremlin,
+    slug: "gremlin",
+    thumb: gremlinLogo,
+    img_alt: "Gremlin Thumbnail",
+    title: "Gremlin Visual Identity",
+  },
+  {
+    component: statype,
+    slug: "statype",
+    thumb: statypeLogo,
+    img_alt: "Statype Thumbnail",
+    title: "Statype Visual Identity",
+  },
+  {
+    component: gravitee,
+    slug: "gravitee",
+    thumb: graviteeLogo,
+    img_alt: "Gravitee Thumbnail",
+    title: "Gravitee Projects",
+  },
+  {
+    component: materialize,
+    slug: "materialize",
+    thumb: materializeLogo,
+    img_alt: "Materialize Thumbnail",
+    title: "Materialize Projects",
+  },
+];
+---
+
+{
+  projects.map((project) => (
+    <div class="portfolio-item col-span-1">
+      <a
+        href={`/work/${project.slug}`}
+        class="mx-auto block max-w-screen-2xl transition duration-300 ease-in-out focus-within:opacity-100"
+      >
+        <Image
+          src={project.thumb}
+          alt={project.img_alt}
+          class="flex h-full w-full flex-col object-cover transition-all duration-500 ease-in-out hover:rounded-3xl"
+          quality="max"
+        />
+
+        <div class="portfolio-title absolute inset-x-0 bottom-0 py-4 text-center text-xs uppercase tracking-widest opacity-0 transition-opacity duration-300 ease-in-out group-focus-within:opacity-100 group-hover:opacity-100">
+          {project.title}
+        </div>
+      </a>
+    </div>
+  ))
+}
+
+<style>
+  .portfolio-item {
+    position: relative;
+  }
+  .portfolio-title {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+</style>

@@ -3,6 +3,8 @@ dist/
 .output/
 *.tsbuildinfo
 *.log*
+.env
 .env.local
 .env.*.local
+.vercel
 .DS_Store

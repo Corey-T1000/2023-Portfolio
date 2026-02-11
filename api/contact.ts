@@ -90,7 +90,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     if (sendError) {
       console.error("Resend API error:", JSON.stringify(sendError));
-      return res.status(502).json({ error: "Email delivery failed" });
+      return res.status(502).json({ error: "Email delivery failed", detail: sendError.message });
     }
 
     return res.status(200).json({ success: true });

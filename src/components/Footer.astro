@@ -1,3 +1,7 @@
+---
+import Icon from "./Icon.astro";
+---
+
 <section id="Footer">
   <div
     class="border-gray mx-auto grid max-w-screen-2xl items-center border-x border-y p-8 sm:flex"
@@ -13,7 +17,7 @@
       </p>
     </div>
     <div
-      class="flex flex-col items-end font-light tracking-widest sm:flex-row sm:py-0 sm:pl-5"
+      class="flex items-center font-light tracking-widest sm:py-0 sm:pl-5"
     >
       <a
         class="duration-400 py-2 pl-4 text-xs font-light text-neutral-400 transition ease-in-out hover:text-neutral-900 sm:ml-auto"
@@ -27,6 +31,15 @@
         class="duration-400 py-2 pl-4 text-xs font-light text-neutral-400 transition ease-in-out hover:text-neutral-900"
         href="/contact">Contact</a
       >
+      <a
+        class="duration-400 py-2 pl-4 text-neutral-400 transition ease-in-out hover:text-neutral-900"
+        href="https://www.linkedin.com/in/cor3ythomas/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+      >
+        <Icon icon="linkedin-logo" size="1.25em" />
+      </a>
     </div>
   </div>
 </section>

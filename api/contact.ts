@@ -74,7 +74,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    await resend.emails.send({
+    const { data, error: sendError } = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: contactEmail,
       subject: `Portfolio contact from ${name}`,
@@ -87,6 +87,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         message,
       ].join("\n"),
     });
+
+    if (sendError) {
+      console.error("Resend API error:", JSON.stringify(sendError));
+      return res.status(502).json({ error: "Email delivery failed" });
+    }
 
     return res.status(200).json({ success: true });
   } catch (error) {

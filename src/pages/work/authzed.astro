@@ -1,0 +1,160 @@
+---
+import Icon from "../../components/Icon.astro";
+import Tag from "../../components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+// NOTE: Visuals are wireframe placeholders pending real, public-safe Sandworm
+// assets. Drop screenshots into ../../assets/authzed/ and swap the placeholder
+// divs for <Image> blocks (see work/gremlin.astro for the pattern).
+---
+
+<BaseLayout title="AuthZed - Corey T" description="AuthZed Brand & Design System">
+  <div class="mx-auto w-full justify-center">
+    <div
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border border-b-0 py-8 md:grid md:border-t-0"
+    >
+      <div class="relative col-span-12 grid-cols-12 justify-between md:grid">
+        <div
+          class="top-0 z-10 col-span-full grid bg-neutral-100 px-8 md:col-span-6"
+          id="description"
+        >
+          <a
+            class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
+            href="/work/"><Icon icon="arrow-left" /> Work</a
+          >
+          <h1 class="mb-2 text-5xl font-light">AuthZed Brand & Design System</h1>
+          <div class="-ml-2 mb-4 justify-start">
+            <Tag text="Identity" />
+            <Tag text="Design systems" />
+            <Tag text="Web development" />
+            <Tag text="Data viz" />
+            <Tag text="Product" />
+          </div>
+        </div>
+        <div
+          class="relative col-span-full gap-4 place-self-center px-8 md:col-span-6 md:mt-4"
+        >
+          <p class="text-md font-light">
+            AuthZed builds authorization infrastructure — the team behind
+            SpiceDB, the open-source permissions system inspired by Google's
+            Zanzibar. It gives developers fine-grained, scalable access control
+            for everything from startups to enterprise platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
+    >
+      <div
+        class="col-span-full mb-8 mt-8 flex aspect-[16/9] items-center justify-center border border-dashed border-neutral-300 bg-neutral-50 text-xs uppercase tracking-widest text-neutral-400 md:col-span-6"
+      >
+        [ Sandworm system — hero visual ]
+      </div>
+
+      <div
+        class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Challenge
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          AuthZed's visual language had grown piecemeal across three very
+          different surfaces — a marketing site, technical docs, and the product
+          itself. Each had drifted into its own set of one-off styles, so the
+          brand read differently depending on where you met it. It needed a
+          single coherent system, not another coat of paint.
+        </p>
+      </div>
+
+      <div
+        class="col-span-full mb-8 flex aspect-[16/9] items-center justify-center border border-dashed border-neutral-300 bg-neutral-50 text-xs uppercase tracking-widest text-neutral-400 md:col-span-6"
+      >
+        [ rebrand directions — exploration ]
+      </div>
+
+      <div
+        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Solution
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          I explored rebrand directions, then codified the winner into
+          &ldquo;Sandworm&rdquo; — a token-driven design system rather than a
+          static style guide. A Stone-950 dark foundation, Inter and JetBrains
+          Mono, and a documented color, space, and type scale, all expressed as
+          design tokens so the same decisions could live in Figma and in code.
+        </p>
+      </div>
+
+      <div class="col-span-full grid gap-1">
+        <div
+          class="col-span-full mb-8 flex aspect-[16/9] items-center justify-center border border-dashed border-neutral-300 bg-neutral-50 text-xs uppercase tracking-widest text-neutral-400 md:col-span-6"
+        >
+          [ design tokens — color, type, space ]
+        </div>
+      </div>
+
+      <div
+        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
+      >
+        <div
+          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
+        >
+          <div class="pr-8 text-xl font-light uppercase tracking-widest">
+            The Execution
+          </div><div
+            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
+          >
+          </div>
+        </div>
+        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+          Sandworm now drives the whole brand surface. It ships on authzed.com
+          and the docs site, and powers a registry-driven use-case page system —
+          new pages assemble from configuration instead of bespoke code. It also
+          carries a dedicated data-visualization language: a value-count-based
+          palette and reusable chart components, including a hex radar, so charts
+          stay on-brand and legible on both light and dark surfaces.
+        </p>
+      </div>
+
+      <div class="col-span-full grid gap-1">
+        <div
+          class="col-span-full mb-8 flex aspect-[16/9] items-center justify-center border border-dashed border-neutral-300 bg-neutral-50 text-xs uppercase tracking-widest text-neutral-400 md:col-span-6"
+        >
+          [ authzed.com — marketing site ]
+        </div>
+        <div
+          class="col-span-full mb-8 flex aspect-[16/9] items-center justify-center border border-dashed border-neutral-300 bg-neutral-50 text-xs uppercase tracking-widest text-neutral-400 md:col-span-6"
+        >
+          [ data viz — value-count palette + hex radar ]
+        </div>
+      </div>
+
+      <div class="col-span-full px-8 pb-12 pt-4 text-center">
+        <a
+          href="https://authzed.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full bg-neutral-800/5 px-6 py-2 text-xs font-medium uppercase tracking-widest text-neutral-800 duration-200 hover:bg-white"
+          >Visit authzed.com<Icon icon="arrow-right" /></a
+        >
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,4 @@
+# pnpm 10+ gates native postinstall builds; allow the ones this project needs.
+allowBuilds:
+  sharp: true
+  esbuild: true

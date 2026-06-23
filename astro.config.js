@@ -1,11 +1,13 @@
 import mdx from "@astrojs/mdx";
-import prefetch from "@astrojs/prefetch";
 import tailwind from "@astrojs/tailwind";
-import { defineConfig, sharpImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 
+// Astro 5: prefetch is built-in (the @astrojs/prefetch integration is gone),
+// and sharp is the default image service (no explicit service config needed).
 export default defineConfig({
   compressHTML: true,
-  image: {
-    service: sharpImageService(),
+  prefetch: {
+    prefetchAll: true,
   },
-  integrations: [mdx(), prefetch(), tailwind()],});
+  integrations: [mdx(), tailwind()],
+});

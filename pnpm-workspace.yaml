@@ -2,3 +2,9 @@
 allowBuilds:
   sharp: true
   esbuild: true
+# Security overrides for transitives pinned by @vercel/node (type-only dep,
+# never executed here: Vercel builds /api with its own copy of @vercel/node).
+overrides:
+  undici@<6.28.0: ^6.28.0
+  path-to-regexp@>=4.0.0 <6.3.0: ^6.3.0
+  ajv@>=7.0.0-alpha.0 <8.18.0: ^8.18.0

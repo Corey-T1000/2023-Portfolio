@@ -35,6 +35,7 @@ import potpourriNYC4 from "../../assets/potpourri/potpourriNYC4.jpg";
 import Icon from "../../components/Icon.astro";
 import Tag from "../../components/Tag.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
 ---
 
 <BaseLayout title="Potpourri - Corey T" description="A potpourri of projects">
@@ -49,7 +50,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         >
           <a
             class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
-            href="/work/"><Icon icon="arrow-left" /> Work</a
+            href={`/work/`}><Icon icon="arrow-left" /> Work</a
           >
           <h1 class="mb-2 text-5xl font-light">A Potpourri of Projects</h1>
           <div class="-ml-2 mb-4 justify-start">

@@ -11,12 +11,13 @@ import gremlin from "../pages/work/gremlin.astro";
 import statype from "../pages/work/statype.astro";
 import authzed from "../pages/work/authzed.astro";
 
+
 const projects = [
   {
     component: authzed,
     slug: "authzed",
     thumb: null,
-    disabled: true,
+    mark: true,
     img_alt: "AuthZed",
     title: "AuthZed Brand & Design System",
   },
@@ -53,11 +54,11 @@ const projects = [
 
 {
   projects.map((project) =>
-    project.disabled ? (
+    project.mark ? (
       <div class="portfolio-item col-span-1">
-        <div
-          class="authzed-tile mx-auto block max-w-screen-2xl cursor-default"
-          aria-label={`${project.title} (coming soon)`}
+        <a
+          href={`/work/${project.slug}`}
+          class="authzed-tile mx-auto block max-w-screen-2xl"
         >
           <div class="flex aspect-square w-full items-center justify-center bg-stone-950 p-12">
             <svg
@@ -72,7 +73,11 @@ const projects = [
               <path fill-rule="evenodd" clip-rule="evenodd" d="M211.673 167.658C216.271 162.733 212.222 154.751 205.531 155.552L88.5438 169.563C85.0053 169.987 82.0607 172.537 81.3465 176.028C76.8475 198.02 78.6423 220.167 87.1071 242.335C90.277 250.64 90.4756 250.879 81.9187 251.931C80.8029 252.068 79.6849 252.22 78.5651 252.372C72.1137 253.246 65.6018 254.129 59.1107 252.286C43.4203 247.817 67.553 232.954 69.3751 226.603C70.7205 221.913 64.346 220.156 60.3605 222.971C47.5893 231.99 35.4307 242.515 27.8912 256.433C26.2801 259.655 26.4794 263.685 27.0855 265.863C31.5498 281.902 66.1127 278.991 77.4998 276.946C92.4207 274.267 103.194 273.294 117.691 268.865C121.645 267.656 121.718 267.255 127.758 261.031C158.363 232.623 186.37 193.89 211.673 167.658Z" fill="#FFB471"/>
             </svg>
           </div>
-        </div>
+
+          <div class="portfolio-title absolute inset-x-0 bottom-0 py-4 text-center text-xs uppercase tracking-widest opacity-0 transition-opacity duration-300 ease-in-out group-focus-within:opacity-100 group-hover:opacity-100">
+            {project.title}
+          </div>
+        </a>
       </div>
     ) : (
       <div class="portfolio-item col-span-1">
@@ -81,7 +86,7 @@ const projects = [
           class="mx-auto block max-w-screen-2xl transition duration-300 ease-in-out focus-within:opacity-100"
         >
           <Image
-            src={project.thumb}
+            src={project.thumb!}
             alt={project.img_alt}
             class="flex h-full w-full flex-col object-cover transition-all duration-500 ease-in-out hover:rounded-3xl"
             quality="max"

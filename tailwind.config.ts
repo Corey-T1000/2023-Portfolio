@@ -1,7 +1,13 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
+// Neutrals resolve through CSS variables (src/styles/global.css) so the
+// whole site flips theme from one place. Light values are Tailwind's stock
+// neutral ramp, so light mode renders exactly as before.
+const neutral = (step: number | string) => `rgb(var(--n-${step}) / <alpha-value>)`;
+
 export default {
+  darkMode: ["selector", '[data-theme="dark"]'],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   future: {
     hoverOnlyWhenSupported: true,
@@ -11,7 +17,24 @@ export default {
   },
   theme: {
     extend: {
+      borderColor: {
+        // Bare `border` (and the no-op `border-gray`) fall back to this.
+        DEFAULT: "rgb(var(--border) / <alpha-value>)",
+      },
       colors: {
+        neutral: {
+          50: neutral(50),
+          100: neutral(100),
+          200: neutral(200),
+          300: neutral(300),
+          400: neutral(400),
+          500: neutral(500),
+          600: neutral(600),
+          700: neutral(700),
+          800: neutral(800),
+          900: neutral(900),
+          950: neutral(950),
+        },
         purple: {
           50: "#f1effd",
           100: "#e4dffa",

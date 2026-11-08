@@ -1,4 +1,5 @@
 ---
+import CaseHeading from "../../components/CaseHeading.astro";
 import { Image } from "astro:assets";
 
 import stackblitzHandout from "../../assets/stackblitz/stackblitzHandout@2x.png";
@@ -17,6 +18,7 @@ import stackblitzPingpong from "../../assets/stackblitz/stackblitzPingpong@2x.pn
 import Icon from "../../components/Icon.astro";
 import Tag from "../../components/Tag.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
 ---
 
 <BaseLayout title="StackBlitz - Corey T" description="StackBlitz Branding">
@@ -31,7 +33,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         >
           <a
             class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
-            href="/work/"><Icon icon="arrow-left" /> Work</a
+            href={`/work/`}><Icon icon="arrow-left" /> Work</a
           >
           <h1 class="mb-2 text-5xl font-light">StackBlitz Branding</h1>
           <div class="-ml-2 mb-4 justify-start">
@@ -63,20 +65,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         alt="stackblitz open graph image"
         class="col-span-full pb-8 md:col-span-6"
       />
-      <div
-        class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
-      >
-        <div
-          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
-        >
-          <div class="pr-8 text-xl font-light uppercase tracking-widest">
-            The Challenge
-          </div><div
-            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
-          >
-          </div>
-        </div>
-        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+      <CaseHeading title="The Challenge">
           StackBlitz found that they were reaching their in-house design
           bandwidth. With immediate needs to scale the existing design system to
           traditional print mediums we worked closely with their marketing and
@@ -84,8 +73,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           everything from print marketing materials to conference booths and
           swag. This enabled StackBlitz to effectively communicate their brand's
           innovation and leadership at every touchpoint.
-        </p>
-      </div>
+        </CaseHeading>
 
       <div class="col-span-full grid grid-cols-6 gap-1">
         <div class="col-span-6">

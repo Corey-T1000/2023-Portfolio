@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 
 import ctLogo from "../assets/ct-logo.png";
+import ThemeToggle from "./ThemeToggle.astro";
+
 ---
 
 <div
@@ -10,7 +12,7 @@ import ctLogo from "../assets/ct-logo.png";
 >
   <div class="flex flex-row items-center justify-between text-neutral-800">
     <a class="inline-flex py-2 font-light uppercase sm:items-center" href="/"
-      ><Image src={ctLogo} alt="CT Logomark" class="max-h-8 w-auto" />
+      ><Image src={ctLogo} alt="CT Logomark" class="max-h-8 w-auto dark:invert" />
     </a>
     <button
       class="focus:shadow-outline rounded-lg focus:outline-none sm:hidden"
@@ -45,26 +47,29 @@ import ctLogo from "../assets/ct-logo.png";
   >
     <a
       class="duration-400 py-4 pl-4 text-xs font-light text-neutral-800 transition ease-in-out hover:text-neutral-300 sm:ml-auto"
-      href="/work"
+      href={`/work`}
       >Work
     </a>
     <a
       class="duration-400 py-4 pl-4 text-xs font-light text-neutral-800 transition ease-in-out hover:text-neutral-300"
-      href="https://the-garage.sawtooth.studio/"
+      href="https://sawtooth.studio/"
       target="_blank"
       rel="noopener noreferrer"
-      >Garage
+      >Sawtooth
     </a>
     <a
       class="duration-400 py-4 pl-4 text-xs font-light text-neutral-800 transition ease-in-out hover:text-neutral-300"
-      href="/info"
+      href={`/info`}
       >Info
     </a>
     <a
       class="duration-400 py-4 pl-4 text-xs font-light text-neutral-800 transition ease-in-out hover:text-neutral-300"
-      href="/contact"
+      href={`/contact`}
       >Contact
     </a>
+    <div class="pt-2 sm:self-center sm:pl-6 sm:pt-0">
+      <ThemeToggle />
+    </div>
   </nav>
 </div>
 

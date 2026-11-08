@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css";
 
-import { ViewTransitions, ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
+
 
 interface Props {
   title?: string | undefined;
@@ -12,9 +13,73 @@ const {
   title = "Corey T - Visual Designer",
   description = "The portfolio site of Corey Thomas, a visual designer based on the East Coast",
 } = Astro.props;
+
 ---
 
 <meta charset="UTF-8" />
+<script is:inline>
+  // Theme resolution, inlined and blocking so the first paint is already in
+  // the right theme. Stored pref: "light" | "dark" | absent (= follow system).
+  // ThemeToggle.astro writes it and calls window.__theme.set().
+  (() => {
+    if (window.__theme) return window.__theme.apply();
+    const mq = matchMedia("(prefers-color-scheme: dark)");
+    const read = () => {
+      try {
+        // The pre-2026-10 script stored the OS theme on every visit, so a
+        // bare "theme" key without the v2 marker is not a real choice.
+        if (localStorage.getItem("theme-v") !== "2") {
+          localStorage.removeItem("theme");
+          localStorage.setItem("theme-v", "2");
+        }
+        const v = localStorage.getItem("theme");
+        return v === "light" || v === "dark" ? v : "system";
+      } catch {
+        return "system";
+      }
+    };
+    const apply = (doc = document) => {
+      const pref = read();
+      const theme = pref === "system" ? (mq.matches ? "dark" : "light") : pref;
+      const el = doc.documentElement;
+      el.dataset.theme = theme;
+      el.dataset.themePref = pref;
+      const meta = doc.querySelector('meta[name="theme-color"]');
+      if (meta) meta.content = theme === "dark" ? "#141414" : "#ffffff";
+      return theme;
+    };
+    // Switch in one frame: without this, every element with a color
+    // transition fades on its own clock and the page flips in a ripple.
+    const switchNow = () => {
+      const freeze = document.createElement("style");
+      freeze.textContent = "*,*::before,*::after{transition:none!important}";
+      document.head.appendChild(freeze);
+      apply();
+      getComputedStyle(document.documentElement).color;
+      requestAnimationFrame(() => freeze.remove());
+      document.dispatchEvent(new CustomEvent("themechange"));
+    };
+    const set = (pref) => {
+      try {
+        if (pref === "system") localStorage.removeItem("theme");
+        else localStorage.setItem("theme", pref);
+        localStorage.setItem("theme-v", "2");
+      } catch {}
+      switchNow();
+    };
+    window.__theme = { apply, set, read };
+    apply();
+    // <meta name="theme-color"> is parsed after this script; catch it up.
+    document.addEventListener("DOMContentLoaded", () => apply());
+    mq.addEventListener("change", () => {
+      if (read() === "system") switchNow();
+    });
+    // ClientRouter swaps <html> attributes for the incoming page's: stamp the
+    // theme on the new document before it lands so navigation never flashes.
+    document.addEventListener("astro:before-swap", (e) => apply(e.newDocument));
+    document.addEventListener("astro:after-swap", () => apply());
+  })();
+</script>
 <meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
@@ -26,7 +91,7 @@ const {
 <meta property="og:url" content="https://corey-t.com" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://corey-t.com/og-image.png" />
-<ViewTransitions />
+<ClientRouter />
 
 <link
   rel="apple-touch-icon"
@@ -57,31 +122,6 @@ const {
   rel="stylesheet"
 />
 
-<script is:inline>
-  // This code is inlined in the head to make dark mode instant & blocking.
-  const getThemePreference = () => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  };
-  const isDark = getThemePreference() === "dark";
-  document.documentElement.classList[isDark ? "add" : "remove"]("theme-dark");
-
-  if (typeof localStorage !== "undefined") {
-    // Watch the document element and persist user preference when it changes.
-    const observer = new MutationObserver(() => {
-      const isDark = document.documentElement.classList.contains("theme-dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    });
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-  }
-</script>
 
 <script defer data-domain="corey-t.com" src="https://plausible.io/js/script.js"
 ></script>

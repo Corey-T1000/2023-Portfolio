@@ -1,0 +1,47 @@
+---
+// Section opener used across the AuthZed page: a plain title on the left third
+// and two or three plain sentences beside it. Stacks on phones.
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<div class="ch col-span-full px-8 sm:px-4">
+  <h2 class="ch-title">{title}</h2>
+  <p class="ch-text"><slot /></p>
+</div>
+
+<style>
+  .ch {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  .ch-title {
+    font-size: 1.625rem;
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .ch-text {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  @media (min-width: 768px) {
+    .ch {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .ch-title {
+      font-size: 2rem;
+    }
+    .ch-text {
+      margin-top: 0.35rem;
+      max-width: 44rem;
+    }
+  }
+</style>

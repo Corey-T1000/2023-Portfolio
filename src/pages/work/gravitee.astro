@@ -1,4 +1,5 @@
 ---
+import CaseHeading from "../../components/CaseHeading.astro";
 import { Image } from "astro:assets";
 
 import graviteeAd1 from "../../assets/gravitee/graviteeAd1@2x.png";
@@ -31,6 +32,7 @@ import graviteeWP from "../../assets/gravitee/graviteeWP@2x.png";
 import Icon from "../../components/Icon.astro";
 import Tag from "../../components/Tag.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
 ---
 
 <BaseLayout title="Gravitee - Corey T" description="Gravitee Visual Identity">
@@ -45,7 +47,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         >
           <a
             class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
-            href="/work/"><Icon icon="arrow-left" /> Work</a
+            href={`/work/`}><Icon icon="arrow-left" /> Work</a
           >
           <h1 class="mb-2 text-5xl font-light">Gravitee.io Visual Identity</h1>
           <div class="-ml-2 mb-4 justify-start">
@@ -76,28 +78,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         class="col-span-full pb-8 md:col-span-6"
       />
 
-      <div
-        class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
-      >
-        <div
-          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
-        >
-          <div class="pr-8 text-xl font-light uppercase tracking-widest">
-            The Challenge
-          </div><div
-            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
-          >
-          </div>
-        </div>
-        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+      <CaseHeading title="The Challenge">
           The Gravitee marketing team was looking to elevate their brand and
           create more impactful and ownable assets, a task that was challenging
           with a small in-house design team mostly focused on product
           development. I was brought on to help fill out their in-house design
           team creating more marketing focused assets and refining the existing
           visual identity.
-        </p>
-      </div>
+        </CaseHeading>
       <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
         <Image
           src={graviteeOld1}
@@ -113,20 +101,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         />
       </div>
 
-      <div
-        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
-      >
-        <div
-          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
-        >
-          <div class="pr-8 text-xl font-light uppercase tracking-widest">
-            The Solution
-          </div><div
-            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
-          >
-          </div>
-        </div>
-        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+      <CaseHeading title="The Solution">
           I worked closely with both the marketing and design teams to audit and
           update the visual language, updating it to more closely match the
           product while adding extra design <span class="italic">flair</span> for
@@ -134,8 +109,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           of collateral. Coordination with internal teams ensured that the designs
           were not just visually appealing but functionally effective, reflecting
           Gravitee's commitment to quality in the API sector.
-        </p>
-      </div>
+        </CaseHeading>
       <Image
         src={graviteeHome}
         alt="Gravitee Home page"
@@ -174,26 +148,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </div>
       </div>
 
-      <div
-        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 py-16"
-      >
-        <div
-          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
-        >
-          <div class="pr-8 text-xl font-light uppercase tracking-widest">
-            The Execution
-          </div><div
-            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
-          >
-          </div>
-        </div>
-        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+      <CaseHeading title="The Execution">
           Since starting with the team, we've developed an ongoing series of
           assets, including but not limited to whitepapers, sales materials, and
           even a mascot (named Newt). All anchored by a versatile visual
           language for consistent designs across all touchpoints.
-        </p>
-      </div>
+        </CaseHeading>
       <Image
         src={graviteeNewtHi}
         alt="Gravitee Mascot Newt"

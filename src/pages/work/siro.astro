@@ -1,4 +1,5 @@
 ---
+import CaseHeading from "../../components/CaseHeading.astro";
 import { Image } from "astro:assets";
 
 import siroHero from "../../assets/siro/siroHero2@2x.png";
@@ -14,6 +15,7 @@ import siroSupers4 from "../../assets/siro/siroSupers4@2x.png";
 import Icon from "../../components/Icon.astro";
 import Tag from "../../components/Tag.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
 ---
 
 <BaseLayout title="Siro - Corey T" description="Siro Visual Identity">
@@ -28,7 +30,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         >
           <a
             class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
-            href="/work/"><Icon icon="arrow-left" /> Work</a
+            href={`/work/`}><Icon icon="arrow-left" /> Work</a
           >
           <h1 class="mb-2 text-5xl font-light">Siro Visual Identity</h1>
           <div class="-ml-2 mb-4 justify-start">
@@ -60,52 +62,24 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         alt="siro open graph image"
         class="col-span-full pb-8 md:col-span-6"
       />
-      <div
-        class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
-      >
-        <div
-          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
-        >
-          <div class="pr-8 text-xl font-light uppercase tracking-widest">
-            The Challenge
-          </div><div
-            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
-          >
-          </div>
-        </div>
-        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+      <CaseHeading title="The Challenge">
           Without a cohesive brand identity, Siro.ai's visual presence was
           fragmented and lacked the design polish needed to reflect its
           innovative technology. The previous ad-hoc design efforts led to
           inconsistencies that weakened the brand’s overall impact.
-        </p>
-      </div>
+        </CaseHeading>
       <div class="col-span-full grid grid-cols-6 gap-1">
         <div class="col-span-6">
           <Image src={siroAdSpread} alt="Materialize Marketing Blog image" />
         </div>
-        <div
-          class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
-        >
-          <div
-            class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
-          >
-            <div class="pr-8 text-xl font-light uppercase tracking-widest">
-              The Solution
-            </div><div
-              class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
-            >
-            </div>
-          </div>
-          <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+        <CaseHeading title="The Solution">
             We conducted a thorough audit of Siro.ai’s visual elements, refining
             key components with strong brand equity. This included transforming
             the existing logomark into a versatile element, creating an
             additional logomark, and developing a stylized UI for marketing
             materials. We also produced the first customer testimonial video,
             enhancing the brand’s narrative and visual identity.
-          </p>
-        </div>
+          </CaseHeading>
         <div class="col-span-3">
           <Image src={siroBanner2} alt="Materialize Marketing Blog image" />
         </div>

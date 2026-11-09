@@ -1,0 +1,683 @@
+---
+import { Image } from "astro:assets";
+
+import authzedOld2021 from "../../assets/authzed/authzedOld2021.jpg";
+import authzedOld2023 from "../../assets/authzed/authzedOld2023.jpg";
+import authzedOld2024 from "../../assets/authzed/authzedOld2024.jpg";
+import authzedOldCustomers from "../../assets/authzed/authzedOldCustomers.jpg";
+import authzedOldPricing from "../../assets/authzed/authzedOldPricing.jpg";
+import authzedOldBlog from "../../assets/authzed/authzedOldBlog.jpg";
+import authzedOldDocs from "../../assets/authzed/authzedOldDocs.jpg";
+import AuthzedHeroBeam from "../../components/authzed/AuthzedHeroBeam.astro";
+import CaseLabel from "../../components/authzed/CaseLabel.astro";
+import AuthzedDisplayTester from "../../components/authzed/AuthzedDisplayTester.astro";
+import authzedAdLaunch from "../../assets/authzed/authzedAdLaunch.jpg";
+import authzedAdCollab from "../../assets/authzed/authzedAdCollab.jpg";
+import authzedAdJwt from "../../assets/authzed/authzedAdJwt.jpg";
+import authzedAdHomegrown from "../../assets/authzed/authzedAdHomegrown.jpg";
+import authzedAdOwasp from "../../assets/authzed/authzedAdOwasp.jpg";
+import authzedAdZanzibar from "../../assets/authzed/authzedAdZanzibar.jpg";
+import authzedIs5 from "../../assets/authzed/authzedIs5.jpg";
+import authzedShowcase from "../../assets/authzed/authzedShowcase.jpg";
+import authzedSlide4 from "../../assets/authzed/authzedSlide4.jpg";
+import authzedSlide12 from "../../assets/authzed/authzedSlide12.jpg";
+import authzedBoothKubecon from "../../assets/authzed/authzedBoothKubeconClean.jpg";
+import authzedBoothEic from "../../assets/authzed/authzedBoothEicClean.jpg";
+import authzedBoothIdentiverse from "../../assets/authzed/authzedBoothIdentiverseClean.jpg";
+import authzedZanzibarBook from "../../assets/authzed/authzedZanzibarBook@2x.jpg";
+import authzedZanzibarStack from "../../assets/authzed/authzedZanzibarStack@2x.jpg";
+import authzedSupperClubHoodieFront from "../../assets/authzed/authzedSupperClubHoodieFront@2x.jpg";
+import authzedSupperClubHoodieBack from "../../assets/authzed/authzedSupperClubHoodieBack@2x.jpg";
+import authzedPocketTeeReal from "../../assets/authzed/authzedPocketTeeReal.jpg";
+import authzedSocks from "../../assets/authzed/authzedSocks.jpg";
+import authzedStickersPhoto from "../../assets/authzed/authzedStickersPhoto@2x.jpg";
+import authzedGiftLibrary from "../../assets/authzed/authzedGiftLibrary.jpg";
+import authzedGiftRbac from "../../assets/authzed/authzedGiftRbac.jpg";
+import authzedGiftTuple from "../../assets/authzed/authzedGiftTuple.jpg";
+import authzedDibsExplore from "../../assets/authzed/authzedDibsExplore@2x.jpg";
+import authzedDibsCull from "../../assets/authzed/authzedDibsCull@2x.jpg";
+import authzedDibsEvolve from "../../assets/authzed/authzedDibsEvolve.jpg";
+import authzedDibsSheets from "../../assets/authzed/authzedDibsSheets.jpg";
+import authzedDibsFirstVector from "../../assets/authzed/authzedDibsFirstVector.jpg";
+import authzedDibsRefs from "../../assets/authzed/authzedDibsRefs@2x.png";
+import authzedDibs3dSheet from "../../assets/authzed/authzedDibs3dSheet.jpg";
+import authzedDibsSlicer from "../../assets/authzed/authzedDibsSlicer.jpg";
+import authzedDibsPrintPhoto from "../../assets/authzed/authzedDibsPrintPhoto.jpg";
+import authzedDibsDeckRounds from "../../assets/authzed/authzedDibsDeckRounds.jpg";
+import authzedDibsStory from "../../assets/authzed/authzedDibsStory.jpg";
+import authzedDibsMeshEdit from "../../assets/authzed/authzedDibsMeshEdit@2x.jpg";
+import authzedPinSet from "../../assets/authzed/authzedPinSet@2x.jpg";
+import authzedShirtScopeghetti from "../../assets/authzed/authzedShirtScopeghetti@2x.jpg";
+import authzedShirtNoMoreJwts from "../../assets/authzed/authzedShirtNoMoreJwts@2x.jpg";
+import authzedShirtNoMoreJwtsRed from "../../assets/authzed/authzedShirtNoMoreJwtsRed@2x.jpg";
+import authzedCardsPhotoReal from "../../assets/authzed/authzedCardsPhotoReal.jpg";
+import authzedOffsiteShirtArt from "../../assets/authzed/authzedOffsiteShirtArt.png";
+import authzedFoilPress from "../../assets/authzed/authzedFoilPress.jpg";
+import authzedFoilDies from "../../assets/authzed/authzedFoilDies.jpg";
+import authzedFoilChips from "../../assets/authzed/authzedFoilChips.jpg";
+import authzedChipStamps from "../../assets/authzed/authzedChipStamps@2x.png";
+import CaseHeading from "../../components/CaseHeading.astro";
+import SandwormSpec from "../../components/authzed/SandwormSpec.astro";
+import SandwormOverview from "../../components/authzed/SandwormOverview.astro";
+import SandwormSystem from "../../components/authzed/SandwormSystem.astro";
+import Icon from "../../components/Icon.astro";
+import Tag from "../../components/Tag.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+// authzed.com before I started, from the Wayback Machine.
+const oldHomes = [
+  { src: authzedOld2021, year: "2021", alt: "The authzed.com homepage in 2021: a light page headed The platform to store, compute, and validate application permissions" },
+  { src: authzedOld2023, year: "2023", alt: "The authzed.com homepage in 2023: muted purple waves behind A managed permissions database for everyone" },
+  { src: authzedOld2024, year: "July 2024", alt: "The authzed.com homepage in July 2024: a dark page with a hex-wrapped planet and the headline Authorization That Scales" },
+];
+const oldPages = [
+  { src: authzedOldCustomers, name: "Customers", alt: "The customer stories page in August 2024, with a teal and red gradient banner and outlined story cards" },
+  { src: authzedOldPricing, name: "Pricing", alt: "The pricing page in August 2024, with three plan cards under the logo" },
+  { src: authzedOldBlog, name: "Blog", alt: "The blog in July 2024, with post cards for the Series A and two new developer tools" },
+  { src: authzedOldDocs, name: "Docs", alt: "The docs home in January 2024, with a sidebar and a node graph in muted red and gray" },
+];
+
+// The whole making of Dibs in order, including the parts that didn't work.
+const spicedbMarks = [
+  { id: "N3", alt: "A SpiceDB logo candidate turning: a faceted garnet crystal in sand, coral and magenta bands" },
+  { id: "F0", alt: "A SpiceDB logo candidate turning: a crystal column split by a fault, in sand, coral and magenta bands" },
+  { id: "B2", alt: "A SpiceDB logo candidate turning: a six-sided crystal column with a slanted top, in sand, coral and magenta bands" },
+];
+
+const dibsStages = [
+  { src: authzedDibsExplore, title: "Throwing things at the wall", note: "From AI image tools.", alt: "Hundreds of small AI-generated mouse mascot images in dense grids, in many styles and palettes" },
+  { src: authzedDibsCull, title: "The versions that stuck", note: "The few worth keeping.", alt: "Fifteen of the most promising mouse directions in a grid" },
+  { src: authzedDibsEvolve, title: "Iterating on each to go from one to many", note: "Round after round. The gray blobs are erase-and-regenerate masks.", alt: "One chosen mouse edited into character sheets over several rounds, with gray masked areas waiting to be regenerated" },
+  { src: authzedDibsSheets, title: "Sharing the newly minted creatures to the team", note: "Sunrise Muad'Dib, Quiet Confidence, Cozy Rock Hopper.", alt: "Six named character sheet variants in different palettes" },
+  { src: authzedDibsFirstVector, title: "Vector of the approved direction", note: "Auto trace, then massaging points by hand.", alt: "The first flat vector Dibs in orange and pink, sitting in profile" },
+  { src: authzedDibsRefs, title: "Creating reference sheets", note: "Re-renders to feed image models.", alt: "Four Dibs reference poses in a row: front, side, back and cheering" },
+  { src: authzedDibs3dSheet, title: "3D render into Blender for mesh cleanup & rigging", note: "From the flat art to a sculpt and test prints.", alt: "A contact sheet going from flat Dibs art through AI 3D views and Blender cleanup to painted test prints" },
+  { src: authzedDibsMeshEdit, title: "Editing the mesh", note: "From my Blender file.", alt: "The Dibs 3D model in a Blender-style edit view: a grey mesh with its wireframe showing and a few faces on the near ear selected in orange" },
+  { src: authzedDibsSlicer, title: "Preparing manufacture of trophy set", note: "Trophy tops and rock bases, ready for the printer.", alt: "Slicer views of trophy figures and rock bases laid out on print plates" },
+  { src: authzedDibsPrintPhoto, title: "Printed and finished", note: "The Golden Dibs, for our spring 2025 offsite. Photo.", alt: "A printed gold Dibs figure sitting on a black faceted rock base" },
+  { video: "/video/authzed/dibs-idle", title: "The idle loop", note: "Sniff, blink, ear twitch.", alt: "Dibs idling: sniffing, blinking and twitching one ear" },
+];
+---
+
+<BaseLayout
+  title="AuthZed - Corey T"
+  description="AuthZed Brand & Design System"
+>
+  <div class="mx-auto w-full justify-center">
+    <div
+      class="border-gray relative mx-auto flex max-w-screen-2xl grid-cols-12 flex-col gap-x-2 border border-b-0 py-8 md:grid md:border-t-0"
+    >
+      <div class="relative col-span-12 grid-cols-12 justify-between md:grid">
+        <div
+          class="top-0 z-10 col-span-full grid bg-neutral-100 px-8 md:col-span-6"
+          id="description"
+        >
+          <a
+            class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
+            href="/work/"><Icon icon="arrow-left" /> Work</a
+          >
+          <h1 class="mb-2 text-5xl font-light">
+            AuthZed Brand & Design System
+          </h1>
+          <div class="-ml-2 mb-4 justify-start">
+            <Tag text="Identity" />
+            <Tag text="Design systems" />
+            <Tag text="Web Design" />
+            <Tag text="Campaigns" />
+            <Tag text="Illustration" />
+            <Tag text="Print" />
+            <Tag text="Event" />
+          </div>
+        </div>
+        <div
+          class="relative col-span-full gap-4 place-self-center px-8 md:col-span-6 md:mt-4"
+        >
+          <p class="text-md font-light">
+            AuthZed builds authorization infrastructure for AI and modern
+            applications. Its open source database, SpiceDB, is based on
+            Google's Zanzibar and gives teams fine-grained permissions that
+            scale, from startups to companies like OpenAI, Netflix and Workday.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-gray mx-auto grid max-w-screen-2xl grid-cols-6 border md:border-t-0"
+    >
+      <AuthzedHeroBeam />
+
+      <CaseHeading title="The Challenge">
+        I joined AuthZed in August 2024 as the only designer. The first things to work on were taking inventory of existing branding and beginning the process of uniformity and updating outward facing materials.
+      </CaseHeading>
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-3">
+          {
+            oldHomes.map((page) => (
+              <div>
+                <p class="pb-2 text-xs font-light text-neutral-500">{page.year}</p>
+                <Image src={page.src} width={1200} alt={page.alt} class="rounded-lg border" />
+              </div>
+            ))
+          }
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Homepage evolution. From the Wayback Machine.
+        </figcaption>
+      </figure>
+      <figure class="col-span-full px-8 pb-8 sm:px-4">
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+          {oldPages.map((page) => <Image src={page.src} width={900} alt={page.alt} class="rounded-lg border" />)}
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Customer stories, pricing, the blog and the docs in 2024.
+        </figcaption>
+      </figure>
+
+      <CaseHeading title="The Solution">
+        A big rebrand or launch didn't make sense. There was nothing to tie it to, and it would have added unnecessary constraints and removed our ability to easily course correct as it was built. The first thing was getting a proper design system established. So I built Sandworm, our design system named for the worm on Arrakis that comes whenever you need, and rolled it out one surface at a time as the work came up.
+      </CaseHeading>
+      <SandwormOverview />
+      <div class="col-span-full pt-4">
+        <SandwormSystem />
+      </div>
+
+      <div class="col-span-full pt-4"></div>
+      <SandwormSpec />
+
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <video
+          class="w-full rounded-lg border"
+          data-inview
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="/video/authzed/spicedb-hero-poster.jpg"
+          aria-label="The SpiceDB page on authzed.com: a terminal runs zed permission check, gets false, writes a relationship, and checks again to get true"
+        >
+          <source src="/video/authzed/spicedb-hero.webm" type="video/webm" />
+          <source src="/video/authzed/spicedb-hero.mp4" type="video/mp4" />
+        </video>
+      </figure>
+      <figure class="col-span-full px-8 pb-8 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-5">
+          <video
+            class="h-full w-full rounded-lg border object-cover object-top sm:col-span-2"
+            data-inview
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="/video/authzed/rag-demo-poster.jpg"
+            aria-label="The Authorization for RAG demo, which plays scripted answers: with authorization on, the same salary question comes back denied and is shown never reaching the model"
+          >
+            <source src="/video/authzed/rag-demo.webm" type="video/webm" />
+            <source src="/video/authzed/rag-demo.mp4" type="video/mp4" />
+          </video>
+          <video
+            class="h-full w-full rounded-lg border object-cover sm:col-span-3"
+            data-inview
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="/video/authzed/materialize-hero-diagram-poster.jpg"
+            aria-label="The Materialize page diagram: a beam runs from data sources through SpiceDB while the precomputed permission grid lights up"
+          >
+            <source src="/video/authzed/materialize-hero-diagram.webm" type="video/webm" />
+            <source src="/video/authzed/materialize-hero-diagram.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          The SpiceDB page, an interactive RAG demo and a diagram for our product Materialize.
+        </figcaption>
+      </figure>
+
+      <CaseHeading title="Campaigns, events and swag">
+        The same system carries off the screen: launch campaigns, our fifth
+        birthday, booths, a book, dinners and the swag we bring to events.
+        Permission to Launch started as one CLI line that comes back true, and
+        Zanzibar+ is Google's paper republished with our notes in the margins
+        and a foreword by Kelsey Hightower.
+      </CaseHeading>
+      <CaseLabel>Permission to Launch</CaseLabel>
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <Image
+            src={authzedBoothKubecon}
+            width={1400}
+            alt="A clean mockup of the KubeCon EU 2025 booth: a Permission to Launch backwall with a zed permission check command and a planet, beside a counter with the AuthZed mark"
+            class="h-full w-full rounded-lg border object-cover"
+          />
+          <div class="grid gap-4">
+            <Image
+              src={authzedAdLaunch}
+              width={1400}
+              alt="A LinkedIn ad: Permission to Launch, with the planet at the right"
+              class="rounded-lg border"
+            />
+            <Image
+              src={authzedAdCollab}
+              width={1400}
+              alt="A later version of the same ad: Permission to Collaborate"
+              class="rounded-lg border"
+            />
+          </div>
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Built and shown at KubeCon EU 2025 (clean mockup with the real print
+          file), then the ads that came out of it.
+        </figcaption>
+      </figure>
+      <CaseLabel>AuthZed is 5 and the Community Showcase</CaseLabel>
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <Image
+            src={authzedIs5}
+            width={1400}
+            alt="The AuthZed is 5 board: a big gradient 5 running across event banners, speaker cards and a recap"
+            class="rounded-lg border"
+          />
+          <Image
+            src={authzedShowcase}
+            width={1400}
+            alt="The SpiceDB Community Showcase board: an event title card, a speaker grid and a shirt"
+            class="rounded-lg border"
+          />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          AuthZed is 5, and the SpiceDB Community Showcase virtual events.
+        </figcaption>
+      </figure>
+      <CaseLabel>Booths</CaseLabel>
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <Image
+            src={authzedBoothEic}
+            width={1400}
+            alt="A clean mockup of the EIC 2026 booth: a backwall headlined The Authorization Platform for AI and Modern Applications, with customer logos set among anonymous industry tags"
+            class="rounded-lg border"
+          />
+          <Image
+            src={authzedBoothIdentiverse}
+            width={1400}
+            alt="A clean mockup of the Identiverse 2026 booth: an L of two walls, one with an OpenAI quote and one with customer logos, and a kiosk with the AuthZed mark on the front and Dibs on its side"
+            class="rounded-lg border"
+          />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          EIC and Identiverse 2026. Clean mockups with the real print files on them.
+        </figcaption>
+      </figure>
+      <CaseLabel>Ads and slides</CaseLabel>
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <Image src={authzedAdJwt} width={800} alt="An ad: No More JWTs for Authorization, over a decoded token" class="rounded-lg border" />
+          <Image src={authzedAdHomegrown} width={800} alt="An ad: Homegrown authorization works, until it doesn't, over a house of cards" class="rounded-lg border" />
+          <Image src={authzedAdOwasp} width={800} alt="An ad: 4 of 10 OWASP AI risks need authorization controls" class="rounded-lg border" />
+          <Image src={authzedAdZanzibar} width={800} alt="An ad for the Zanzibar+ annotated paper, with the book cover" class="rounded-lg border" />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Other ads falling from the same system.
+        </figcaption>
+      </figure>
+      <figure class="col-span-full px-8 pb-8 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <Image src={authzedSlide4} width={1400} alt="A slide: How AuthZed helps secure your AI systems" class="rounded-lg border" />
+          <Image src={authzedSlide12} width={1400} alt="A slide with a system diagram: Unify your application and agent permissions" class="rounded-lg border" />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          The same visual language on slides.
+        </figcaption>
+      </figure>
+
+      <CaseLabel>Zanzibar+</CaseLabel>
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <Image
+            src={authzedZanzibarBook}
+            width={1400}
+            alt="A mockup of the printed Zanzibar+ booklet open on a worn desk at pages 14 and 15, with violet and teal margin notes beside the architecture diagram"
+            class="rounded-lg border"
+          />
+          <Image
+            src={authzedZanzibarStack}
+            width={1400}
+            alt="A mockup of a fanned stack of Zanzibar+ booklets on a desk, the purple cover with the Zanzibar+ title and planet art on top"
+            class="rounded-lg border"
+          />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Zanzibar+, Annotated by AuthZed with violet notes to explain Zanzibar and teal for where SpiceDB differs.
+        </figcaption>
+      </figure>
+      <CaseLabel>Supper Club</CaseLabel>
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <Image
+            src={authzedSupperClubHoodieFront}
+            width={1400}
+            alt="A mockup of a black Supper Club hoodie, front: the seal printed small on the left chest"
+            class="aspect-[4/5] rounded-lg border object-cover"
+          />
+          <Image
+            src={authzedSupperClubHoodieBack}
+            width={1400}
+            alt="The same hoodie mockup from the back: The AuthZed supper club, est. 2025, printed large across the shoulders"
+            class="aspect-[4/5] rounded-lg border object-cover"
+          />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          The AuthZed Supper Club, a private dinner series focused on the authorization space. Hoodies as a keepsake.
+        </figcaption>
+      </figure>
+      <CaseLabel>Swag</CaseLabel>
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-3">
+          <Image
+            src={authzedPocketTeeReal}
+            width={900}
+            alt="A photo of a black pocket tee with Dibs peeking out of the pocket and the AuthZed wordmark on the sleeve"
+            class="aspect-[4/3] h-full rounded-lg border object-cover"
+          />
+          <Image
+            src={authzedSocks}
+            width={900}
+            alt="Dibs socks shown from the front, side and back, black with an orange and pink pattern"
+            class="aspect-[4/3] h-full rounded-lg border bg-white object-contain"
+          />
+          <Image
+            src={authzedStickersPhoto}
+            width={900}
+            alt="A mockup of stickers on a laptop lid: We're Hiring stickers with QR codes and Dibs character stickers"
+            class="aspect-[4/3] h-full rounded-lg border object-cover"
+          />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          The pocket tee, hand pressed for a company offsite (any idea how hard it is to get someone to print in the pocket?), socks, and some stickers.
+        </figcaption>
+      </figure>
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <Image src={authzedPinSet} width={2400} alt="A mockup of three enamel pins on their dark backing cards on a wooden table: a keychain reading Friends don't let agents have admin, a round pin reading My friends don't dangerously skip permissions, and a bar reading safely run with exact permissions, with one card turned over to its QR code" class="w-full rounded-lg border" />
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          A set of pins focused on agent authorization for an AuthZed + ClawCon event.
+        </figcaption>
+      </figure>
+      <figure class="col-span-full px-8 pb-4 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-3">
+          <Image
+            src={authzedShirtScopeghetti}
+            width={1400}
+            alt="A mockup of a white shirt from the back with a bowl of noodles above the words Scope-ghetti alla JWTs"
+            class="aspect-[8/5] h-full rounded-lg border object-cover"
+          />
+          <Image
+            src={authzedShirtNoMoreJwts}
+            width={1400}
+            alt="A mockup of a white shirt with a small print on the chest, beside the same art at large size: No more JWTs"
+            class="aspect-[8/5] h-full rounded-lg border object-cover"
+          />
+          <Image
+            src={authzedShirtNoMoreJwtsRed}
+            width={1400}
+            alt="A mockup of a white shirt, front and back: No more JWTs in big red type, under pill shapes reading stale, key chaos, no revoke, token replay and scope bloat"
+            class="aspect-[8/5] h-full rounded-lg border object-cover"
+          />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Scope-ghetti shirt and two No More JWTs shirts available in our swag market.
+        </figcaption>
+      </figure>
+      <CaseLabel>Gifts</CaseLabel>
+      <figure class="col-span-full px-8 pb-8 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-3">
+          <Image src={authzedGiftRbac} width={900} alt="A gift box mockup with a massage gun behind it: Chronic RBAC pain? Ask your engineers if relationship-based access is right for you" class="aspect-[4/3] h-full rounded-lg border object-cover" />
+          <Image src={authzedGiftLibrary} width={900} alt="A gift box mockup laid open with the Zanzibar+ book, a Dibs storybook and small pieces: Time to return those if-statements" class="aspect-[4/3] h-full rounded-lg border object-cover" />
+          <Image src={authzedGiftTuple} width={900} alt="A mailer mockup with three prints: Some relationships are worth framing" class="aspect-[4/3] h-full rounded-lg border object-cover" />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Gifting authorization to those in need (prospects).
+        </figcaption>
+      </figure>
+
+      <CaseHeading title="The Mascot">
+        SpiceDB needed a friendly face (can you name a developer who doesn't love a mascot?), the way Go has its Gopher. Dibs is a jerboa named after Dune's Muad'Dib, the chosen one: small, nimble, & resilient, which lines up with SpiceDB. I explored hundreds of directions with AI image gen, and then traced and tweaked the winner, massaging all of the points in Illustrator like old times.
+      </CaseHeading>
+      <figure class="col-span-full pb-8">
+        <ol class="film" tabindex="0" aria-label="The making of Dibs, in order. Scroll sideways.">
+          {
+            dibsStages.map((stage, i) => (
+              <li class="film-stage">
+                {stage.video ? (
+                  <video
+                    class="film-media"
+                    data-inview
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    poster={`${stage.video}-poster.jpg`}
+                    aria-label={stage.alt}
+                  >
+                    <source src={`${stage.video}.mp4`} type="video/mp4" />
+                  </video>
+                ) : (
+                  <Image src={stage.src!} width={900} alt={stage.alt} class="film-media" />
+                )}
+                <p class="pt-2 text-xs font-medium text-neutral-800">
+                  <span class="mr-1 font-light text-neutral-400">{String(i + 1).padStart(2, "0")}</span>
+                  {stage.title}
+                </p>
+                <p class="pt-1 text-xs font-light text-neutral-500">{stage.note}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </figure>
+      <figure class="col-span-full px-8 pb-8 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-5">
+          <Image
+            src={authzedCardsPhotoReal}
+            width={1400}
+            alt="A photo of the printed Dibs deck, fanned out on its shipping box beside a stack of cards"
+            class="h-full w-full rounded-lg border object-cover sm:col-span-3"
+          />
+          <div class="flex items-center overflow-hidden rounded-lg border bg-black sm:col-span-2">
+            <Image
+              src={authzedOffsiteShirtArt}
+              width={1000}
+              alt="One-bit dithered art of a campsite at night: pine trees, a tent, a campfire and Dibs resting by the fire"
+              class="h-auto w-full"
+            />
+          </div>
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          The printed deck (photo), with court art I made with AI image tools
+          from my Dibs character. My art for the shirt at the spring 2025 offsite.
+        </figcaption>
+        <div class="grid gap-4 pt-4 sm:grid-cols-2">
+          <Image
+            src={authzedDibsDeckRounds}
+            width={1400}
+            alt="The final king, queen and jack of hearts from the Dibs deck, in cream, red and gold"
+            class="h-full w-full rounded-lg border object-cover"
+          />
+          <Image
+            src={authzedDibsStory}
+            width={1400}
+            alt="A mockup of Dibs and the Magic Library in a small bookshop: two copies on easels and a stack on a wooden table by a window, with shelves blurred behind"
+            class="h-full w-full rounded-lg border object-cover"
+          />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Style rounds until one held up across 52 cards, and Dibs and the Magic Library, written by Sam Kim.
+        </figcaption>
+      </figure>
+
+      <CaseHeading title="Experiments">
+        Being the only designer means I get to try a lot of things. Some are still in progress, some are shared, even more are sitting in folders on my desktop.
+      </CaseHeading>
+      <figure class="col-span-full px-8 pb-8 sm:px-4">
+        <video
+          class="w-full rounded-lg border"
+          data-inview
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="/video/authzed/chess-action-poster.jpg"
+          aria-label="A chess game where the rules are SpiceDB data: a rule card gives the knight a two-square leap, which is logged as a write, the knight makes the move as allowed checks, and the X-ray view then shows the grant on the board and as a relationship"
+        >
+          <source src="/video/authzed/chess-action.webm" type="video/webm" />
+          <source src="/video/authzed/chess-action.mp4" type="video/mp4" />
+        </video>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Chess against a live SpiceDB: every move fires a real check and every
+          card a real write. A rule card gives the knight a new move, the knight
+          makes it, and X-ray shows the grant on the board.
+        </figcaption>
+      </figure>
+      <figure class="col-span-full px-8 pb-8 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-5">
+          <video
+            class="aspect-square h-full w-full rounded-lg border object-cover sm:col-span-2"
+            data-inview
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="/video/authzed/typeface-reel-poster.jpg"
+            aria-label="Rounds of the AuthZed Display typeface: letterforms compared, outlines overlaid, ink traps tested and notes on what to change"
+          >
+            <source src="/video/authzed/typeface-reel.mp4" type="video/mp4" />
+          </video>
+          <div class="flex items-center overflow-hidden rounded-lg border bg-[#0c050f] sm:col-span-3">
+            <AuthzedDisplayTester />
+          </div>
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          AuthZed Display, not on the live site yet, with today's homepage headline
+          set in it. Try the sliders.
+        </figcaption>
+      </figure>
+      <figure class="col-span-full px-8 pb-8 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-3">
+          {
+            spicedbMarks.map((m) => (
+              <div class="spin-mark relative overflow-hidden rounded-lg border" data-mark={m.id} aria-label={m.alt}>
+                <img src={`/video/authzed/spicedb-mark-${m.id.toLowerCase()}-poster.jpg`} alt="" loading="lazy" class="block aspect-square w-full" />
+              </div>
+            ))
+          }
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Three of my favorites from the SpiceDB candidates. Drag them to spin them.
+        </figcaption>
+      </figure>
+      <figure class="col-span-full px-8 pb-8 sm:px-4">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <video
+            class="h-full w-full rounded-lg border object-cover"
+            data-inview
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="/video/authzed/foil-mill-poster.jpg"
+            aria-label="A CNC bit carving a Dibs award die into a brass block, with air blowing the chips away"
+          >
+            <source src="/video/authzed/foil-mill.mp4" type="video/mp4" />
+          </video>
+          <div class="flex items-center rounded-lg border bg-white">
+            <Image
+              src={authzedChipStamps}
+              width={1400}
+              alt="Four round award stamps for poker chips, each with Dibs in the center: Dedicated Driver, Founders' Award, Ultimate Collaborator and Selfless Service"
+              class="mx-auto"
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 pt-4 md:grid-cols-4">
+          <Image
+            src={authzedFoilChips}
+            width={1400}
+            alt="A photo of stacks of foil-stamped poker chips in black, teal and pink beside the finished brass dies"
+            class="col-span-2 h-full w-full rounded-lg border object-cover"
+          />
+          <Image src={authzedFoilPress} width={700} alt="A photo of the foil press with a strip of gold foil loaded" class="aspect-[4/3] h-full rounded-lg border object-cover" />
+          <Image src={authzedFoilDies} width={700} alt="A photo of four finished brass dies on a wood bench" class="aspect-[4/3] h-full rounded-lg border object-cover" />
+        </div>
+        <figcaption class="pt-2 text-xs font-light text-neutral-500">
+          Award art reduced to flat silhouettes for the dies, then cut, mounted
+          and pressed. Photos.
+        </figcaption>
+      </figure>
+
+      <CaseHeading title="And beyond">
+        Teammates are now able to make work that's consistently on brand at the speed they can ask a question or provide feedback (with their AI tools and the spec of course), all while I still get to work on the fun stuff a designer loves.
+      </CaseHeading>
+
+      <div class="col-span-full pb-12"></div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .spin-mark :global(canvas) {
+    position: absolute;
+    inset: 0;
+  }
+  .film {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0 2rem 0.75rem;
+    scroll-snap-type: x proximity;
+    scroll-padding-left: 2rem;
+  }
+  .film:focus-visible {
+    outline: 2px solid rgb(var(--n-400));
+    outline-offset: -2px;
+  }
+  .film-stage {
+    flex: 0 0 min(78vw, 22rem);
+    scroll-snap-align: start;
+  }
+  .film :global(.film-media) {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #0c050f;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(var(--n-200));
+  }
+</style>
+
+<script>
+  import { initSpinMark } from "../../components/authzed/spin-marks";
+
+  // The marks draw live over their poster and can be dragged.
+  document.addEventListener("astro:page-load", () => {
+    document.querySelectorAll<HTMLElement>(".spin-mark").forEach((el) => {
+      const mark = el.dataset.mark as "N3" | "F0" | "B2";
+      initSpinMark(el, mark, { label: el.getAttribute("aria-label") ?? "" });
+    });
+  });
+
+  // Clips play only while on screen, and stay on their poster frames
+  // under reduced motion.
+  document.addEventListener("astro:page-load", () => {
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          const v = e.target as HTMLVideoElement;
+          if (e.isIntersecting) v.play().catch(() => {});
+          else v.pause();
+        });
+      },
+      { threshold: 0.4 },
+    );
+    document.querySelectorAll("video[data-inview]").forEach((v) => io.observe(v));
+  });
+</script>

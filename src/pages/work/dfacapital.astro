@@ -1,4 +1,5 @@
 ---
+import CaseHeading from "../../components/CaseHeading.astro";
 import { Image } from "astro:assets";
 
 import dfacapitalDeck1 from "../../assets/dfacapital/dfacapitalDeck1@2x.png";
@@ -18,6 +19,7 @@ import VCFirms from "../../assets/dfacapital/VCfirms@2x.png";
 import Icon from "../../components/Icon.astro";
 import Tag from "../../components/Tag.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
 ---
 
 <BaseLayout
@@ -35,7 +37,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         >
           <a
             class="mb-4 flex gap-2 pt-4 text-xs uppercase text-neutral-400"
-            href="/work/"><Icon icon="arrow-left" /> Work</a
+            href={`/work/`}><Icon icon="arrow-left" /> Work</a
           >
           <h1 class="mb-2 text-5xl font-light">D.F.A. Capital Identity</h1>
           <div class="-ml-2 mb-4 justify-start">
@@ -63,58 +65,34 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         class="col-span-full pb-8 md:col-span-6"
       />
 
-      <div
-        class="relative col-span-full grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
-      >
-        <div
-          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
-        >
-          <div class="pr-8 text-xl font-light uppercase tracking-widest">
-            The Challenge
-          </div><div
-            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
-          >
-          </div>
-        </div>
-        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+      <CaseHeading title="The Challenge">
           D.F.A. Capital differentiates itself in the VC landscape by focusing
           on underrepresented founders, bringing a unique punk ethos to venture
           capital. This distinct persona needed to be encapsulated in their
           visual language.
-        </p>
-      </div>
+        </CaseHeading>
       <Image
         src={VCFirms}
         alt="Competitive landscape of VC firms"
         class="col-span-full pb-8 md:col-span-6"
       />
 
-      <div
-        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 pb-16 pt-8"
-      >
-        <div
-          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
-        >
-          <div class="pr-8 text-xl font-light uppercase tracking-widest">
-            The Solution
-          </div><div
-            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
-          >
-          </div>
-        </div>
-        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+      <CaseHeading title="The Solution">
           We drew inspiration from early punk flyers, zines, & wheat paste
           posters juxtaposed to a ‘buttoned up’ corporate style. This created a
           unique visual identity that resonated with the firm's ethos, stand up
           to the big ones and do something different.
-        </p>
-      </div>
+        </CaseHeading>
       <Image
         src={dfacapitalLogo5}
         alt="D.F.A. Capital Logo variation"
-        class="col-span-full pb-24 md:col-span-6"
+        class="col-span-full bg-neutral-100 pb-24 md:col-span-6"
+        data-theme="light"
       />
-      <div class="col-span-full grid grid-cols-4 md:col-span-3">
+      <div
+        class="col-span-full grid grid-cols-4 bg-neutral-100 md:col-span-3"
+        data-theme="light"
+      >
         <div class="col-span-2 sm:col-span-2">
           <Image
             src={dfacapitalLogo1}
@@ -144,7 +122,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           />
         </div>
       </div>
-      <div class="col-span-full grid grid-cols-4 md:col-span-3">
+      <div
+        class="col-span-full grid grid-cols-4 bg-neutral-100 md:col-span-3"
+        data-theme="light"
+      >
         <div
           class="col-span-2 flex h-auto items-center px-24 py-2 md:col-span-full"
         >
@@ -171,25 +152,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         class="col-span-full border-b md:col-span-6"
       />
 
-      <div
-        class="relative col-span-6 grid grid-cols-6 items-start gap-4 px-8 py-16"
-      >
-        <div
-          class="col-span-full flex items-center text-left md:col-span-3 md:inline-flex"
-        >
-          <div class="pr-8 text-xl font-light uppercase tracking-widest">
-            The Execution
-          </div><div
-            class="hidden flex-auto self-center border-b border-neutral-200 md:flex"
-          >
-          </div>
-        </div>
-        <p class="text-md col-span-full font-light md:col-span-3 md:px-8">
+      <CaseHeading title="The Execution">
           We developed a brand identity that pushed on the traditional Venture
           Capital persona and fully embraced D.F.A. Capital’s alternate roots,
           helping them effectively capturing their unique market position.
-        </p>
-      </div>
+        </CaseHeading>
 
       <div class="col-span-full px-8 pb-8 sm:col-span-3 sm:px-4">
         <Image

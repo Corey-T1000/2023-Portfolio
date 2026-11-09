@@ -3,7 +3,68 @@
 @tailwind utilities;
 
 @layer base {
+  /*
+   * Theme tokens. `data-theme` on <html> is set before first paint by the
+   * inline script in MainHead.astro. Values are space-separated RGB channels
+   * so Tailwind opacity modifiers (`bg-neutral-800/5`) keep working. Light is
+   * Tailwind's stock neutral ramp; dark is the same ramp inverted and tuned so
+   * every text step from 300 up clears AA (4.5:1) on the page (neutral-100).
+   *
+   * `data-theme="light"` on any element pins its subtree to the light tokens:
+   * use it (with `bg-neutral-100`) for transparent artwork drawn for the light
+   * page, e.g. dark-ink logos, so it keeps its native ground in dark mode.
+   */
+  :root,
+  [data-theme="light"] {
+    color-scheme: light;
+    --n-50: 250 250 250;
+    --n-100: 245 245 245;
+    --n-200: 229 229 229;
+    --n-300: 212 212 212;
+    --n-400: 163 163 163;
+    --n-500: 115 115 115;
+    --n-600: 82 82 82;
+    --n-700: 64 64 64;
+    --n-800: 38 38 38;
+    --n-900: 23 23 23;
+    --n-950: 10 10 10;
+    /* copy with no color class, and bare `border` (Tailwind's gray-200) */
+    --fg: 0 0 0;
+    --border: 229 231 235;
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --n-50: 14 14 14;
+    --n-100: 20 20 20;
+    --n-200: 46 46 46;
+    --n-300: 140 140 140;
+    --n-400: 160 160 160;
+    --n-500: 180 180 180;
+    --n-600: 200 200 200;
+    --n-700: 215 215 215;
+    --n-800: 229 229 229;
+    --n-900: 240 240 240;
+    --n-950: 250 250 250;
+    --fg: 236 236 236;
+    --border: 44 44 44;
+  }
+
   html {
     font-family: "Raleway Variable", sans-serif;
   }
+
+  html,
+  [data-theme="light"] {
+    color: rgb(var(--fg));
+  }
+}
+
+/*
+ * `text-neutral-200` is deliberately faint aside copy on the near-white page.
+ * Inverted it would sink into the dark page (it shares a step with borders),
+ * so in dark it gets its own value: recessive, still 4.5:1.
+ */
+:root[data-theme="dark"] .text-neutral-200:not([data-theme="light"] *) {
+  color: rgb(128 128 128);
 }

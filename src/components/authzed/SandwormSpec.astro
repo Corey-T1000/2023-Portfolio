@@ -1,0 +1,181 @@
+---
+// How the spec is laid out, drawn in Sandworm's diagram language: one hub file
+// and the real guide files under sandworm/design/ in the authzed/design repo.
+const REPO = "https://github.com/authzed/design/tree/main/sandworm";
+const top = ["web-ui", "product-ui", "components", "typography", "palette", "logo-brand", "animation"];
+const bottom = ["dataviz", "diagrams", "slides", "social", "print", "accessibility"];
+const W = 1200;
+const NODE = 142;
+const CY = 190;
+// Top and bottom branches alternate along the line, so their joints never crowd.
+const xs = (n: number) => Array.from({ length: n }, (_, i) => (n === 7 ? 120 : 200) + i * 160);
+---
+
+<figure class="spec col-span-full px-8 pb-8 sm:px-4">
+  <div class="spec-board">
+    <header class="spec-head">
+      <div class="spec-intro">
+        <p class="spec-title"><span class="font-light">One spec,</span> <span class="font-semibold">thirteen specific guides</span></p>
+      </div>
+      <a class="spec-link" href={REPO} target="_blank" rel="noopener noreferrer">See the repo ↗</a>
+    </header>
+
+    <svg
+      class="spec-wide"
+      viewBox={`0 0 ${W} 380`}
+      role="img"
+      aria-label="DESIGN.md at the center of a gradient line running from people to AI tools, with thirteen guide files branching off it: web UI, product UI, components, typography, palette, logo and brand, animation, data viz, diagrams, slides, social, print and accessibility"
+    >
+      <defs>
+        <linearGradient id="spec-warm-hero" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stop-color="#ffb370"></stop>
+          <stop offset=".5" stop-color="#f9808a"></stop>
+          <stop offset="1" stop-color="#6242e0"></stop>
+        </linearGradient>
+        <filter id="spec-glow" x="-5%" y="-900%" width="110%" height="1900%">
+          <feGaussianBlur stdDeviation="9"></feGaussianBlur>
+        </filter>
+      </defs>
+      <g stroke="#514856" stroke-width="1.25" fill="none">
+        {xs(top.length).map((x) => <path d={`M${x} 62V${CY}`} />)}
+        {xs(bottom.length).map((x) => <path d={`M${x} ${CY}V318`} />)}
+      </g>
+      <rect x="0" y={CY - 3} width={W} height="6" fill="url(#spec-warm-hero)" filter="url(#spec-glow)" opacity=".65"></rect>
+      <rect x="0" y={CY - 1.5} width={W} height="3" fill="url(#spec-warm-hero)"></rect>
+      <g font-family="JetBrains Mono, monospace" font-size="15" text-anchor="middle">
+        {
+          xs(top.length).map((x, i) => (
+            <g>
+              <rect x={x - NODE / 2 + 8} y="18" width={NODE - 16} height="44" rx="6" fill="#170d1c" stroke="#514856" />
+              <text x={x} y="45" fill="#d4d1d6">{top[i]}</text>
+              <circle cx={x} cy={CY} r="4" fill="#0c050f" stroke="#aaa5ac" stroke-width="1.5" />
+            </g>
+          ))
+        }
+        {
+          xs(bottom.length).map((x, i) => (
+            <g>
+              <rect x={x - NODE / 2 + 8} y="318" width={NODE - 16} height="44" rx="6" fill="#170d1c" stroke="#514856" />
+              <text x={x} y="345" fill="#d4d1d6">{bottom[i]}</text>
+              <circle cx={x} cy={CY} r="4" fill="#0c050f" stroke="#aaa5ac" stroke-width="1.5" />
+            </g>
+          ))
+        }
+      </g>
+      <rect x="490" y={CY - 37} width="220" height="74" rx="12" fill="#170d1c" stroke="url(#spec-warm-hero)" stroke-width="2"></rect>
+      <text x="600" y={CY + 8} text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="24" font-weight="500" fill="#f8f7f8">DESIGN.md</text>
+      <g font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1.5" fill="#aaa5ac">
+        <rect x="0" y={CY - 15} width="84" height="30" fill="#0c050f"></rect>
+        <text x="6" y={CY + 5}>PEOPLE</text>
+        <rect x="1104" y={CY - 15} width="96" height="30" fill="#0c050f"></rect>
+        <text x="1194" y={CY + 5} text-anchor="end">AI TOOLS</text>
+      </g>
+    </svg>
+
+    <div class="spec-narrow">
+      <p class="spec-hub">DESIGN.md</p>
+      <p class="spec-readers">Read by people and their AI tools</p>
+      <ul>
+        {[...top, ...bottom].map((name) => <li>{name}</li>)}
+      </ul>
+    </div>
+  </div>
+  <figcaption class="pt-2 text-xs font-light text-neutral-500">
+    The file names are
+    the real ones in the repo.
+  </figcaption>
+</figure>
+
+<style>
+  .spec-board {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: #0c050f; /* stone-975 */
+    color: #f8f7f8; /* stone-025 */
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    padding: 1.75rem 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .spec-board {
+      padding: 2rem;
+    }
+  }
+  .spec-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .spec-head {
+    align-items: flex-start;
+  }
+  .spec-title {
+    font-size: clamp(1.375rem, 2.4vw, 2rem);
+    line-height: 1.1;
+  }
+  .spec-link {
+    display: inline-flex;
+    padding: 0.625rem 1.125rem;
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 1px #514856;
+    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f8f7f8;
+    transition: box-shadow 0.2s;
+  }
+  .spec-link:hover {
+    box-shadow: inset 0 0 0 1px #f9808a;
+  }
+  .spec-wide {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  .spec-narrow ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .spec-hub {
+    padding: 0.875rem;
+    border-radius: 0.625rem;
+    background:
+      linear-gradient(#170d1c, #170d1c) padding-box,
+      linear-gradient(100deg, #ffb370, #f9808a 50%, #6242e0) border-box;
+    border: 2px solid transparent;
+    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .spec-readers {
+    padding: 0.625rem 0 1rem;
+    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.75rem;
+    color: #aaa5ac;
+    text-align: center;
+  }
+  .spec-narrow li {
+    padding: 0.625rem;
+    border: 1px solid #514856;
+    border-radius: 0.375rem;
+    background: #170d1c;
+    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.75rem;
+    color: #d4d1d6;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .spec-wide {
+      display: block;
+    }
+    .spec-narrow {
+      display: none;
+    }
+  }
+</style>

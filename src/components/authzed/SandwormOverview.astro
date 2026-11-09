@@ -222,18 +222,15 @@ const order = ["sand", "red", "magenta", "violet", "teal", "blue", "stone"] as c
     gap: 0.375rem;
     min-height: 11rem;
   }
-  /* A hairline between stops and around each ramp, so the darkest stops (and
-     the 950/975 pairs that are identical by design) still read as cells on
-     the dark panel instead of melting into it. */
+  /* Each stop is its own small tile with a slit of panel between, so the
+     950/975 pairs (identical by design) still count as two stops. */
   .ov-ramp {
     display: grid;
     grid-auto-rows: 1fr;
-    gap: 1px;
-    overflow: hidden;
-    border-radius: 0.375rem;
-    background: #3f3644; /* stone-800 */
-    outline: 1px solid rgb(248 247 248 / 0.1);
-    outline-offset: -1px;
+    gap: 2px;
+  }
+  .ov-ramp i {
+    border-radius: 2px;
   }
 
   .ov-glyphs {
